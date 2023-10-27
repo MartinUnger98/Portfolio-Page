@@ -1,0 +1,46 @@
+section {
+    margin-top: 100px;
+}
+
+.rotate {
+    transform: rotate(270deg);
+    font-size: 90px;
+}
+
+.name {
+    font-size: 128px;
+    font-weight: 700;
+    line-height: 153.6px;
+}
+
+.job {
+    font-size: 64px;
+    color: #4B47FF;
+}
+
+.talk-btn {
+    width: 165px;
+    height: 58px;
+}
+
+.blue_neon {
+    position: absolute;
+    width: 572.03px;
+    height: 608px;
+    top: 99px;
+    left: -281px;
+    transform: rotate(343deg);
+    z-index: -1;
+    
+}
+ 
+.green_neon {
+    position: absolute;
+    z-index: -1;
+    width: 679.58px;
+    height: 573.58px;
+    top: 122px;
+    right: -352px;
+    transform: rotate(26.87deg)
+
+}
