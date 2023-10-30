@@ -1,1 +1,13 @@
-<p>skills works!</p>
+<section class="d-flex justify-content-between align-items-center">
+    <div class="image-grid">
+        <img *ngFor="let skill of skills" src="assets/icons/{{ skill }}" alt="">
+    </div>
+    <div class="skills">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Skills</h1>
+            <div class="line"></div>
+        </div>
+        <p>I have gained experience in building projects with various front end technologies and concepts</p>
+        <button><span>Get in touch</span></button>
+    </div>
+</section>

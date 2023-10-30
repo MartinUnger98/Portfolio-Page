@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-
+skills = [
+  'javaScript.svg',
+  'css.svg',
+  'html.svg',
+  'Angular.svg',
+  'Api.svg',
+  'Firebase.svg',
+  'git.svg',
+  'material.svg',
+  'scrum.svg',
+  'typescript.svg',
+]
 }
