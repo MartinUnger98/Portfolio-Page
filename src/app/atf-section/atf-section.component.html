@@ -1,4 +1,4 @@
-<section class="d-flex justify-content-center align-items-center">
+<section class="d-flex justify-content-center align-items-start">
     <div class="rotate">
         <span>I am</span>
     </div>
@@ -6,9 +6,13 @@
         <span class="name">Martin Unger</span>
         <span class="job">FRONTEND DEVELOPER</span>
         <button class="talk-btn">
-            <a href=""><span>Let's talk!</span></a>
+            <a href=""><span>Let's talk!</span></a>            
         </button>
     </div>
     <img class="blue_neon" src="assets/neon_img/blue_atf.svg" alt="">
     <img class="green_neon" src="assets/neon_img/green_atf.svg" alt="">
+</section>
+<section class="social-media d-flex  align-items-center">
+    <div class="line"></div>
+    <img *ngFor="let img of socialMedia" src="assets/icons/{{ img }}" class="social-media-btn" alt="">
 </section>

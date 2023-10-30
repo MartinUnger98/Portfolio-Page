@@ -5,6 +5,7 @@ section {
 .rotate {
     transform: rotate(270deg);
     font-size: 90px;
+    margin-top: 70px;
 }
 
 .name {
@@ -41,6 +42,42 @@ section {
     height: 573.58px;
     top: 122px;
     right: -352px;
-    transform: rotate(26.87deg)
+    transform: rotate(26.87deg);
+}
 
+.talk-btn {
+    
+    background-color: #00BEE8;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 40px;
+    
+    &:hover {
+        background-color: #4B47FF;
+        scale: 1.1;
+    }
+
+    span {
+        font-size: 23px;
+        font-weight: 400;
+        
+        color: #ffffff;
+    }
+
+    a {
+        text-decoration: none;
+    }    
+}
+
+.line {
+    height: 2px;
+    background-color: #00BEE8;
+    width: 100px;    
+}
+
+.social-media-btn, .line {
+    margin-right: 42px;
+    &:hover {
+        scale: 1.2;
+    }
 }
