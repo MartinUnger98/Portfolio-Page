@@ -1,0 +1,85 @@
+section {
+    padding: 100px 100px 37px 100px;  
+}
+
+.line {
+    background-color: #4B47FF;
+    height: 4px;
+    width: 109px;
+    border-radius: 4px;
+}
+
+img {
+    width: 450px;
+}
+
+.project {
+    gap: 100px;
+    flex-wrap: nowrap;         
+    &:nth-child(odd) {
+        div:first-child {
+            order: 1; 
+        }
+        div:nth-child(2) {
+            order: 2;
+        }
+    }
+
+    &:nth-child(even) {
+        div:first-child {
+            order: 2; 
+        }
+        div:nth-child(2) {
+            order: 1; 
+        }
+    }
+}
+
+.title {
+    color: #4B47FF;
+    font-weight: 700;
+    font-size: 32px;
+}
+ 
+.techno{
+    color: #00BEE8;
+    font-weight: 400;
+    font-size: 23px;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+button {
+    span {
+        color: #ffffff;
+        font-size: 23px;
+        font-weight: 400;        
+    }
+    a {
+        text-decoration: none;
+    }
+    margin-right: 86px;
+    border-radius: 10px;
+    width: 152px;
+    height: 58px;
+    &:hover {
+        background-color: #00BEE8;
+        border: 0;
+    }
+}
+
+.btn-live {
+    background-color: #4B47FF;
+    border: 0;
+}
+
+.btn-git {
+    background-color: #141D2F;
+    border: 1px solid #00BEE8;
+}
