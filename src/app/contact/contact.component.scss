@@ -37,25 +37,35 @@ p {
 
 .input-sec {
     width: 617px;
-    p {
+    p, .err-mess {
         font-size: 14px;
         font-weight: 400;
     }
 }
 
-input, textarea {
-    background-color: #141d2f;
+.err-mess {
+    margin: 10px 0px 15px 0px;
+    color: #e61c40;
+    opacity: 0;
+}
+
+.input-fields {
     border: 1px solid #4B47FF;
-    margin-bottom: 32px;
     border-radius: 10px;
     padding: 15px 25px 15px 25px;
-    outline: none;
     box-shadow: 0 0 3px 1px #4B47FF,inset 0 0 3px 1px #4B47FF;
-    color: #ffffff;
     &:hover, &:focus {
         border: 1px solid #00BEE8;
         box-shadow: 0 0 3px 1px #00BEE8,inset 0 0 3px 1px #00BEE8;
     }
+}
+
+input, textarea {
+    width: 100%;
+    background-color: #141d2f;
+    outline: none;
+    border: 0;
+    color: #ffffff;
 }
 
 ::placeholder {

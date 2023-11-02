@@ -9,9 +9,28 @@
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.<br><br>Need a Frontend developer? Contact me!</p>
         </div>
         <div class="d-flex flex-column input-sec">
-            <input type="text" placeholder="Your name">
-            <input type="email" placeholder="Your email">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+            <div class="input-fields d-flex">
+                <input type="text" placeholder="Your name">
+                <img src="assets/icons/wrong.svg" alt="">
+            </div>
+            <p class="err-mess">Please enter a name with at least two characters.</p>
+            <div class="input-fields d-flex">
+                <input type="email" placeholder="Your email">
+                <img src="assets/icons/wrong.svg" alt="">
+            </div>
+            <p class="err-mess">Invalid email format.</p>
+            <div class="input-fields d-flex align-items-start">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                <img src="assets/icons/wrong.svg" alt="">
+            </div>
+            <p class="err-mess">Please write a message with at least two characters.</p>
+            
+            
+
+
+
+
+
             <div class="d-flex align-items-center gap-3">
                 <div>
                     <div id="checkbox" class="checkbox" (click)="toggleCheckbox()" [class.checked]="isChecked"></div>
