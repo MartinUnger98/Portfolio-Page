@@ -56,11 +56,15 @@ p {
 }
 
 button {
-    span {
-        font-size: 23px;
-        font-weight: 400;
-        color: #ffffff;
+    a{
+        text-decoration: none;
+        span {
+            font-size: 23px;
+            font-weight: 400;
+            color: #ffffff;
+        }
     }
+    
     background-color: #00BEE8;
     border-radius: 10px;
     border: 0;
