@@ -14,5 +14,8 @@
 </section>
 <section class="social-media d-flex  align-items-center">
     <div class="line"></div>
-    <img *ngFor="let img of socialMedia" src="assets/icons/{{ img }}" class="social-media-btn" alt="">
+    <a *ngFor="let img of socialMedia" href="{{ img.link }}" target="_blank" rel="noopener noreferrer">
+        <img  src="assets/icons/{{ img.img }}" class="social-media-btn" alt="">
+    </a>
+    
 </section>

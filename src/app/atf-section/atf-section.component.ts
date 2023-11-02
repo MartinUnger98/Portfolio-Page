@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./atf-section.component.scss']
 })
 export class AtfSectionComponent {
-  socialMedia = ['github.svg', 'mail.svg', 'linkedin.svg']
+  socialMedia = [
+    {
+      img:'github.svg', 
+      link: 'https://github.com/MartinUnger98',
+    },
+    {
+      img: 'mail.svg',
+      link: 'mailto:martin-unger2@live.at',
+    },
+    {
+      img: 'linkedin.svg',
+      link: 'https://www.linkedin.com/in/martin-unger-profile',
+    },
+  ]
 }

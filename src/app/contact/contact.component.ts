@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  isChecked: boolean = false;
 
+  
+  toggleCheckbox() {
+    this.isChecked = !this.isChecked;
+  }
 }
