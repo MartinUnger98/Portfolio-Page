@@ -1,1 +1,16 @@
-<p>footer works!!!!!!</p>
+<section class="d-flex justify-content-between align-items-center">
+    <div class="width">
+        <img class="logo" src="assets/icons/logo.svg" alt="">
+        <div class="d-flex flex-column">
+            <a href=""><span>Imprint</span></a>
+        </div>
+    </div>
+    <span>© Copyright 2023 by MartinUnger - All rights reserved.</span>
+    <div class="d-flex">
+        <div *ngFor="let img of socialMedia">
+            <a href="{{ img.link }}" target="_blank" rel="noopener noreferrer">
+                <img class="scl-media" src="assets/icons/{{ img.img }}" alt="">
+            </a>        
+        </div>
+    </div>
+</section>

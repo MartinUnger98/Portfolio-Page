@@ -3,7 +3,7 @@
         <div class="line"></div>
         <h1>Contact</h1>
     </div>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between ">
         <div id="left-section">
             <h2>Got a problem to solve?</h2>
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.<br><br>Need a Frontend developer? Contact me!</p>
@@ -13,14 +13,20 @@
             <input type="email" placeholder="Your email">
             <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
             <div class="d-flex align-items-center gap-3">
-                <div id="checkbox" class="checkbox" (click)="toggleCheckbox()" [class.checked]="isChecked"></div>
+                <div>
+                    <div id="checkbox" class="checkbox" (click)="toggleCheckbox()" [class.checked]="isChecked"></div>
+                </div>
                 <p>I've read the <a href="">privacy policy</a>and agree to the processing of my data as outlined.</p>
             </div>
             <div class="d-flex justify-content-center">
                 <button>
                     <span>Send message</span>
                 </button>
-            </div>            
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="#" class="up-btn"></a>
+            </div>   
+                     
         </div>
     </div>
 </section>

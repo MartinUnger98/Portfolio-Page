@@ -1,0 +1,30 @@
+section {
+    padding: 45px 100px 37px 100px;
+    width: 100vw;
+    border-top: 4px solid #00BEE8;
+}
+
+.logo {
+    height: 60px;
+    width: 56.15px;
+}
+
+.scl-media {
+    margin-left: 20px;
+    &:hover {
+        scale: 1.2;
+    }
+    
+}
+
+.width {
+    width: 182px;
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        width: fit-content;
+        &:hover {
+            color: #00BEE8;
+        }    
+    }
+}
