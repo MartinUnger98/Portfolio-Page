@@ -1,5 +1,5 @@
 section {
-    padding:37px 100px 37px 100px;
+    padding:37px 50px 37px 100px;
     a {
         text-decoration: none;
         margin-left: 29px;
@@ -10,6 +10,11 @@ section {
         }
     } 
     img {
-        height: 100px;
+        height: 60px;
     }  
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: #141d2f;
+    z-index: 3;
 }

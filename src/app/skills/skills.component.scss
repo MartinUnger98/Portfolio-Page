@@ -1,10 +1,10 @@
 section {
-    padding: 300px 0px 37px 100px;
+    padding: 100px 0px 37px 100px;
     background-image: url(/assets/img/big-curve.svg);
     background-size: cover;
     margin-top: -230px;
     position: relative;
-    z-index: 99;
+    z-index: 2;
 }
 
 .image-grid {
@@ -36,6 +36,10 @@ section {
 
 .skills {
     width: 572px;
+}
+
+.image-grid, .skills {
+    margin-top: 200px;
 }
 
 .line {
