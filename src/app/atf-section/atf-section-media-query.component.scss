@@ -1,0 +1,68 @@
+@media (max-width: 1040px) {
+    .job {
+        font-size: 45px;
+    } 
+    .name {
+        font-size: 90px;
+        line-height: 107px;
+    }
+    .rotate {
+        font-size: 63px;
+    }   
+    .green_neon {
+        right: -412px;
+    } 
+}
+
+@media (max-width: 740px) {
+    .job {
+        font-size: 32px;
+    } 
+    .name {
+        font-size: 63px;
+        line-height: 75px;
+    }
+    .rotate {
+        font-size: 44px;
+    } 
+    .talk-btn {
+       margin-top: 20px;
+    }
+    .green_neon {
+        right: -464px;
+    }
+    .blue_neon {
+        top: 84px;
+        left: -381px;
+    } 
+    
+}
+
+@media (max-width: 570px) {
+    .job {
+        font-size: 20px;
+    } 
+    .name {
+        font-size: 36px;
+        line-height: 37px;
+    }
+    .rotate {
+        font-size: 26px;
+        margin-top: 40px;
+    } 
+    .talk-btn {
+        width: 115px;
+        height: 40px;
+        span {
+            font-size: 16px;
+        }
+    }
+    .green_neon {
+        right: -464px;
+    }
+    .blue_neon {
+        top: 84px;
+        left: -381px;
+    } 
+    
+}

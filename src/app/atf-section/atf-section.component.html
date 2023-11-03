@@ -9,13 +9,12 @@
             <a href="#contact"><span>Let's talk!</span></a>            
         </button>
     </div>
-    <img class="blue_neon" src="assets/neon_img/blue_atf.svg" alt="">
-    <img class="green_neon" src="assets/neon_img/green_atf.svg" alt="">
+    <img class="blue_neon position-absolute" src="assets/neon_img/blue_atf.svg" alt="">
+    <img class="green_neon position-absolute" src="assets/neon_img/green_atf.svg" alt="">
 </section>
-<section class="social-media d-flex  align-items-center">
+<div class="social-media d-flex  align-items-center">
     <div class="line"></div>
     <a *ngFor="let img of socialMedia" href="{{ img.link }}" target="_blank" rel="noopener noreferrer">
         <img  src="assets/icons/{{ img.img }}" class="social-media-btn" alt="">
-    </a>
-    
-</section>
+    </a>    
+</div>

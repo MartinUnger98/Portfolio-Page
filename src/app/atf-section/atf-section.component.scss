@@ -19,25 +19,15 @@ section {
     color: #4B47FF;
 }
 
-.talk-btn {
-    width: 165px;
-    height: 58px;
-}
-
 .blue_neon {
-    position: absolute;
     width: 572.03px;
     height: 608px;
     top: 150px;
     left: -281px;
-    transform: rotate(343deg);
-    z-index: -1;
-    
+    transform: rotate(343deg);    
 }
  
 .green_neon {
-    position: absolute;
-    z-index: -1;
     width: 679.58px;
     height: 573.58px;
     top: 122px;
@@ -45,8 +35,13 @@ section {
     transform: rotate(26.87deg);
 }
 
-.talk-btn {
-    
+.blue_neon, .green_neon {
+    z-index: -1;
+}
+
+.talk-btn { 
+    width: 165px;
+    height: 58px;   
     background-color: #00BEE8;
     border-radius: 10px;
     border: 0;
@@ -56,14 +51,11 @@ section {
         background-color: #4B47FF;
         transform: scale(1.2);
     }
-
     span {
         font-size: 23px;
         font-weight: 400;
-        
         color: #ffffff;
     }
-
     a {
         text-decoration: none;
     }    
@@ -80,4 +72,8 @@ section {
     &:hover {
         scale: 1.2;
     }
+}
+
+.social-media {
+    margin-top: 250px;
 }
