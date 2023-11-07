@@ -27,7 +27,7 @@ export class ContactComponent {
 
   
  
-
+  REGEX = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
   isChecked: boolean = false;
   private ICON_RIGHT = 'assets/icons/right.svg';
   private ICON_WRONG = 'assets/icons/wrong.svg';
@@ -71,8 +71,7 @@ export class ContactComponent {
 
 
   validateEmail(inputValue: string, borderElement: ElementRef, errorElement: ElementRef, imgElement: ElementRef) {
-  
-    if (inputValue.includes('@') && inputValue.indexOf('@') > 0 && inputValue.indexOf('@') < inputValue.length - 1) {
+    if (inputValue.match(this.REGEX)) {
       this.setValue(borderElement.nativeElement, errorElement.nativeElement, imgElement.nativeElement, true);
     } else {
       this.setValue(borderElement.nativeElement, errorElement.nativeElement, imgElement.nativeElement, false);
@@ -105,7 +104,7 @@ export class ContactComponent {
   }
 
   checkButtonForm(name: string, mail: string, message: string, checkbox: boolean) {
-    let form = name.length > 1 && mail.includes('@') && message.length > 1 && checkbox;
+    let form = name.length > 1 && mail.match(this.REGEX) && message.length > 1 && checkbox;
     this.btnDiv.nativeElement.disabled = !form;
   }
 
@@ -115,7 +114,6 @@ export class ContactComponent {
   }
 
   async sendMail(event: any) {
-    debugger;
     try {
       event.preventDefault();
       const data = new FormData(event.target);

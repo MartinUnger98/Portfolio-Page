@@ -9,10 +9,10 @@
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.<br><br>Need a Frontend developer? Contact me!</p>
         </div>
         <div class="d-flex flex-column input-sec">
-            <form action="https://formspree.io/f/mjvqzpqy" method="POST">
+            <form #myForm (submit)="sendMail($event)">
                 <div>
                     <div #nameDiv class="input-fields d-flex">
-                        <input #nameInput type="text" placeholder="Your name">
+                        <input #nameInput type="text" placeholder="Your name" name="name">
                         <img #nameImg src="" alt="">
                     </div>
                     <p #nameErr class="err-mess hidden">Please enter a name with at least two characters.</p>
@@ -20,7 +20,7 @@
 
                 <div>
                     <div #emailDiv class="input-fields d-flex">
-                        <input #emailInput type="email" placeholder="Your email">
+                        <input #emailInput type="email" placeholder="Your email" name="email">
                         <img #emailImg src="" alt="">
                     </div>
                     <p #emailErr class="err-mess hidden">Invalid email format.</p>
@@ -29,7 +29,7 @@
 
                 <div>
                     <div #messageDiv class="input-fields d-flex align-items-start">
-                        <textarea #messageInput name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                        <textarea #messageInput cols="30" rows="10" placeholder="Your message" name="message"></textarea>
                         <img #messageImg src="" alt="">
                     </div>
                     <p #messageErr class="err-mess hidden">Please write a message with at least two characters.</p>
