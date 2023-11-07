@@ -9,7 +9,7 @@
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.<br><br>Need a Frontend developer? Contact me!</p>
         </div>
         <div class="d-flex flex-column input-sec">
-            <form>
+            <form action="https://formspree.io/f/mjvqzpqy" method="POST">
                 <div>
                     <div #nameDiv class="input-fields d-flex">
                         <input #nameInput type="text" placeholder="Your name">
@@ -43,14 +43,14 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    <button #btnDiv disabled>
+                    <button type="submit" #btnDiv disabled>
                         <span>Send message</span>
                     </button>
                 </div>
             </form>
             <div class="d-flex justify-content-end">
                 <a href="#" class="up-btn"></a>
-            </div>       
+            </div>  
         </div>
     </div>
 </section>

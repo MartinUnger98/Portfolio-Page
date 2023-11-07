@@ -1,4 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import JSConfetti from 'js-confetti';
+
+
+
 
 @Component({
   selector: 'app-contact',
@@ -21,6 +25,8 @@ export class ContactComponent {
   @ViewChild('messageErr') messageErr!: ElementRef;
   @ViewChild('btnDiv') btnDiv!: ElementRef;
 
+  
+ 
 
   isChecked: boolean = false;
   private ICON_RIGHT = 'assets/icons/right.svg';
@@ -101,6 +107,28 @@ export class ContactComponent {
   checkButtonForm(name: string, mail: string, message: string, checkbox: boolean) {
     let form = name.length > 1 && mail.includes('@') && message.length > 1 && checkbox;
     this.btnDiv.nativeElement.disabled = !form;
+  }
+
+  confetti() {
+    const jsConfetti = new JSConfetti()
+    jsConfetti.addConfetti()
+  }
+
+  async sendMail(event: any) {
+    debugger;
+    try {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      await fetch("https://formspree.io/f/mjvqzpqy", {
+        method: "POST",
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      });
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
   }
   
 }
