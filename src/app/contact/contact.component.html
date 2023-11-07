@@ -9,53 +9,48 @@
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.<br><br>Need a Frontend developer? Contact me!</p>
         </div>
         <div class="d-flex flex-column input-sec">
-            <div class="input-fields d-flex">
-                <input type="text" placeholder="Your name">
-                <img src="assets/icons/wrong.svg" alt="">
-            </div>
-            <p class="err-mess">Please enter a name with at least two characters.</p>
-            <div class="input-fields d-flex">
-                <input type="email" placeholder="Your email">
-                <img src="assets/icons/wrong.svg" alt="">
-            </div>
-            <p class="err-mess">Invalid email format.</p>
-            <div class="input-fields d-flex align-items-start">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-                <img src="assets/icons/wrong.svg" alt="">
-            </div>
-            <p class="err-mess">Please write a message with at least two characters.</p>    
-
-
-            <form class="example-form">
-                <mat-form-field >
-                  <mat-label>Email</mat-label>
-                  <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                         placeholder="Ex. pat@example.com">
-                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                    Please enter a valid email address
-                  </mat-error>
-                  <mat-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </mat-error>
-                </mat-form-field>
-              </form>
-
-
-              
-            <div class="d-flex align-items-center gap-3">
+            <form action="https://formspree.io/f/mjvqzpqy" method="POST">
                 <div>
-                    <div id="checkbox" class="checkbox" (click)="toggleCheckbox()" [class.checked]="isChecked"></div>
+                    <div #nameDiv class="input-fields d-flex">
+                        <input #nameInput type="text" placeholder="Your name">
+                        <img #nameImg src="" alt="">
+                    </div>
+                    <p #nameErr class="err-mess hidden">Please enter a name with at least two characters.</p>
                 </div>
-                <p>I've read the <a href="">privacy policy</a>and agree to the processing of my data as outlined.</p>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button>
-                    <span>Send message</span>
-                </button>
-            </div>
+
+                <div>
+                    <div #emailDiv class="input-fields d-flex">
+                        <input #emailInput type="email" placeholder="Your email">
+                        <img #emailImg src="" alt="">
+                    </div>
+                    <p #emailErr class="err-mess hidden">Invalid email format.</p>
+                </div>
+                
+
+                <div>
+                    <div #messageDiv class="input-fields d-flex align-items-start">
+                        <textarea #messageInput name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                        <img #messageImg src="" alt="">
+                    </div>
+                    <p #messageErr class="err-mess hidden">Please write a message with at least two characters.</p>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div>
+                        <div id="checkbox" class="checkbox" (click)="toggleCheckbox()" [class.checked]="isChecked"></div>
+                    </div>
+                    <p>I've read the <a href="">privacy policy</a>and agree to the processing of my data as outlined.</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" #btnDiv disabled>
+                        <span>Send message</span>
+                    </button>
+                </div>
+            </form>
             <div class="d-flex justify-content-end">
                 <a href="#" class="up-btn"></a>
-            </div>       
+            </div>  
         </div>
     </div>
 </section>

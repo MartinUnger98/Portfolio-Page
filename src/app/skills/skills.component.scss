@@ -11,13 +11,15 @@ section {
     display: grid;
     gap: 83px;
     width: 625px;
+    align-items: center;
+    justify-content: center;
 
     grid-template-rows: repeat(4, auto); 
     grid-template-columns: repeat(4, 1fr);
     img {
         width: 88px;
         &:hover {
-            animation: bounce 750ms ease 0s 1 normal forwards;
+            animation: bounce 500ms ease;
         }
     }
     img:nth-child(-n+4) {
@@ -80,49 +82,8 @@ button {
 
 
 
-
 @keyframes bounce {
-    0% {
-        animation-timing-function: ease-in;
-        opacity: 1;
-        transform: translateY(-32px);
-    }
-
-    24% {
-        opacity: 1;
-    }
-
-    40% {
-        animation-timing-function: ease-in;
-        transform: translateY(-24px);
-    }
-
-    65% {
-        animation-timing-function: ease-in;
-        transform: translateY(-16px);
-    }
-
-    82% {
-        animation-timing-function: ease-in;
-        transform: translateY(-8px);
-    }
-
-    93% {
-        animation-timing-function: ease-in;
-        transform: translateY(-4px);
-    }
-
-    25%,
-    55%,
-    75%,
-    87% {
-        animation-timing-function: ease-out;
-        transform: translateY(0px);
-    }
-
-    100% {
-        animation-timing-function: ease-out;
-        opacity: 1;
-        transform: translateY(0px);
-    }
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }
