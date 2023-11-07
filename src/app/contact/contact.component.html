@@ -23,14 +23,25 @@
                 <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
                 <img src="assets/icons/wrong.svg" alt="">
             </div>
-            <p class="err-mess">Please write a message with at least two characters.</p>
-            
-            
+            <p class="err-mess">Please write a message with at least two characters.</p>    
 
 
+            <form class="example-form">
+                <mat-form-field >
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                         placeholder="Ex. pat@example.com">
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </form>
 
 
-
+              
             <div class="d-flex align-items-center gap-3">
                 <div>
                     <div id="checkbox" class="checkbox" (click)="toggleCheckbox()" [class.checked]="isChecked"></div>

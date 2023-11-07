@@ -11,6 +11,8 @@
     --bs-body-bg: #141d2f !important;
     --bs-body-color: #ffffff !important;
     --bs-body-font-family: 'Poppins', sans-serif !important;
+    --mdc-filled-text-field-input-text-color: #ffffff;
+    --mdc-filled-text-field-container-color: #141d2f;
 }
 
 html {
@@ -22,3 +24,6 @@ h1 {
     font-size: 90px;
     font-weight: 700;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

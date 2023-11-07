@@ -122,3 +122,17 @@ button {
     }
 }
 
+.mat-mdc-form-field {
+    width: 100%;
+}
+
+.mdc-text-field--filled {
+    border: 1px solid #4B47FF !important;
+    /* border-radius: 10px !important;
+    padding: 15px 25px 15px 25px;
+    box-shadow: 0 0 3px 1px #4B47FF,inset 0 0 3px 1px #4B47FF !important;
+    &:hover, &:focus {
+        border: 1px solid #00BEE8 !important;
+        box-shadow: 0 0 3px 1px #00BEE8,inset 0 0 3px 1px #00BEE8 !important;
+    } */
+}
