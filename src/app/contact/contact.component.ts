@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import JSConfetti from 'js-confetti';
+import lottie from 'lottie-web';
 
 
 
@@ -24,6 +25,8 @@ export class ContactComponent {
   @ViewChild('messageImg') messageImg!: ElementRef;
   @ViewChild('messageErr') messageErr!: ElementRef;
   @ViewChild('btnDiv') btnDiv!: ElementRef;
+  @ViewChild('sendmailBtn') sendmailBtn!: ElementRef;
+  @ViewChild('overlay') overlay!: ElementRef;
 
   
  
@@ -31,6 +34,7 @@ export class ContactComponent {
   isChecked: boolean = false;
   private ICON_RIGHT = 'assets/icons/right.svg';
   private ICON_WRONG = 'assets/icons/wrong.svg';
+  private animationPath = 'assets/img/Animation - 1699433179691.json';
 
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
@@ -114,6 +118,7 @@ export class ContactComponent {
   }
 
   async sendMail(event: any) {
+    this.overlay.nativeElement.classList.remove('d-none');
     try {
       event.preventDefault();
       const data = new FormData(event.target);
@@ -126,7 +131,49 @@ export class ContactComponent {
       });
     } catch (error) {
         console.error('An error occurred:', error);
+    } finally {
+      this.playAnimation();
+      this.confetti();
+      this.restoreInputContainers();
+      setTimeout(() => {
+        this.overlay.nativeElement.classList.add('d-none');
+        this.sendmailBtn.nativeElement.innerHTML = '';
+      }, 4500);
     }
   }
+
+  playAnimation() {
+    let animationContainer = this.sendmailBtn.nativeElement;
+    animationContainer.classList.remove('d-none');
+    lottie.loadAnimation({
+      container: animationContainer,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      path: this.animationPath
+    });
+  }
+
+  restoreInputContainers() {
+    let name = this.nameInput.nativeElement;
+    let mail = this.emailInput.nativeElement;
+    let message = this.messageInput.nativeElement;
+    this.restoreInputValues(name, mail, message);
+    this.restoreInputDivsAfterSendingMail(name, mail, message);
+  }
   
+  restoreInputValues(name: HTMLInputElement, mail: HTMLInputElement, message: HTMLInputElement) {
+    name.value = '';
+    mail.value = '';
+    message.value = '';
+    this.isChecked = false;
+  }
+
+  restoreInputDivsAfterSendingMail(name: HTMLInputElement, mail: HTMLInputElement, message: HTMLInputElement) {
+    this.validateInput(name.value, this.nameDiv, this.nameErr, this.nameImg);
+    this.validateInput(message.value, this.messageDiv, this.messageErr, this.messageImg);
+    this.validateEmail(mail.value, this.emailDiv, this.emailErr, this.emailImg);
+  }
+
+
 }
