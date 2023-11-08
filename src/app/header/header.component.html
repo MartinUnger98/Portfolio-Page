@@ -2,7 +2,7 @@
     <div>
         <img src="assets/icons/logo.svg" alt="">
     </div>
-    <div>
+    <div class="links">
         <a href="#about">
             <span>About me</span>
         </a>
@@ -12,5 +12,26 @@
         <a href="#portfolio">
             <span>Portfolio</span>
         </a> 
+        <a href="#contact">
+            <span>Contact</span>
+        </a> 
     </div>
+    <div class="burger">
+        <img #burgerimg (click)="toggleBurgerMenu()" src="assets/icons/burgermenu.svg" alt="">
+    </div>     
 </section>
+<div #menu class="menu d-flex justify-content-center align-items-center flex-column menu-hidden">
+    <a (click)="toggleBurgerMenu()" href="#about">
+        <span>About me</span>
+    </a>
+    <a (click)="toggleBurgerMenu()" href="#skills">
+        <span>Skills</span>
+    </a>
+    <a (click)="toggleBurgerMenu()" href="#portfolio">
+        <span>Portfolio</span>
+    </a> 
+    <a (click)="toggleBurgerMenu()" href="#contact">
+        <span>Contact</span>
+    </a> 
+</div>
+
