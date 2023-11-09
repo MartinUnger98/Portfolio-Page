@@ -144,7 +144,6 @@ export class ContactComponent {
 
   playAnimation() {
     let animationContainer = this.sendmailBtn.nativeElement;
-    animationContainer.classList.remove('d-none');
     lottie.loadAnimation({
       container: animationContainer,
       renderer: 'svg',
