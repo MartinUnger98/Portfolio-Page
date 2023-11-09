@@ -25,5 +25,36 @@ h1 {
     font-weight: 700;
 }
 
+section {
+    padding:37px 100px 37px 100px;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media (max-width: 1040px) {
+    h1 {
+        font-size: 90px;
+        line-height: 107px;
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 37px;
+    }
+}
+
+@media (max-width: 740px) {
+    h1 {
+        font-size: 63px;
+        line-height: 75px;
+    }
+}
+
+@media (max-width: 570px) {
+    h1 {
+        font-size: 36px;
+        line-height: 37px;
+    }
+}

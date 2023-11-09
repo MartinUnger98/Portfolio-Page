@@ -1,5 +1,4 @@
 section {
-    padding:37px 100px 37px 100px;
     img {
         height: 60px;
     }  
@@ -8,9 +7,6 @@ section {
     top: 0px;
     background-color: #141d2ff0;
     z-index: 3;
-    @media (max-width: 400px) {
-        padding: 37px;
-    }
 }
 
 a {
@@ -23,14 +19,7 @@ a {
     }
 } 
 
-@media (max-width: 800px) {
-    .links {
-        display: none;
-    }
-    .burger {
-        display: flex !important;
-    }
-}
+
 
 .burger {
     display: none;
@@ -67,4 +56,14 @@ a {
     visibility: hidden;
     transform: translateX(800px);
     transition: all 225ms ease-out;
+}
+
+
+@media (max-width: 800px) {
+    .links {
+        display: none;
+    }
+    .burger {
+        display: flex !important;
+    }
 }
