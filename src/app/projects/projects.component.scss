@@ -18,7 +18,7 @@ img {
     flex-wrap: nowrap;         
     &:nth-child(odd) {
         div:first-child {
-            order: 1; 
+            order: 1;
         }
         div:nth-child(2) {
             order: 2;
@@ -28,11 +28,24 @@ img {
     &:nth-child(even) {
         div:first-child {
             order: 2; 
+            @media (max-width: 1240px) {
+                order: 1;
+            }
         }
         div:nth-child(2) {
             order: 1; 
+            @media (max-width: 1240px) {
+                order: 2;
+            }
         }
     }
+    @media (max-width: 1240px) {
+        flex-direction: column;
+    }
+}
+
+.project-txt {
+    max-width: 513px;
 }
 
 .title {
@@ -82,4 +95,26 @@ button {
 .btn-git {
     background-color: #141D2F;
     border: 1px solid #00BEE8;
+}
+
+@media (max-width: 1240px) {
+    .project-txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .project {
+        gap: 0px;
+    }
+    .description, .project-txt {
+        text-align: center;
+    }
+    .btn-row {
+        justify-content: center;
+        gap: 86px;
+        button {
+            margin-right: 0px;
+        }
+    }
 }
