@@ -164,3 +164,14 @@ button {
     width: 300px;
     height: 200px;
 }
+
+@media (max-width: 1340px) {
+    .middle-sec {
+        flex-direction: column;
+        gap: 86px;
+    }
+    section {
+        align-items: center;
+    }
+
+}

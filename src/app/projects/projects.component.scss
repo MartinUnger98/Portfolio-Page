@@ -118,3 +118,37 @@ button {
         }
     }
 }
+
+@media (max-width: 540px) {
+    .project-txt {
+        max-width: 340px;
+    }
+    img {
+        width: 350px;
+    }
+    button {
+        width: 120px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 430px) {
+    .projects-header {
+        p{
+            margin: 0px 60px 0px 60px;
+        }
+    }
+    
+}
+
+@media (max-width: 390px) {
+    .project-txt {
+        max-width: 270px;
+    }
+    img {
+        width: 290px;
+    }
+    .btn-row {
+       gap: 32px;
+    }
+}
