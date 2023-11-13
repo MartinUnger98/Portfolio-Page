@@ -1,11 +1,15 @@
 section {
-    padding: 45px 100px 37px 100px;
     border-top: 4px solid #00BEE8;
 }
 
 .logo {
-    height: 60px;
-    width: 56.15px;
+    height: 90px;
+    width: 90px;
+    filter: drop-shadow(4px 3px 7px #00BEE8);
+}
+
+span, a {
+    font-size: 23px;
 }
 
 .scl-media {
@@ -16,14 +20,31 @@ section {
     
 }
 
-.width {
-    width: 182px;
-    a {
-        text-decoration: none;
-        color: #ffffff;
-        width: fit-content;
-        &:hover {
-            color: #00BEE8;
-        }    
+.imprint_phone {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    width: fit-content;
+    &:hover {
+        color: #00BEE8;
+    }
+    img {
+        filter: drop-shadow(4px 3px 7px #4b47ff);
+    }  
+}
+
+@media (max-width: 740px) {
+    section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .imprint_phone {
+        display: block;
+    } 
+    .imprint {
+        display: none;
     }
 }

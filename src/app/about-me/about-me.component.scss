@@ -6,7 +6,16 @@ section {
 }
 
 .profile-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 600px;
+}
+
+#right-aM {
+    position: relative;
+    width: 600px;
+    height: 486px;
 }
 
 #left-aM {
@@ -79,8 +88,11 @@ p {
 
 
 @media (max-width: 700px) {
-    .profile-img {
+    .profile-img, #right-aM {
         width: 400px;
+    }
+    #right-aM {
+        height: 324px;
     }
     .curve {
         margin-top: -130px;
@@ -101,8 +113,11 @@ p {
     }
 }
 @media (max-width: 420px) {
-    .profile-img {
+    .profile-img, #right-aM {
         width: 250px;
+    }
+    #right-aM {
+        height: 202px;
     }
     .curve {
         margin-top: -83px;

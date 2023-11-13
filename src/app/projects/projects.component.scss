@@ -1,5 +1,5 @@
 section {
-    padding: 150px 100px 37px 100px;  
+    padding-top: 150px;  
 }
 
 .line {
@@ -97,6 +97,12 @@ button {
     border: 1px solid #00BEE8;
 }
 
+.projects-header {
+    p{
+        text-align: center;
+    }
+}
+
 @media (max-width: 1240px) {
     .project-txt {
         display: flex;
@@ -133,12 +139,9 @@ button {
 }
 
 @media (max-width: 430px) {
-    .projects-header {
-        p{
-            margin: 0px 60px 0px 60px;
-        }
-    }
-    
+    .line {
+        width: 54px;
+    }    
 }
 
 @media (max-width: 390px) {

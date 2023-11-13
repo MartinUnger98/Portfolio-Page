@@ -68,6 +68,9 @@ section {
 
 .social-media-btn, .line {
     margin-right: 42px;
+}
+.social-media-btn {
+    filter: drop-shadow(4px 3px 7px #4b47ff);
     &:hover {
         scale: 1.2;
     }

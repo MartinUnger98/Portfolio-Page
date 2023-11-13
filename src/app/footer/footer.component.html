@@ -1,11 +1,9 @@
 <section class="d-flex justify-content-between align-items-center">
-    <div class="width">
+    <div class="width d-flex flex-column align-items-center">
         <img class="logo" src="assets/icons/logo.svg" alt="">
-        <div class="d-flex flex-column">
-            <a href=""><span>Imprint</span></a>
-        </div>
+        <a class="imprint" href="">Imprint</a>        
     </div>
-    <span>© Copyright 2023 by MartinUnger - All rights reserved.</span>
+    <span>© Martin Unger 2023</span>
     <div class="d-flex">
         <div *ngFor="let img of socialMedia">
             <a href="{{ img.link }}" target="_blank" rel="noopener noreferrer">
@@ -13,4 +11,5 @@
             </a>        
         </div>
     </div>
+    <a class="imprint_phone" href="">Imprint</a>
 </section>
