@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { PageComponent } from './page/page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ImprintComponent } from './imprint/imprint.component';
     ContactComponent,
     FooterComponent,
     PrivacyPolicyComponent,
-    ImprintComponent
+    ImprintComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
