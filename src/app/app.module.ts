@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    PrivacyPolicyComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,
