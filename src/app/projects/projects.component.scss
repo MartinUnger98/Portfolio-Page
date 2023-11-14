@@ -11,11 +11,14 @@ section {
 
 img {
     width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #00bee8;
 }
 
 .project {
     gap: 100px;
-    flex-wrap: nowrap;         
+    flex-wrap: nowrap; 
+    margin-top: 100px;        
     &:nth-child(odd) {
         div:first-child {
             order: 1;
@@ -100,6 +103,7 @@ button {
 .projects-header {
     p{
         text-align: center;
+        margin: 0px;
     }
 }
 
@@ -111,7 +115,7 @@ button {
         justify-content: center;
     }
     .project {
-        gap: 0px;
+        gap: 40px;
     }
     .description, .project-txt {
         text-align: center;
@@ -125,16 +129,27 @@ button {
     }
 }
 
+@media (max-width: 740px) {
+    .project {
+        margin-top: 50px;
+    }
+}
+
 @media (max-width: 540px) {
     .project-txt {
         max-width: 340px;
     }
     img {
-        width: 350px;
+        width: 100%;
     }
     button {
         width: 120px;
         height: 50px;
+    }
+    .btn-row {
+        justify-content: space-between;
+        width: 100%;
+        gap: 0px;
     }
 }
 
@@ -142,16 +157,17 @@ button {
     .line {
         width: 54px;
     }    
+    .project-txt {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 390px) {
-    .project-txt {
-        max-width: 270px;
-    }
-    img {
-        width: 290px;
-    }
-    .btn-row {
-       gap: 32px;
+    .line {
+        width: 24px;
+    }  
+    button {
+        width: 100px;
+        height: 50px;
     }
 }

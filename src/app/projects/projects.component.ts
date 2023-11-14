@@ -20,7 +20,7 @@ export class ProjectsComponent {
       title:"El pollo Loco",
       technologies: "HTML | CSS | Javascript",
       description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      img: "assets/img/Pollo loco 1.svg",
+      img: "assets/img/pollo_loco.svg",
       link_live: "https://martin-unger.developerakademie.net/El%20Pollo%20Loco/index.html",
       link_github: "https://github.com/MartinUnger98/El-Pollo-Loco",
     },
