@@ -22,12 +22,6 @@ section {
     max-width: 700px;
 }
 
-p {
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 20.2px;
-}
-
 .undersection {
     gap: 50px;
 }
@@ -111,11 +105,6 @@ p {
     .curve {
         margin-top: -103px;
     }
-    p {
-        font-size: 16px;
-        line-height: 19.2px;
-    }
-
 }
 @media (max-width: 420px) {
     .profile-img, #right-aM {
