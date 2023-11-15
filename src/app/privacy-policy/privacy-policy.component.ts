@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './privacy-policy.component.html',
   styleUrls: ['./privacy-policy.component.scss']
 })
-export class PrivacyPolicyComponent implements OnInit{
+export class PrivacyPolicyComponent implements OnInit{ 
   /**
      * scrolls to the top when the component is initialized
      */

@@ -5,7 +5,7 @@
             <h1>Portfolio</h1>  
             <div class="line"></div>    
         </div>
-        <p>This page is a sample of my work - please feel free to try them out.</p>
+        <p translate>This page is a sample of my work - please feel free to try them out.</p>
     </div>
     <div>
         <div *ngFor="let project of projects" class="d-flex justify-content-between align-items-center project">
@@ -15,7 +15,7 @@
             <div class="project-txt" [@slideInFromLeft]="isVisible ? 'in' : 'void'">
                 <span class="title">{{ project.title }}</span>
                 <p class="techno">{{ project.technologies }}</p>
-                <p class="description">{{ project.description }}</p>
+                <p class="description" translate>{{ project.description }}</p>
                 <div class="d-flex btn-row">
                     <button class="btn-live">
                         <a href="{{ project.link_live }}" target="_blank" rel="noopener noreferrer">

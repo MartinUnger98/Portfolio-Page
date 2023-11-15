@@ -2,19 +2,26 @@
     <div routerLink="">
         <img src="assets/icons/logo.svg" alt="">
     </div>
-    <div class="links">
-        <a href="#about">
-            <span>About me</span>
-        </a>
-        <a href="#skills">
-            <span>Skills</span>
-        </a>
-        <a href="#portfolio">
-            <span>Portfolio</span>
-        </a> 
-        <a href="#contact">
-            <span>Contact</span>
-        </a> 
+    <div>
+        <div class="links">
+            <a href="#about">
+                <span translate>About me</span>
+            </a>
+            <a href="#skills">
+                <span translate>Skills</span>
+            </a>
+            <a href="#portfolio">
+                <span translate>Portfolio</span>
+            </a> 
+            <a href="#contact">
+                <span translate>Contact</span>
+            </a> 
+        </div>
+        <div class="translate d-flex align-items-center justify-content-end gap-2">
+            <a (click)="translate.use('de');"><span>DE</span></a>
+            <span> | </span>
+            <a (click)="translate.use('en');"><span>EN</span></a>
+        </div>
     </div>
     <div class="burger">
         <img #burgerimg (click)="toggleBurgerMenu()" src="assets/icons/burgermenu.svg" alt="">
@@ -22,16 +29,16 @@
 </section>
 <div #menu class="menu d-flex justify-content-center align-items-center flex-column menu-hidden">
     <a (click)="toggleBurgerMenu()" href="#about">
-        <span>About me</span>
+        <span translate>About me</span>
     </a>
     <a (click)="toggleBurgerMenu()" href="#skills">
-        <span>Skills</span>
+        <span translate>Skills</span>
     </a>
     <a (click)="toggleBurgerMenu()" href="#portfolio">
-        <span>Portfolio</span>
+        <span translate>Portfolio</span>
     </a> 
     <a (click)="toggleBurgerMenu()" href="#contact">
-        <span>Contact</span>
+        <span translate>Contact</span>
     </a> 
 </div>
 

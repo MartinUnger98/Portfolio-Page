@@ -21,6 +21,15 @@ a {
     }
 } 
 
+.translate {
+    a {
+        margin-left: 0px;
+        &:hover {
+            color: #00BEE8;
+        }
+    }
+}
+
 
 
 .burger {

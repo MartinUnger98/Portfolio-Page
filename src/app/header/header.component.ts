@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,8 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  constructor(public translate: TranslateService) {
+    }
   @ViewChild('burgerimg') burgerimg!: ElementRef;
   @ViewChild('menu') menu!: ElementRef;
 
