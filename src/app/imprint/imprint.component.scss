@@ -1,3 +1,9 @@
 section {
     padding-top: 150px;
 }
+
+@media (max-width: 360px) {
+    p {
+        font-size: 14px;
+    }
+}

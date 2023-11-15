@@ -6,10 +6,22 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss'],
   animations: [
-    trigger('slideInFromLeft', [
+    trigger('slideInFromLeft1', [
       state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
         animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+      ]),
+    ]),
+    trigger('slideInFromLeft2', [
+      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
+      transition(':enter', [
+        animate('1s 1500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+      ]),
+    ]),
+    trigger('slideInFromLeft3', [
+      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
+      transition(':enter', [
+        animate('1s 2500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromRight', [
@@ -37,7 +49,7 @@ export class AboutMeComponent {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset;
 
-    if (scrollPosition > componentPosition - window.innerHeight +200) {
+    if (scrollPosition > componentPosition - window.innerHeight + 150) {
       this.isVisible = true;
     }
   }

@@ -70,7 +70,7 @@ export class ProjectsComponent {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset;
 
-    if (scrollPosition > componentPosition - window.innerHeight +200) {
+    if (scrollPosition > componentPosition - window.innerHeight + 150) {
       this.isVisible = true;
     }
   }

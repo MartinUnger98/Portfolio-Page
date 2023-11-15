@@ -1,12 +1,12 @@
 <section id="about">
-    <div id="left-aM" [@slideInFromLeft]="isVisible ? 'in' : 'void'">
+    <div id="left-aM" >
         <h1>About me</h1>
-        <p>Hello! My name is Martin Unger. I am a dedicated frontend developer with expertise in HTML, CSS, JavaScript, and Angular from Vienna. My journey into the world of web development began in 2023, marking the start of an exciting adventure.</p>
-        <div class="d-flex undersection">
+        <p [@slideInFromLeft1]="isVisible ? 'in' : 'void'">Hello! My name is Martin Unger. I am a dedicated frontend developer with expertise in HTML, CSS, JavaScript, and Angular from Vienna. My journey into the world of web development began in 2023, marking the start of an exciting adventure.</p>
+        <div class="d-flex undersection" [@slideInFromLeft2]="isVisible ? 'in' : 'void'">
             <img src="assets/icons/bulb.svg" alt="">
             <p class="m-left">What I cherish most about my role is the opportunity to bring designs to life—converting a designer's vision into interactive, user-friendly web interfaces. It's not merely about writing code for me; it's about crafting an experience, ensuring every pixel aligns perfectly and every interaction feels intuitive.</p>
         </div>
-        <div class="d-flex undersection">
+        <div class="d-flex undersection" [@slideInFromLeft3]="isVisible ? 'in' : 'void'">
             <img src="assets/icons/puzzle.svg" alt="">
             <p>My commitment is to deliver not only functional but also aesthetically pleasing solutions, showcasing the perfect blend of design and technology. <br> I invite you to explore my portfolio to witness my dedication to excellence in the realm of frontend development.</p>
         </div>
@@ -16,4 +16,4 @@
         <img class="profile-img" src="assets/img/profile-img.webp" alt="">
     </div>
 </section>
-<div class="curve" [@slideInFromRight]="isVisible ? 'in' : 'void'"></div>
+<div class="curve"></div>
