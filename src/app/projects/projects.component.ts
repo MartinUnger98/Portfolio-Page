@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
+  animations: [
+    trigger('slideInFromLeft', [
+      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
+      transition(':enter', [
+        animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+      ]),
+    ]),
+    trigger('slideInFromRight', [
+      state('void', style({ transform: 'translateX(100%)', opacity: 0 })),
+      transition(':enter', [
+        animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+      ]),
+    ]),
+  ]
 })
 export class ProjectsComponent {
 
+  isVisible = false;
+  constructor(private el: ElementRef) {}
   projects = [
     {
       title:"Join",
@@ -41,4 +58,20 @@ export class ProjectsComponent {
       link_github: "https://github.com/MartinUnger98/Ring-of-Fire",
     },
   ];
+  
+
+  /**
+   * Host listener for the 'window:scroll' event.
+   *
+   * @param {Event} $event - The scroll event object.
+   */
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition > componentPosition - window.innerHeight +200) {
+      this.isVisible = true;
+    }
+  }
 }

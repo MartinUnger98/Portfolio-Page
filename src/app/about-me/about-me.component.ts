@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -6,26 +6,39 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss'],
   animations: [
-    trigger('slideInFromBottom', [
-      state('void', style({ transform: 'translateY(100%)', opacity: 0 })),
+    trigger('slideInFromLeft', [
+      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
-        animate('1s 1s ease-out', style({ transform: 'translateY(0)', opacity: 1 })),
+        animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
-    trigger('slideInFromTop', [
-      state('void', style({ transform: 'translateY(-100%)', opacity: 0 })),
+    trigger('slideInFromRight', [
+      state('void', style({ transform: 'translateX(100%)', opacity: 0 })),
       transition(':enter', [
-        animate('1s 2s ease-out', style({ transform: 'translateY(0)', opacity: 1 })),
+        animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
-    trigger('fadeInTitle', [
-      state('void', style({ opacity: 0 })),
-      transition(':enter', [
-        animate('1s 3s ease-out', style({ opacity: 1 })),
-      ]),
-    ]),
-  ],
+  ]
 })
 export class AboutMeComponent {
+  isVisible = false;
 
+
+  constructor(private el: ElementRef) {}
+
+  
+  /**
+   * Host listener for the 'window:scroll' event.
+   *
+   * @param {Event} $event - The scroll event object.
+   */
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition > componentPosition - window.innerHeight +200) {
+      this.isVisible = true;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page',
@@ -11,6 +11,19 @@ import { Component } from '@angular/core';
   <app-contact></app-contact>
   `,
 })
-export class PageComponent {
+export class PageComponent implements OnInit {
+  /**
+     * scrolls to the top when the component is initialized
+     */
+  ngOnInit(): void {
+    this.scrollToTop();
+  }
 
+
+  /**
+   * scroll function which scrolls to top
+   */
+  scrollToTop() {
+    window.scroll({ top: 0, left: 0});
+  }
 }

@@ -1,5 +1,5 @@
 <section id="about">
-    <div id="left-aM">
+    <div id="left-aM" [@slideInFromLeft]="isVisible ? 'in' : 'void'">
         <h1>About me</h1>
         <p>Hello! My name is Martin Unger. I am a dedicated frontend developer with expertise in HTML, CSS, JavaScript, and Angular from Vienna. My journey into the world of web development began in 2023, marking the start of an exciting adventure.</p>
         <div class="d-flex undersection">
@@ -11,9 +11,9 @@
             <p>My commitment is to deliver not only functional but also aesthetically pleasing solutions, showcasing the perfect blend of design and technology. <br> I invite you to explore my portfolio to witness my dedication to excellence in the realm of frontend development.</p>
         </div>
     </div>
-    <div id="right-aM">
+    <div id="right-aM" [@slideInFromRight]="isVisible ? 'in' : 'void'">
         <img class="profile-img" src="assets/neon_img/bg_profile.svg" alt="">
         <img class="profile-img" src="assets/img/profile-img.webp" alt="">
     </div>
 </section>
-<div class="curve"></div>
+<div class="curve" [@slideInFromRight]="isVisible ? 'in' : 'void'"></div>
