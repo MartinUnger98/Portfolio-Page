@@ -9,11 +9,7 @@ section {
     border-radius: 4px;
 }
 
-img {
-    width: 450px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 1px #00bee8;
-}
+
 
 .project {
     gap: 100px;
@@ -26,6 +22,12 @@ img {
         div:nth-child(2) {
             order: 2;
         }
+    }
+
+    img {
+        width: 450px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 1px #00bee8;
     }
 
     &:nth-child(even) {
@@ -108,5 +110,27 @@ button {
         text-align: center;
         margin: 0px;
     }
+}
+
+.blueneon-left {
+    top: 0px;    
+}
+
+.blueneon-left, .purpleneon-left {
+    left: 0px;
+} 
+
+.purpleneon-left {
+    top: 45%;
+    width: 510px;
+}
+
+.blueneon-right {
+    top: 75%;
+    right: 0px;
+}
+
+.blueneon-left, .purpleneon-left, .blueneon-right {
+    z-index: -1;
 }
 

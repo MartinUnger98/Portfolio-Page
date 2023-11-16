@@ -1,6 +1,5 @@
 section {
     padding-top: 150px;
-    position: relative;
     padding-bottom: 390px;
 }
 
@@ -11,6 +10,12 @@ section {
     background-color: #4B47FF;
     height: 4px;
     width: 50px;
+}
+
+.neonpurpe-left {
+    bottom: 202.5px;
+    left: 0px;
+    z-index: -1;
 }
 
 h2 {

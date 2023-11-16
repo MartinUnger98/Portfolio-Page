@@ -1,4 +1,4 @@
-<section class="d-flex justify-content-between" id="skills" >
+<section class="d-flex justify-content-between position-relative" id="skills" >
     <div class="d-flex flex-column align-items-center">
         <div class="image-grid" >
             <img *ngFor="let skill of skills" src="assets/icons/{{ skill }}" alt="" [@fadeInFromBottom]="isVisible ? 'in' : 'void'" >
@@ -13,5 +13,5 @@
         <p translate>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
         <button class="btn"><a href="#contact"><span>Get in touch</span></a></button>
     </div>
-    
+    <img src="assets/neon_img/green_skills_right.svg" class="position-absolute neongreen-right" alt="">
 </section>

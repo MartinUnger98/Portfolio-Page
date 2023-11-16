@@ -30,6 +30,9 @@
     .btn {
         display: none;
     }
+    .neongreen-right {
+        width: 290px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -43,6 +46,10 @@
     }
     .skills {
         width: 100%;
+    }
+    .neongreen-right {
+        top: -210px;
+        width: 195px;
     }
 }
 

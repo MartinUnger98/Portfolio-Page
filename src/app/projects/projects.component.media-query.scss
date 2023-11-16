@@ -24,15 +24,29 @@
     .project {
         margin-top: 50px;
     }
+    .blueneon-left {
+        width: 200px;    
+    }
+    
+    .purpleneon-left {
+        width: 350px;
+    }
+    
+    .blueneon-right {
+        width: 270px;
+    }
 }
 
 @media (max-width: 540px) {
     .project-txt {
         max-width: 340px;
     }
-    img {
-        width: 100%;
+    .project {
+        img {
+            width: 100%;
+        }
     }
+    
     button {
         width: 120px;
         height: 50px;
@@ -41,6 +55,17 @@
         justify-content: space-between;
         width: 100%;
         gap: 0px;
+    }
+    .blueneon-left {
+        width: 150px;    
+    }
+    
+    .purpleneon-left {
+        width: 270px;
+    }
+    
+    .blueneon-right {
+        width: 205px;
     }
 }
 
