@@ -32,6 +32,7 @@ export class ProjectsComponent {
       img: "assets/img/Join.svg",
       link_live: "https://martin-unger.developerakademie.net/Join/html/login.html",
       link_github: "https://github.com/MartinUnger98/Join",
+      live: true,
     },
     {
       title:"El pollo Loco",
@@ -40,6 +41,7 @@ export class ProjectsComponent {
       img: "assets/img/pollo_loco.svg",
       link_live: "https://martin-unger.developerakademie.net/El%20Pollo%20Loco/index.html",
       link_github: "https://github.com/MartinUnger98/El-Pollo-Loco",
+      live: true,
     },
     {
       title:"Pokedex",
@@ -48,6 +50,7 @@ export class ProjectsComponent {
       img: "assets/img/Pokedex.svg",
       link_live: "https://martin-unger.developerakademie.net/Pokedex/index.html",
       link_github: "https://github.com/MartinUnger98/Pokedex",
+      live: true,
     },
     {
       title:"Ring of Fire",
@@ -56,6 +59,16 @@ export class ProjectsComponent {
       img: "assets/img/Ring_of_Fire.svg",
       link_live: "https://martin-unger.developerakademie.net/angular-projects/Ring%20of%20Fire/",
       link_github: "https://github.com/MartinUnger98/Ring-of-Fire",
+      live: true,
+    },
+    {
+      title:"simpleCRM",
+      technologies: "Angular | Typescript | SCSS | Firebase",
+      description: "Customer Relationship Management System. Easily organize your customer relationships and track essential information to optimize your business.",
+      img: "assets/img/CRM.svg",
+      link_live: "",
+      link_github: "",
+      live: false,
     },
   ];
   

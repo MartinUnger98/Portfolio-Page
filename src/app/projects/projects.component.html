@@ -16,7 +16,7 @@
                 <span class="title">{{ project.title }}</span>
                 <p class="techno">{{ project.technologies }}</p>
                 <p class="description" translate>{{ project.description }}</p>
-                <div class="d-flex btn-row">
+                <div class="d-flex btn-row" *ngIf="project.live">
                     <button class="btn-live">
                         <a href="{{ project.link_live }}" target="_blank" rel="noopener noreferrer">
                             <span>Live test</span>
@@ -27,6 +27,9 @@
                             <span>Github</span>
                         </a>
                     </button>
+                </div>
+                <div *ngIf="!project.live" class="future d-flex justify-content-center">
+                    <p translate>Coming Soon!!</p>
                 </div>
             </div>
         </div>
