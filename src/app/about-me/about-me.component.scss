@@ -7,7 +7,7 @@ section {
 
 .profile-img {
     position: absolute;
-    top: 170px;
+    bottom: 0px;
     left: 0px;
     width: 600px;
 }
@@ -15,12 +15,14 @@ section {
 #right-aM {
     position: relative;
     width: 600px;
-    height: 486px;
+}
+
+#right-aM, #left-aM {
+    height: 800px;
 }
 
 #left-aM {
     max-width: 700px;
-    height: 590px;
 }
 
 .undersection {
@@ -33,7 +35,7 @@ section {
 
 .curve {
     z-index: 1;
-    margin-top: -170px;
+    margin-top: -240px;
     background-image: url(/assets/img/big-curve.svg);
     background-size: cover;
     width: 100%;

@@ -48,13 +48,11 @@ body {
 p {
     font-size: 21px;
     font-weight: 400;
-    line-height: 21.2px;
 }
 
 @media (max-width: 1040px) {
     h1 {
         font-size: 90px;
-        line-height: 107px;
     }
 }
 
@@ -67,20 +65,17 @@ p {
 @media (max-width: 740px) {
     h1 {
         font-size: 63px;
-        line-height: 75px;
     }
 }
 
 @media (max-width: 570px) {
     h1 {
         font-size: 36px;
-        line-height: 37px;
     }
 }
 @media (max-width: 550px) {
     p {
         font-size: 16px;
-        line-height: 19.2px;
     }
 
 }
