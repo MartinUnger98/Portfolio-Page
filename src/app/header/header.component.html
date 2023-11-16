@@ -18,9 +18,9 @@
             </a> 
         </div>
         <div class="translate d-flex align-items-center justify-content-end gap-2">
-            <a (click)="translate.use('de');"><span>DE</span></a>
+            <a #de (click)="buttonTranslate('de');"><span>DE</span></a>
             <span> | </span>
-            <a (click)="translate.use('en');"><span>EN</span></a>
+            <a #en (click)="buttonTranslate('en');" class="selected"><span>EN</span></a>
         </div>
     </div>
     <div class="burger">

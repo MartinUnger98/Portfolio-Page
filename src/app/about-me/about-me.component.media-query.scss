@@ -1,20 +1,32 @@
 
 @media (min-width: 1920px) {
     .curve {
-        margin-top: -277px;
+        margin-top: -190px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .curve {
+        margin-top: -210px;
     }
 }
 
 @media (min-width: 2650px) {
     .curve {
-        margin-top: -310px;
+        margin-top: -230px;
+    }
+}
+
+@media (min-width: 3130px) {
+    .curve {
+        margin-top: -250px;
     }
 }
 
 
 @media (max-width: 1600px) {
     .curve {
-        margin-top: -214px;
+        margin-top: -150px;
     }
 }
 
@@ -29,6 +41,13 @@
     }
     #left-aM {
         max-width: 100%;
+        height: fit-content;
+    }
+    .profile-img {
+        top: 0;
+    }
+    .curve {
+        margin-top: -213px;
     }
     
 }

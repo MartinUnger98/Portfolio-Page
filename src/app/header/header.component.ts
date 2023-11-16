@@ -11,6 +11,8 @@ export class HeaderComponent {
     }
   @ViewChild('burgerimg') burgerimg!: ElementRef;
   @ViewChild('menu') menu!: ElementRef;
+  @ViewChild('de') de!: ElementRef;
+  @ViewChild('en') en!: ElementRef;
 
   burgerMenuActive = false;
 
@@ -49,6 +51,16 @@ export class HeaderComponent {
   menuFadeOut(menu: HTMLElement) {
     menu.classList.add('menu-hidden');
     menu.classList.remove('menu-visible');
+  }
+
+  buttonTranslate(id: string) {
+    this.translate.use(`${id}`);
+    this.select(id);
+  }
+
+  select(id: string) {
+    this.de.nativeElement.classList.toggle('selected', id === 'de');
+    this.en.nativeElement.classList.toggle('selected', id !== 'de');
   }
 
 }

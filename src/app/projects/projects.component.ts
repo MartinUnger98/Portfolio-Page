@@ -67,10 +67,12 @@ export class ProjectsComponent {
    */
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop;
-    const scrollPosition = window.pageYOffset;
+    let element = this.el.nativeElement;
+    let elementTop = element.offsetTop + 250 + 150;
+    let scrollTop = window.scrollY;
+    let windowHeight = window.innerHeight;
 
-    if (scrollPosition > componentPosition - window.innerHeight + 150) {
+    if (elementTop < (scrollTop + windowHeight) && (elementTop + element.offsetHeight) > scrollTop) {
       this.isVisible = true;
     }
   }
