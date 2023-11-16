@@ -8,7 +8,7 @@ import lottie from 'lottie-web';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss', './contact.component.media-query.scss']
 })
 export class ContactComponent {
   @ViewChild('myForm') myForm!: ElementRef;

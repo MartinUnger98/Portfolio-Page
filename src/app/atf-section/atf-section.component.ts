@@ -4,7 +4,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: 'app-atf-section',
   templateUrl: './atf-section.component.html',
-  styleUrls: ['./atf-section.component.scss', './atf-section-media-query.component.scss'],
+  styleUrls: ['./atf-section.component.scss', './atf-section.component.media-query.scss'],
   animations: [
     trigger('slideInFromBottom', [
       state('void', style({ transform: 'translateY(100%)', opacity: 0 })),

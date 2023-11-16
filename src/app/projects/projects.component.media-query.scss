@@ -1,0 +1,67 @@
+@media (max-width: 1240px) {
+    .project-txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .project {
+        gap: 40px;
+    }
+    .description, .project-txt {
+        text-align: center;
+    }
+    .btn-row {
+        justify-content: center;
+        gap: 86px;
+        button {
+            margin-right: 0px;
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .project {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 540px) {
+    .project-txt {
+        max-width: 340px;
+    }
+    img {
+        width: 100%;
+    }
+    button {
+        width: 120px;
+        height: 50px;
+    }
+    .btn-row {
+        justify-content: space-between;
+        width: 100%;
+        gap: 0px;
+    }
+}
+
+@media (max-width: 430px) {
+    .line {
+        width: 54px;
+    }    
+    .project-txt {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 390px) {
+    .line {
+        width: 24px;
+    }  
+    button {
+        span {
+            font-size: 21px;     
+        }
+        width: 100px;
+        height: 50px;
+    }        
+}

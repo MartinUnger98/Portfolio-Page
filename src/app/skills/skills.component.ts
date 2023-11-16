@@ -4,7 +4,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss'],
+  styleUrls: ['./skills.component.scss', './skills.component.media-query.scss'],
   animations: [
     trigger('fadeInFromBottom', [
       state('void', style({ transform: 'translateX(70%)', opacity: 0 })),

@@ -4,7 +4,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
+  styleUrls: ['./projects.component.scss', './projects.component.media-query.scss'],
   animations: [
     trigger('slideInFromLeft', [
       state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
