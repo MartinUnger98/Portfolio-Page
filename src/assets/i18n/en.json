@@ -1,14 +1,13 @@
 {
   "About me": "About me",
-  "Hello! My name is Martin Unger. I am a dedicated frontend developer with expertise in HTML, CSS, JavaScript, and Angular from Vienna. My journey into the world of web development began in 2023, marking the start of an exciting adventure.": "Hello! My name is Martin Unger. I am a dedicated frontend developer with expertise in HTML, CSS, JavaScript, and Angular from Vienna. My journey into the world of web development began in 2023, marking the start of an exciting adventure.",
-  "What I cherish most about my role is the opportunity to bring designs to life—converting a designer's vision into interactive, user-friendly web interfaces. It's not merely about writing code for me; it's about crafting an experience, ensuring every pixel aligns perfectly and every interaction feels intuitive.": "What I cherish most about my role is the opportunity to bring designs to life—converting a designer's vision into interactive, user-friendly web interfaces. It's not merely about writing code for me; it's about crafting an experience, ensuring every pixel aligns perfectly and every interaction feels intuitive.",
-  "My commitment is to deliver not only functional but also aesthetically pleasing solutions, showcasing the perfect blend of design and technology.": "My commitment is to deliver not only functional but also aesthetically pleasing solutions, showcasing the perfect blend of design and technology.",
-  "I invite you to explore my portfolio to witness my dedication to excellence in the realm of frontend development.": "I invite you to explore my portfolio to witness my dedication to excellence in the realm of frontend development.",
+  "Hello, my name is Martin Unger and I'm a dedicated front-end developer from Vienna with expertise in HTML, CSS, JavaScript, and Angular. I embarked on my exciting adventure into the world of web development in 2023.": "Hello, my name is Martin Unger and I'm a dedicated front-end developer from Vienna with expertise in HTML, CSS, JavaScript, and Angular. I embarked on my exciting adventure into the world of web development in 2023.",
+  "My passion is to translate a designer's vision into interactive, user-friendly web interfaces, breathing life into their ideas. It's not just about writing code; it's about crafting an experience ensuring pixel-perfect alignment, and intuitive interactions.": "My passion is to translate a designer's vision into interactive, user-friendly web interfaces, breathing life into their ideas. It's not just about writing code; it's about crafting an experience ensuring pixel-perfect alignment, and intuitive interactions.",
+  "I'm committed to delivering both functional and aesthetically pleasing solutions that blend design and technology. Explore my portfolio to see my dedication to front-end development excellence.": "I'm committed to delivering both functional and aesthetically pleasing solutions that blend design and technology. Explore my portfolio to see my dedication to front-end development excellence.",
   "I am": "I am",
   "Contact": "Contact",
   "Got a problem to solve?": "Got a problem to solve?",
   "Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.": "Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
-  "Need a Frontend developer? Contact me!": "Need a Frontend developer? Contact me!",
+  "Need a front-end developer? Contact me!": "Need a Frontend developer? Contact me!",
   "Please enter a name with at least two characters.": "Please enter a name with at least two characters.",
   "Invalid email format.": "Invalid email format.",
   "Please write a message with at least two characters.": "Please write a message with at least two characters.",
@@ -89,8 +88,9 @@
   "External Data Protection Officers": "External Data Protection Officers",
   "This page is a sample of my work - please feel free to try them out.": "This page is a sample of my work - please feel free to try them out.",
   "Get in touch": "Get in touch",
-  "I have grown my frontend developments skills that have allowed me to create different real projects.": "I have grown my frontend developments skills that have allowed me to create different real projects.",
+  "My tech stack has consistently translated into projects with real-world applications, showcasing my ability to deliver meaningful results.": "My tech stack has consistently translated into projects with real-world applications, showcasing my ability to deliver meaningful results.",
   "no": "no",
   "Customer Relationship Management System. Easily organize your customer relationships and track essential information to optimize your business.": "Customer Relationship Management System. Easily organize your customer relationships and track essential information to optimize your business.",
-  "Coming Soon": "Coming Soon"
+  "Coming Soon": "Coming Soon",
+  "Intrigued?": "Intrigued?"
 }
