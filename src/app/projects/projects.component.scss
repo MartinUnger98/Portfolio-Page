@@ -12,7 +12,7 @@ section {
 
 
 .project {
-    gap: 100px;
+    gap: 200px;
     flex-wrap: nowrap; 
     margin-top: 100px;        
     &:nth-child(odd) {
@@ -50,7 +50,7 @@ section {
 }
 
 .project-txt {
-    max-width: 513px;
+    max-width: 450px;
 }
 
 .title {
@@ -70,8 +70,9 @@ section {
 }
 
 .future {
-    color: #77fb77;
+    color: #00BEE8;
     p {
+        font-weight: bold;
         font-size: 35px;
     }    
 }
