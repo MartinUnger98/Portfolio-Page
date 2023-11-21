@@ -55,7 +55,7 @@ export class ProjectsComponent {
     {
       title:"Ring of Fire",
       technologies: "Angular | Typescript | SCSS | Firebase",
-      description: "Angular based project about the popular drinking game. Get your friends and play a round.",
+      description: "Discover an Angular-based project about the popular drinking game. Invite your friends and dive into a thrilling game session together.",
       img: "assets/img/Ring_of_Fire.svg",
       link_live: "https://martin-unger.developerakademie.net/angular-projects/Ring%20of%20Fire/",
       link_github: "https://github.com/MartinUnger98/Ring-of-Fire",
@@ -81,10 +81,9 @@ export class ProjectsComponent {
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     let element = this.el.nativeElement;
-    let elementTop = element.offsetTop + 250 + 150;
+    let elementTop = element.offsetTop + 270 + 150;
     let scrollTop = window.scrollY;
     let windowHeight = window.innerHeight;
-
     if (elementTop < (scrollTop + windowHeight) && (elementTop + element.offsetHeight) > scrollTop) {
       this.isVisible = true;
     }

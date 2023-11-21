@@ -8,7 +8,7 @@
   "Got a problem to solve?": "Haben Sie ein Problem zu lösen?",
   "Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.": "Kontaktieren Sie mich über dieses Formular, ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
   "Need a front-end developer? Contact me!": "Brauchen Sie einen Frontend-Entwickler? Kontaktieren Sie mich!",
-  "Please enter a name with at least two characters.": "Bitte geben Sie einen Namen mit mindestens zwei Zeichen ein.",
+  "Please enter a name with at least two characters.": "Geben Sie bitte mindestens zwei Zeichen ein.",
   "Invalid email format.": "Ungültiges E-Mail-Format.",
   "Please write a message with at least two characters.": "Bitte schreiben Sie eine Nachricht mit mindestens zwei Zeichen.",
   "I've read the": "Ich habe die",
@@ -85,14 +85,15 @@
   "The privacy statement was created with the help of activeMind AG, the experts for": "Die Datenschutzerklärung wurde mithilfe der activeMind AG erstellt, den Experten für",
   "(Version #2020-09-30).": "(Version #2020-09-30).",
   "External Data Protection Officers": "externe Datenschutzbeauftragte",
-  "This page is a sample of my work! scroll down to view other projects I have develped.": "Hier finden Sie eine Demonstration meiner Fähigkeiten in Aktion - bitte zögern Sie nicht, sie auszuprobieren.",
+  "This page is a sample of my work! Scroll down to view other projects I have developed.": "Willkommen auf meinem Portfolio! Scrollen Sie nach unten, um Projekte zu entdecken, die ich entwickelt habe.",
   "My tech stack has consistently translated into projects with real-world applications, showcasing my ability to deliver meaningful results.": "Mein Tech Stack half mir Projekte mit praktischem Nutzen zu realisieren. Meine Fähigkeit, bedeutsame Ergebnisse zu liefern, spiegelt sich in ihnen wieder.",
   "no": "no",
   "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
   "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.": "Spring-, Lauf- und Wurfspiel basierend auf objektorientierter Programmierung. Helfen Sie Pepe, Münzen zu finden und Tabasco-Salsa zu sammeln, um gegen die verrückte Henne zu kämpfen.",
-  "Based on the PokéAPI a simple library that provides and catalogues pokemon information.": "Basierend auf der PokéAPI eine einfache Übersicht, die Pokémon-Informationen bereitstellt und katalogisiert.",
-  "Angular based project about the popular drinking game. Get your friends and play a round.": "Ein auf Angular basierendes Projekt über das beliebte Trinkspiel. Holen Sie sich Ihre Freunde und spielen Sie eine Runde.",
+  "Based on the PokéAPI a simple library that provides and catalogues pokemon information.": "Eine einfache Übersicht, die Pokémon-Informationen bereitstellt, basierend auf der PokéAPI.",
+  "Discover an Angular-based project about the popular drinking game. Invite your friends and dive into a thrilling game session together.": "Entdecken Sie ein auf Angular basierendes Projekt über das beliebte Trinkspiel. Laden Sie Ihre Freunde ein und stürzen Sie sich gemeinsam in ein aufregendes Spiel",
   "Customer Relationship Management System. Easily organize your customer relationships and track essential information to optimize your business.": "Kundenbeziehungs Management System. Organisieren Sie Ihre Kundenbeziehungen leicht und verfolgen Sie wichtige Informationen, um Ihr Geschäft zu optimieren.",
   "Coming Soon": "Kommt bald",
-  "Intrigued?": "Neugierig?"
+  "Intrigued?": "Neugierig?",
+  "Let's talk!": "Reden wir!"
 }
