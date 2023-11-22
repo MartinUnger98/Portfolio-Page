@@ -50,10 +50,9 @@ export class AboutMeComponent implements OnInit{
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     let element = this.el.nativeElement;
-    let elementTop = element.offsetTop + 250 + 150;
+    let elementTop = element.offsetTop + 270 + 150;
     let scrollTop = window.scrollY;
     let windowHeight = window.innerHeight;
-
     if (elementTop < (scrollTop + windowHeight) && (elementTop + element.offsetHeight) > scrollTop) {
       this.isVisible = true;
     }
