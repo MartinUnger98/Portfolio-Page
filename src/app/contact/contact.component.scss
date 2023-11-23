@@ -6,7 +6,7 @@ section {
 .line {
     position: absolute;
     left: 0px;
-    top: 200px;
+    top: 220px;
     background-color: #4B47FF;
     height: 4px;
     width: 50px;
@@ -78,10 +78,20 @@ p {
 
 input, textarea {
     width: 100%;
-    background-color: #141d2f;
     outline: none;
     border: 0;
+    background-color: #141d2f;
     color: #ffffff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #141d2f;
 }
 
 ::placeholder {

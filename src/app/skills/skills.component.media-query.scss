@@ -35,14 +35,20 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 860px) {
+    .skill {
+        width: 77px;
+    }
+
+    .skill img {
+        height: 77px;
+    }
+
     .image-grid { 
-        img {
-            width: 77px;
-        }
         gap: 40px;
         width: 100%;
         grid-template-columns: none;
+        
     }
     .skills {
         width: 100%;
@@ -55,10 +61,18 @@
 
 @media (max-width: 530px) {
     .image-grid { 
-        img {
-            width: 60px;
-        }
         gap: 40px;
+    }
+    .skill {
+        width: 60px;
+        p {
+            margin-top: 8px;
+            font-size: 11px;
+        }   
+    }
+
+    .skill img {
+        height: 60px;
     }
     .btnResponsive, .image-grid {
         margin-top: 45px;
@@ -67,10 +81,14 @@
 
 @media (max-width: 430px) {
     .image-grid { 
-        img {
-            width: 45px;
-        }
         gap: 30px;
+    }
+    .skill {
+        width: 45px;
+    }
+
+    .skill img {
+        height: 45px;
     }
 }
 

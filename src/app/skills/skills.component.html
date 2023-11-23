@@ -1,7 +1,10 @@
 <section class="d-flex justify-content-between position-relative" id="skills" >
     <div class="d-flex flex-column align-items-center">
-        <div class="image-grid" >
-            <img *ngFor="let skill of skills" src="assets/icons/{{ skill }}" alt="" [@fadeInFromBottom]="isVisible ? 'in' : 'void'" >
+        <div class="image-grid" [@fadeInFromBottom]="isVisible ? 'in' : 'void'" >
+            <div *ngFor="let skill of skills" class="skill d-flex flex-column align-items-center">
+                <img src="assets/icons/{{ skill.img }}" alt="">
+                <p>{{ skill.txt }}</p>
+            </div>            
         </div>
         <button class="btnResponsive"><a href="#contact"><span translate>Intrigued?</span></a></button>
     </div>

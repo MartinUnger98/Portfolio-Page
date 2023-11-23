@@ -1,6 +1,7 @@
 section {
     margin-top: 270px;
     padding: 0;
+    height: calc(100vh - 270px);
 }
 
 .rotate {
@@ -74,7 +75,8 @@ section {
         scale: 1.2;
     }
 }
-
 .social-media {
-    margin-top: 250px;
+    position: absolute;
+    bottom: 100px;
 }
+

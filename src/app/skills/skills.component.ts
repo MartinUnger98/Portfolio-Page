@@ -16,16 +16,46 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class SkillsComponent {
 skills = [
-  'javaScript.svg',
-  'css.svg',
-  'html.svg',
-  'Angular.svg',
-  'Api.svg',
-  'Firebase.svg',
-  'git.svg',
-  'material.svg',
-  'scrum.svg',
-  'typescript.svg',
+  {
+    img: 'javaScript.svg',
+    txt: 'JavaScript',
+  },
+  {
+    img: 'css.svg',
+    txt: 'CSS'
+  },
+  {
+    img: 'html.svg',
+    txt: 'HTML'
+  },
+  {
+    img: 'Angular.svg',
+    txt: 'Angular'
+  },
+  {
+    img: 'Api.svg',
+    txt: 'Rest-Api'
+  },
+  {
+    img: 'Firebase.svg',
+    txt: 'Firebase'
+  },
+  {
+    img: 'git.svg',
+    txt: 'Git'
+  },
+  {
+    img: 'material.svg',
+    txt: 'Material design'
+  },
+  {
+    img: 'scrum.svg',
+    txt: 'Scrum'
+  },
+  { 
+    img: 'typescript.svg',
+    txt: 'TypeScript'
+  },
 ];
 
 isVisible = false;

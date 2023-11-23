@@ -63,12 +63,12 @@
     .blue_neon {
         height: 300px;
     } 
-    .social-media {
-        margin-top: 150px;
-    }
 }
 
 @media (max-width: 480px) {
+    .line {
+        width: 50px;
+    }
     .blue_neon, .green_neon {
         width: 100px;
     } 
