@@ -1,8 +1,10 @@
-section {
+.content {
     padding-top: 170px;
     z-index: 1;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: 1920px;
 }
 
 .profile-img {

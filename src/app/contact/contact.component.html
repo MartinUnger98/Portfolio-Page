@@ -1,60 +1,62 @@
-<section id="contact" class="position-relative">
-    <div>
-        <div class="line"></div>
-        <h1 translate>Contact</h1>
-    </div>
-    <div class="d-flex justify-content-between middle-sec">
-        <div id="left-section">
-            <h2 translate>Got a problem to solve?</h2>
-            <p translate>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.<br><br>Need a front-end developer? Contact me!</p>
+<section id="contact" class="position-relative d-flex justify-content-center">
+    <div class="content">
+        <div>
+            <div class="line"></div>
+            <h1 translate>Contact</h1>
         </div>
-        <div class="d-flex flex-column input-sec">
-            <form #myForm (submit)="sendMail($event)">
-                <div>
-                    <div #nameDiv class="input-fields d-flex">
-                        <input #nameInput type="text" placeholder="Your name" name="name">
-                        <img #nameImg src="" alt="">
-                    </div>
-                    <p #nameErr class="err-mess hidden" translate>Please enter a name with at least two characters.</p>
-                </div>
-
-                <div>
-                    <div #emailDiv class="input-fields d-flex">
-                        <input #emailInput type="email" placeholder="Your email" name="email">
-                        <img #emailImg src="" alt="">
-                    </div>
-                    <p #emailErr class="err-mess hidden" translate>Invalid email format.</p>
-                </div>
-                
-
-                <div>
-                    <div #messageDiv class="input-fields d-flex align-items-start">
-                        <textarea #messageInput cols="30" rows="10" placeholder="Your message" name="message"></textarea>
-                        <img #messageImg src="" alt="">
-                    </div>
-                    <p #messageErr class="err-mess hidden" translate>Please write a message with at least two characters.</p>
-                </div>
-
-                <div class="d-flex align-items-center gap-3">
+        <div class="d-flex justify-content-between middle-sec">
+            <div id="left-section">
+                <h2 translate>Got a problem to solve?</h2>
+                <p translate>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.<br><br>Need a front-end developer? Contact me!</p>
+            </div>
+            <div class="d-flex flex-column input-sec">
+                <form #myForm (submit)="sendMail($event)">
                     <div>
-                        <div id="checkbox" class="checkbox" (click)="toggleCheckbox()" [class.checked]="isChecked"></div>
+                        <div #nameDiv class="input-fields d-flex">
+                            <input #nameInput type="text" placeholder="Your name" name="name">
+                            <img #nameImg src="" alt="">
+                        </div>
+                        <p #nameErr class="err-mess hidden" translate>Please enter a name with at least two characters.</p>
                     </div>
-                    <p translate>I've read the <a routerLink="/privacy-policy" translate>privacy policy</a> and agree to the processing of my data as outlined.</p>
-                </div>
 
-                <div class="d-flex justify-content-center">
-                    <button type="submit" #btnDiv disabled>
-                        <span translate>Send message</span>
-                    </button>
-                </div>
-            </form>
-            <div class="d-flex justify-content-end">
-                <a href="#" class="up-btn"></a>
-            </div>  
+                    <div>
+                        <div #emailDiv class="input-fields d-flex">
+                            <input #emailInput type="email" placeholder="Your email" name="email">
+                            <img #emailImg src="" alt="">
+                        </div>
+                        <p #emailErr class="err-mess hidden" translate>Invalid email format.</p>
+                    </div>
+                    
+
+                    <div>
+                        <div #messageDiv class="input-fields d-flex align-items-start">
+                            <textarea #messageInput cols="30" rows="10" placeholder="Your message" name="message"></textarea>
+                            <img #messageImg src="" alt="">
+                        </div>
+                        <p #messageErr class="err-mess hidden" translate>Please write a message with at least two characters.</p>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <div>
+                            <div id="checkbox" class="checkbox" (click)="toggleCheckbox()" [class.checked]="isChecked"></div>
+                        </div>
+                        <p translate>I've read the <a routerLink="/privacy-policy" translate>privacy policy</a> and agree to the processing of my data as outlined.</p>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" #btnDiv disabled>
+                            <span translate>Send message</span>
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-end">
+                    <a href="#" class="up-btn"></a>
+                </div>  
+            </div>
         </div>
     </div>
     <div #overlay class="overlay d-none">
         <div #sendmailBtn class="sendMailBtn"></div>
-    </div>
+    </div>    
     <img src="assets/neon_img/purple_contact.svg" class="position-absolute neonpurpe-left" alt="">
 </section>

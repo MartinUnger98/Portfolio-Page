@@ -11,17 +11,35 @@
     }
 }
 
+@media (min-width: 2340px) {
+    .curve {
+        margin-top: -320px;
+    }
+}
+
 @media (min-width: 2650px) {
     .curve {
-        margin-top: -300px;
+        margin-top: -340px;
         height: 900px;
     }
 }
 
-@media (min-width: 3130px) {
+@media (min-width: 2820px) {
     .curve {
-        margin-top: -320px;
+        margin-top: -400px;
         height: 1100px;
+    }
+}
+
+@media (min-width: 3370px) {
+    .curve {
+        margin-top: -440px;
+    }
+}
+
+@media (min-width: 3700px) {
+    .curve {
+        margin-top: -480px;
     }
 }
 
@@ -33,7 +51,7 @@
 }
 
 @media (max-width: 1350px) {
-    section {
+    .content {
         display: block;
     }
     #right-aM {

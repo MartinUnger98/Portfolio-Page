@@ -1,31 +1,33 @@
-<section class="d-flex justify-content-between align-items-center">
-    <div routerLink="" (click)="scrollToTop()">
-        <img src="assets/icons/logo.svg" alt="">
-    </div>
-    <div>
-        <div class="links">
-            <a href="#about">
-                <span translate>About me</span>
-            </a>
-            <a href="#skills">
-                <span translate>Skills</span>
-            </a>
-            <a href="#portfolio">
-                <span translate>Portfolio</span>
-            </a> 
-            <a href="#contact">
-                <span translate>Contact</span>
-            </a> 
+<section class="d-flex justify-content-center">
+    <div class="d-flex justify-content-between align-items-center content">
+        <div routerLink="" (click)="scrollToTop()">
+            <img src="assets/icons/logo.svg" alt="">
         </div>
-        <div class="translate d-flex align-items-center justify-content-end gap-2">
-            <a #de (click)="buttonTranslate('de');"><span>DE</span></a>
-            <span> | </span>
-            <a #en (click)="buttonTranslate('en');" class="selected"><span>EN</span></a>
+        <div>
+            <div class="links">
+                <a href="#about">
+                    <span translate>About me</span>
+                </a>
+                <a href="#skills">
+                    <span translate>Skills</span>
+                </a>
+                <a href="#portfolio">
+                    <span translate>Portfolio</span>
+                </a> 
+                <a href="#contact">
+                    <span translate>Contact</span>
+                </a> 
+            </div>
+            <div class="translate d-flex align-items-center justify-content-end gap-2">
+                <a #de (click)="buttonTranslate('de');"><span>DE</span></a>
+                <span> | </span>
+                <a #en (click)="buttonTranslate('en');" class="selected"><span>EN</span></a>
+            </div>
         </div>
-    </div>
-    <div class="burger">
-        <img #burgerimg (click)="toggleBurgerMenu()" src="assets/icons/burgermenu.svg" alt="">
-    </div>     
+        <div class="burger">
+            <img #burgerimg (click)="toggleBurgerMenu()" src="assets/icons/burgermenu.svg" alt="">
+        </div> 
+    </div>    
 </section>
 <div #menu class="menu d-flex justify-content-center align-items-center flex-column menu-hidden">
     <a (click)="toggleBurgerMenu()" href="#about">

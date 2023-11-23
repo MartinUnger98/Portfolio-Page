@@ -1,19 +1,21 @@
-<section id="about">
-    <div id="left-aM" >
-        <h1 translate>About me</h1>
-        <p [@slideInFromLeft1]="isVisible ? 'in' : 'void'" translate>Hello, my name is Martin Unger and I'm a dedicated front-end developer from Vienna with expertise in HTML, CSS, JavaScript, and Angular. I embarked on my exciting adventure into the world of web development in 2023.</p>
-        <div class="d-flex undersection" [@slideInFromLeft2]="isVisible ? 'in' : 'void'">
-            <img src="assets/icons/bulb.svg" alt="">
-            <p class="m-left" translate>My passion is to translate a designer's vision into interactive, user-friendly web interfaces, breathing life into their ideas. It's not just about writing code; it's about crafting an experience ensuring pixel-perfect alignment, and intuitive interactions.</p>
+<section id="about" class="d-flex justify-content-center">
+    <div class="content">
+        <div id="left-aM" >
+            <h1 translate>About me</h1>
+            <p [@slideInFromLeft1]="isVisible ? 'in' : 'void'" translate>Hello, my name is Martin Unger and I'm a dedicated front-end developer from Vienna with expertise in HTML, CSS, JavaScript, and Angular. I embarked on my exciting adventure into the world of web development in 2023.</p>
+            <div class="d-flex undersection" [@slideInFromLeft2]="isVisible ? 'in' : 'void'">
+                <img src="assets/icons/bulb.svg" alt="">
+                <p class="m-left" translate>My passion is to translate a designer's vision into interactive, user-friendly web interfaces, breathing life into their ideas. It's not just about writing code; it's about crafting an experience ensuring pixel-perfect alignment, and intuitive interactions.</p>
+            </div>
+            <div class="d-flex undersection" [@slideInFromLeft3]="isVisible ? 'in' : 'void'">
+                <img src="assets/icons/puzzle.svg" alt="">
+                <p translate>I'm committed to delivering both functional and aesthetically pleasing solutions that blend design and technology. Explore my portfolio to see my dedication to front-end development excellence.</p>
+            </div>
         </div>
-        <div class="d-flex undersection" [@slideInFromLeft3]="isVisible ? 'in' : 'void'">
-            <img src="assets/icons/puzzle.svg" alt="">
-            <p translate>I'm committed to delivering both functional and aesthetically pleasing solutions that blend design and technology. Explore my portfolio to see my dedication to front-end development excellence.</p>
+        <div id="right-aM" [@slideInFromRight]="isVisible ? 'in' : 'void'">
+            <img class="profile-img" src="assets/neon_img/bg_profile.svg" alt="">
+            <img class="profile-img" src="assets/img/profile-img.webp" alt="">
         </div>
-    </div>
-    <div id="right-aM" [@slideInFromRight]="isVisible ? 'in' : 'void'">
-        <img class="profile-img" src="assets/neon_img/bg_profile.svg" alt="">
-        <img class="profile-img" src="assets/img/profile-img.webp" alt="">
     </div>
 </section>
 <div class="curve"></div>

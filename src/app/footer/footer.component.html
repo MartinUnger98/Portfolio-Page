@@ -1,15 +1,17 @@
-<section class="d-flex justify-content-between align-items-center position-absolute">
-    <div class="d-flex flex-column align-items-center">
-        <img routerLink="" class="logo" src="assets/icons/logo.svg" alt="">
-        <a class="imprint" routerLink="/imprint" translate>Imprint</a>        
-    </div>
-    <span>© Martin Unger 2023</span>
-    <div class="d-flex">
-        <div *ngFor="let img of socialMedia">
-            <a href="{{ img.link }}" target="_blank" rel="noopener noreferrer">
-                <img class="scl-media" src="assets/icons/{{ img.img }}" alt="">
-            </a>        
+<section class="position-absolute d-flex justify-content-center">
+    <div class="d-flex justify-content-between align-items-center content">
+        <div class="d-flex flex-column align-items-center">
+            <img routerLink="" class="logo" src="assets/icons/logo.svg" alt="">
+            <a class="imprint" routerLink="/imprint" translate>Imprint</a>        
         </div>
+        <span>© Martin Unger 2023</span>
+        <div class="d-flex">
+            <div *ngFor="let img of socialMedia">
+                <a href="{{ img.link }}" target="_blank" rel="noopener noreferrer">
+                    <img class="scl-media" src="assets/icons/{{ img.img }}" alt="">
+                </a>        
+            </div>
+        </div>
+        <a routerLink="/imprint" class="imprint_phone" translate>Imprint</a>
     </div>
-    <a routerLink="/imprint" class="imprint_phone" translate>Imprint</a>
 </section>
