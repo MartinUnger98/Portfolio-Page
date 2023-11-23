@@ -7,30 +7,31 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./about-me.component.scss', './about-me.component.media-query.scss'],
   animations: [
     trigger('slideInFromLeft1', [
-      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
+        style({ transform: 'translateX(-100%)', opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('250ms 0ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromLeft2', [
-      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
+        style({ transform: 'translateX(-100%)', opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('250ms 250ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromLeft3', [
-      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
+        style({ transform: 'translateX(-100%)', opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('250ms 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromRight', [
-      state('void', style({ transform: 'translateX(100%)', opacity: 0 })),
       transition(':enter', [
+        style({ transform: 'translateX(100%)', opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('500ms 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
   ]
+  
 })
 export class AboutMeComponent implements OnInit{
   isVisible = false;

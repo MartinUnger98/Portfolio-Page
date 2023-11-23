@@ -7,12 +7,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./skills.component.scss', './skills.component.media-query.scss'],
   animations: [
     trigger('fadeInFromBottom', [
-      state('void', style({ transform: 'translateX(70%)', opacity: 0 })),
       transition(':enter', [
-        animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+        style({ transform: 'translateY(70%)', opacity: 0 }), // Anfangszustand direkt in der Transition
+        animate('1s 500ms ease-out', style({ transform: 'translateY(0)', opacity: 1 })),
       ]),
     ]),
-  ],
+  ]  
 })
 export class SkillsComponent {
 skills = [

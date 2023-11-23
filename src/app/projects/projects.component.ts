@@ -7,18 +7,18 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./projects.component.scss', './projects.component.media-query.scss'],
   animations: [
     trigger('slideInFromLeft', [
-      state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
+        style({ transform: 'translateX(-100%)', opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromRight', [
-      state('void', style({ transform: 'translateX(100%)', opacity: 0 })),
       transition(':enter', [
+        style({ transform: 'translateX(100%)', opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
-  ]
+  ]  
 })
 export class ProjectsComponent {
 

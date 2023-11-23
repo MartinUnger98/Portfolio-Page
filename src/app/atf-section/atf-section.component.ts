@@ -7,24 +7,25 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./atf-section.component.scss', './atf-section.component.media-query.scss'],
   animations: [
     trigger('slideInFromBottom', [
-      state('void', style({ transform: 'translateY(100%)', opacity: 0 })),
       transition(':enter', [
+        style({ transform: 'translateY(100%)', opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('1s 0ms ease-out', style({ transform: 'translateY(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromTop', [
-      state('void', style({ transform: 'translateY(-100%)', opacity: 0 })),
       transition(':enter', [
+        style({ transform: 'translateY(-100%)', opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('1s 500ms ease-out', style({ transform: 'translateY(0)', opacity: 1 })),
       ]),
     ]),
     trigger('fadeInTitle', [
-      state('void', style({ opacity: 0 })),
       transition(':enter', [
+        style({ opacity: 0 }), // Anfangszustand direkt in der Transition
         animate('1s 1s ease-out', style({ opacity: 1 })),
       ]),
     ]),
-  ],
+  ]
+  
 })
 export class AtfSectionComponent {
   socialMedia = [
