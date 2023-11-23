@@ -1,10 +1,10 @@
 /* poppins-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    src: url('assets/fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/poppins-v20-latin-regular.woff2') format('woff2');
 }
 
 :root {
@@ -26,19 +26,19 @@ h1 {
 }
 
 section {
-    padding:37px 100px 37px 100px;
+    padding: 37px 100px 37px 100px;
 }
 
 #shadow-host-companion {
     padding: 0;
 }
 
-html, body { 
-    height: 100%; 
+html, body {
+    height: 100%;
 }
 
-body { 
-    margin: 0; 
+body {
+    margin: 0;
 }
 
 .root {
@@ -68,7 +68,7 @@ p {
 }
 
 ::-webkit-scrollbar-corner {
-    background: transparent
+    background: transparent;
 }
 
 @media (max-width: 1040px) {
@@ -94,6 +94,7 @@ p {
         font-size: 36px;
     }
 }
+
 @media (max-width: 550px) {
     p {
         font-size: 16px;

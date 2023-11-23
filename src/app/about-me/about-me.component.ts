@@ -9,32 +9,31 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     trigger('slideInFromLeft1', [
       state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
-        animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+        animate('500ms 250ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromLeft2', [
       state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
-        animate('1s 1500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+        animate('500ms 750ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromLeft3', [
       state('void', style({ transform: 'translateX(-100%)', opacity: 0 })),
       transition(':enter', [
-        animate('1s 2500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+        animate('500ms 1.25s ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
     trigger('slideInFromRight', [
       state('void', style({ transform: 'translateX(100%)', opacity: 0 })),
       transition(':enter', [
-        animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+        animate('500ms 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
   ]
 })
 export class AboutMeComponent implements OnInit{
   isVisible = false;
-
 
   constructor(private el: ElementRef) {}
 
@@ -50,7 +49,7 @@ export class AboutMeComponent implements OnInit{
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     let element = this.el.nativeElement;
-    let elementTop = element.offsetTop + 270 + 150;
+    let elementTop = element.offsetTop + 270 + 170;
     let scrollTop = window.scrollY;
     let windowHeight = window.innerHeight;
     if (elementTop < (scrollTop + windowHeight) && (elementTop + element.offsetHeight) > scrollTop) {
@@ -58,3 +57,5 @@ export class AboutMeComponent implements OnInit{
     }
   }
 }
+
+
