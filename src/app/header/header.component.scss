@@ -4,7 +4,7 @@ section {
         height: 90px;
         filter: drop-shadow(4px 3px 7px #00BEE8);
     }  
-    width: 100vw;
+    width: calc(100vw - 7px);
     position: fixed;
     top: 0px;
     background-color: #141d2ff0;
