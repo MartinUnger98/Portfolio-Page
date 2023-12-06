@@ -45,6 +45,13 @@ a {
     }  
 }
 
+@media (max-width: 800px) {
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+}
+
 @media (max-width: 740px) {
     .content {
         flex-direction: column;

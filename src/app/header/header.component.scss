@@ -87,4 +87,9 @@ a {
     .burger {
         display: flex !important;
     }
+    section {
+        img {            
+            height: 50px;
+        }  
+    }
 }

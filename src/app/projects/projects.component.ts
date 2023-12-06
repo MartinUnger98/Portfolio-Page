@@ -61,15 +61,6 @@ export class ProjectsComponent {
       link_github: "https://github.com/MartinUnger98/Ring-of-Fire",
       live: true,
     },
-    {
-      title:"simpleCRM",
-      technologies: "Angular | Typescript | SCSS | Firebase",
-      description: "Customer Relationship Management System. Easily organize your customer relationships and track essential information to optimize your business.",
-      img: "assets/img/CRM.svg",
-      link_live: "",
-      link_github: "",
-      live: false,
-    },
   ];
   
 
