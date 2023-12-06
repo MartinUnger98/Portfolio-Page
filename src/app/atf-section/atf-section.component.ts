@@ -35,7 +35,7 @@ export class AtfSectionComponent {
     },
     {
       img: 'mail.svg',
-      link: 'mailto:martin-unger2@live.at',
+      link: 'mailto:mail@martin-unger.at',
     },
     {
       img: 'linkedin.svg',
