@@ -26,9 +26,18 @@ export class ProjectsComponent {
   constructor(private el: ElementRef) {}
   projects = [
     {
+      title:"DABubble",
+      technologies: "Angular | Typescript | SCSS | Firebase",
+      description: "Inspired by Slack, this chat messenger allows you to create custom channels for smooth communication with colleagues. Exchange direct messages, share images, and tag individuals effortlessly.",
+      img: "assets/img/dabubble_portfolio.svg",
+      link_live: "https://dabubble.martin-unger.at/",
+      link_github: "https://github.com/MartinUnger98/DABubble",
+      live: true,
+    },
+    {
       title:"Join",
       technologies: "HTML | CSS | Javascript",
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ",
       img: "assets/img/Join.svg",
       link_live: "https://join.martin-unger.at/html/login.html",
       link_github: "https://github.com/MartinUnger98/Join",
@@ -52,7 +61,7 @@ export class ProjectsComponent {
       link_github: "https://github.com/MartinUnger98/Pokedex",
       live: true,
     },
-    {
+   /*  {
       title:"Ring of Fire",
       technologies: "Angular | Typescript | SCSS | Firebase",
       description: "Discover an Angular-based project about the popular drinking game. Invite your friends and dive into a thrilling game session together.",
@@ -60,7 +69,7 @@ export class ProjectsComponent {
       link_live: "https://ringoffire.martin-unger.at/",
       link_github: "https://github.com/MartinUnger98/Ring-of-Fire",
       live: true,
-    },
+    }, */
   ];
   
 
