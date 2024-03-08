@@ -18,7 +18,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         animate('1s 500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
       ]),
     ]),
-  ]  
+  ]
 })
 export class ProjectsComponent {
 
@@ -27,7 +27,7 @@ export class ProjectsComponent {
   projects = [
     {
       title:"DABubble",
-      technologies: "Angular | Typescript | SCSS | Firebase",
+      technologies: "Angular | Typescript | SCSS | Firebase | RxJs",
       description: "Inspired by Slack, this chat messenger allows you to create custom channels for smooth communication with colleagues. Exchange direct messages, share images, and tag individuals effortlessly.",
       img: "assets/img/dabubble_portfolio.svg",
       link_live: "https://dabubble.martin-unger.at/",
@@ -36,7 +36,7 @@ export class ProjectsComponent {
     },
     {
       title:"Join",
-      technologies: "HTML | CSS | Javascript",
+      technologies: "Javascript | HTML | CSS",
       description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ",
       img: "assets/img/Join.svg",
       link_live: "https://join.martin-unger.at/html/login.html",
@@ -45,7 +45,7 @@ export class ProjectsComponent {
     },
     {
       title:"El pollo Loco",
-      technologies: "HTML | CSS | Javascript",
+      technologies: "Javascript | HTML | CSS",
       description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       img: "assets/img/pollo_loco.svg",
       link_live: "https://elpolloloco.martin-unger.at/",
@@ -54,7 +54,7 @@ export class ProjectsComponent {
     },
     {
       title:"Pokedex",
-      technologies: "HTML | CSS | Javascript | Api",
+      technologies: "Javascript | Api | HTML | CSS",
       description: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
       img: "assets/img/Pokedex.svg",
       link_live: "https://pokedex.martin-unger.at/",
@@ -71,7 +71,7 @@ export class ProjectsComponent {
       live: true,
     }, */
   ];
-  
+
 
   /**
    * Host listener for the 'window:scroll' event.

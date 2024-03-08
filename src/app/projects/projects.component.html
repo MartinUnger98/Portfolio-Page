@@ -2,12 +2,12 @@
     <div class="projects-header" >
         <div class="d-flex align-items-center justify-content-center gap-3">
             <div class="line"></div>
-            <h1>Portfolio</h1>  
-            <div class="line"></div>    
+            <h1>Portfolio</h1>
+            <div class="line"></div>
         </div>
-        <p translate>This page is a sample of my work! Scroll down to view other projects I have developed.</p>
+        <p translate>This section is a sample of my work! Scroll down to see a selection of the best projects I have developed.</p>
     </div>
-    <div>
+    <div class="content">
         <div *ngFor="let project of projects" class="d-flex justify-content-between align-items-center project">
             <div [@slideInFromRight]="isVisible ? 'in' : 'void'">
                 <img src="{{ project.img }}" alt="">

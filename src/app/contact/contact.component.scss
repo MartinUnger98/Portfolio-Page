@@ -1,11 +1,8 @@
+@import '../../styles.scss';
+
 section {
     padding-top: 170px;
     padding-bottom: 390px;
-}
-
-.content {
-    max-width: 1920px;
-    width: 100%;
 }
 
 .line {
@@ -37,9 +34,9 @@ p {
     margin: 0;
 }
 
-#left-section { 
+#left-section {
     width: 473px;
-    
+
     p {
         margin-top: 50px;
     }
@@ -90,8 +87,8 @@ input, textarea {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
     -webkit-background-clip: text;
     -webkit-text-fill-color: #ffffff;
@@ -115,7 +112,7 @@ textarea {
     &:hover {
         background-image: url(/assets/icons/Checkbox_Default_hover.svg);
     }
-    
+
 }
 
 .checkbox.checked {

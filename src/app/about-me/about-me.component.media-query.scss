@@ -1,43 +1,51 @@
 
-@media (min-width: 1920px) {
+@media (min-width: 1900px) {
     .curve {
         margin-top: -260px;
     }
 }
 
-@media (min-width: 2200px) {
+@media (min-width: 2060px) {
     .curve {
         margin-top: -280px;
     }
 }
 
-@media (min-width: 2340px) {
+@media (min-width: 2220px) {
     .curve {
         margin-top: -320px;
     }
 }
 
-@media (min-width: 2650px) {
+@media (min-width: 2550px) {
     .curve {
         margin-top: -340px;
         height: 900px;
     }
 }
 
-@media (min-width: 2820px) {
+
+@media (min-width: 2720px) {
+  .curve {
+      margin-top: -360px;
+      height: 1100px;
+  }
+}
+
+@media (min-width: 2900px) {
     .curve {
         margin-top: -400px;
         height: 1100px;
     }
 }
 
-@media (min-width: 3370px) {
+@media (min-width: 3230px) {
     .curve {
         margin-top: -440px;
     }
 }
 
-@media (min-width: 3700px) {
+@media (min-width: 3590px) {
     .curve {
         margin-top: -480px;
     }
@@ -62,6 +70,7 @@
     #left-aM {
         max-width: 100%;
         height: fit-content;
+        margin: 0 0 50px 0;
     }
     #right-aM {
         height: 487px;
@@ -73,7 +82,7 @@
         margin-top: -213px;
         height: 450px;
     }
-    
+
 }
 @media (max-width: 1200px) {
     .curve {
@@ -97,10 +106,14 @@
         margin-left: 0px;
     }
     .undersection {
+      margin-top: 22px;
         img {
             display: none;
         }
-    } 
+    }
+    #left-aM {
+      margin: 0 0 20px 0;
+    }
 }
 
 @media (max-width: 550px) {
@@ -118,5 +131,5 @@
     .curve {
         margin-top: -83px;
         height: 210px;
-    } 
+    }
 }

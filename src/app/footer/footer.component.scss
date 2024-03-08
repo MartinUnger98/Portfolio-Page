@@ -1,11 +1,8 @@
+@import '../../styles.scss';
+
 section {
     border-top: 4px solid #00BEE8;
     width: 100vw;
-}
-
-.content {
-    max-width: 1920px;
-    width: 100%;
 }
 
 .logo {
@@ -25,7 +22,7 @@ span, a {
     &:hover {
         scale: 1.2;
     }
-    
+
 }
 
 .imprint_phone {
@@ -41,7 +38,7 @@ a {
     }
     img {
         filter: drop-shadow(4px 3px 7px #4b47ff);
-    }  
+    }
 }
 
 @media (max-width: 800px) {
@@ -58,7 +55,7 @@ a {
     }
     .imprint_phone {
         display: block;
-    } 
+    }
     .imprint {
         display: none;
     }

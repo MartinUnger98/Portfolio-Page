@@ -1,5 +1,7 @@
+@import '../../styles.scss';
+
 section {
-    padding-top: 170px;  
+    padding-top: 170px;
 }
 
 .line {
@@ -9,12 +11,10 @@ section {
     border-radius: 4px;
 }
 
-
-
 .project {
     gap: 200px;
-    flex-wrap: nowrap; 
-    margin-top: 100px;        
+    flex-wrap: nowrap;
+    padding: 150px 0px;
     &:nth-child(odd) {
         div:first-child {
             order: 1;
@@ -25,20 +25,20 @@ section {
     }
 
     img {
-        width: 450px;
+        width: 600px;
         border-radius: 10px;
         box-shadow: 0 0 10px 1px #00bee8;
     }
 
     &:nth-child(even) {
         div:first-child {
-            order: 2; 
+            order: 2;
             @media (max-width: 1240px) {
                 order: 1;
             }
         }
         div:nth-child(2) {
-            order: 1; 
+            order: 1;
             @media (max-width: 1240px) {
                 order: 2;
             }
@@ -58,7 +58,7 @@ section {
     font-weight: 700;
     font-size: 32px;
 }
- 
+
 .techno{
     color: #00BEE8;
     font-weight: 400;
@@ -73,7 +73,7 @@ button {
     span {
         color: #ffffff;
         font-size: 23px;
-        font-weight: 400;        
+        font-weight: 400;
     }
     a {
         text-decoration: none;
@@ -106,12 +106,12 @@ button {
 }
 
 .blueneon-left {
-    top: 0px;    
+    top: 0px;
 }
 
 .blueneon-left, .purpleneon-left {
     left: 0px;
-} 
+}
 
 .purpleneon-left {
     top: 53%;

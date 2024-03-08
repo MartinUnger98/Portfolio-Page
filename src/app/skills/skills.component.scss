@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 section {
     padding-top: 170px;
     position: relative;
@@ -6,18 +8,13 @@ section {
     min-height: 100vh;
 }
 
-.content {
-    max-width: 1920px;
-    width: 100%;
-}
-
 .image-grid {
     display: grid;
     gap: 83px;
     width: 646px;
     justify-content: center;
     text-align: center;
-    grid-template-rows: repeat(4, auto); 
+    grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(4, 1fr);
     img {
         width: 100%;
@@ -37,7 +34,7 @@ section {
     }
     .skill:nth-child(10) {
         grid-row: 4;
-    }    
+    }
 }
 
 .skill {
@@ -45,7 +42,7 @@ section {
     p {
         margin-top: 8px;
         font-size: 16px;
-    }    
+    }
 }
 
 .skills {
@@ -74,7 +71,7 @@ button {
             color: #ffffff;
         }
     }
-    
+
     background-color: #00BEE8;
     border-radius: 10px;
     border: 0;

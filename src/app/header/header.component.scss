@@ -1,19 +1,17 @@
+@import '../../styles.scss';
+
 section {
     img {
         cursor: pointer;
         height: 90px;
         filter: drop-shadow(4px 3px 7px #00BEE8);
-    }  
+        margin-left: -15px
+    }
     width: 100vw;
     position: fixed;
     top: 0px;
     background-color: #141d2ff0;
     z-index: 3;
-}
-
-.content {
-    max-width: 1920px;
-    width: 100%;
 }
 
 a {
@@ -24,7 +22,7 @@ a {
     &:hover {
         color: #00BEE8;
     }
-} 
+}
 
 .translate {
     a {
@@ -53,7 +51,7 @@ a {
     &:hover {
         transform: scale(1.2);
     }
-    
+
 }
 
 .menu {
@@ -88,8 +86,8 @@ a {
         display: flex !important;
     }
     section {
-        img {            
+        img {
             height: 50px;
-        }  
+        }
     }
 }

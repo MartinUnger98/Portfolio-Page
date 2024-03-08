@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 section {
     margin-top: 270px;
     padding: 0;
@@ -30,7 +32,7 @@ section {
     top: -110px;
     left: 0px;
 }
- 
+
 .green_neon {
     width: 679.58px;
     height: 573.58px;
@@ -42,9 +44,9 @@ section {
     z-index: -1;
 }
 
-.talk-btn { 
+.talk-btn {
     width: 165px;
-    height: 58px;   
+    height: 58px;
     background-color: #00BEE8;
     border-radius: 10px;
     border: 0;
@@ -61,13 +63,13 @@ section {
     }
     a {
         text-decoration: none;
-    }    
+    }
 }
 
 .line {
     height: 2px;
     background-color: #00BEE8;
-    width: 100px;    
+    width: 100px;
 }
 
 .social-media-btn, .line {

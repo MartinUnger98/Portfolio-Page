@@ -50,6 +50,11 @@ p {
     font-weight: 400;
 }
 
+.content {
+  max-width: 1600px;
+  width: 100%;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
