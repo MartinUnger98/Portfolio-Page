@@ -27,7 +27,7 @@ export class ProjectsComponent {
   projects = [
     {
       title:"DABubble",
-      technologies: "Angular | Typescript | SCSS | Firebase | RxJs",
+      technologies: "Angular | Typescript | Firebase | RxJs | SCSS ",
       description: "Inspired by Slack, this chat messenger allows you to create custom channels for smooth communication with colleagues. Exchange direct messages, share images, and tag individuals effortlessly.",
       img: "assets/img/dabubble_portfolio.svg",
       link_live: "https://dabubble.martin-unger.at/",
@@ -54,7 +54,7 @@ export class ProjectsComponent {
     },
     {
       title:"Pokedex",
-      technologies: "Javascript | Api | HTML | CSS",
+      technologies: "Angular | Typescript | Api | RxJs",
       description: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
       img: "assets/img/Pokedex.svg",
       link_live: "https://pokedex.martin-unger.at/",
