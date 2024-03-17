@@ -58,7 +58,7 @@ export class ProjectsComponent {
       description: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
       img: "assets/img/Pokedex.svg",
       link_live: "https://pokedex.martin-unger.at/",
-      link_github: "https://github.com/MartinUnger98/Pokedex",
+      link_github: "https://github.com/MartinUnger98/Pokedex-Angular",
       live: true,
     },
    /*  {
