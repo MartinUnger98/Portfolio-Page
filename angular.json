@@ -27,12 +27,23 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
+                "glob": "favicon.ico",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/tailwind-theme.css",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -86,17 +97,31 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
+                "glob": "favicon.ico",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/tailwind-theme.css",
+              "src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

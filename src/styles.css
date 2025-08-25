@@ -1,0 +1,31 @@
+@import "./tailwind-theme.css";
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Karla';
+  src: url('assets/fonts/karla/Karla-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Karla';
+  src: url('assets/fonts/karla/Karla-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Code';
+  src: url('assets/fonts/firacode/FiraCode-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Code';
+  src: url('assets/fonts/firacode/FiraCode-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
