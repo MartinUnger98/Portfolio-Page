@@ -1,9 +1,6 @@
 @theme {
-  /* deine eigenen Utilities: font-karla / font-fira */
   --font-karla: "Karla", sans-serif;
   --font-fira: "Fira Code", monospace;
-
-  /* optional: Defaults überschreiben */
-  /* --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif; */
-  /* --font-mono: "Fira Code", ui-monospace, SFMono-Regular, monospace; */
+  --color-primary: #3DCFB6;
+  --text-40px: 40px;
 }

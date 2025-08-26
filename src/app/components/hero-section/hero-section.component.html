@@ -1,1 +1,94 @@
-<p>hero-section works!</p>
+<main
+  class="hero-bg relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center h-full w-full text-white text-center px-4"
+>
+  <h2 class="font-fira text-[40px] text pb-3">Fullstack Developer</h2>
+  <h1 class="font-bold text-9xl pb-10">Martin Unger</h1>
+  <div class="flex gap-12">
+    <button
+      class="w-44 h-12 cursor-pointer border border-white hover:border-primary rounded-full text-lg hover:text-primary transition-colors duration-300 ease-in-out"
+    >
+      Check my work
+    </button>
+    <button
+      class="w-36 h-12 cursor-pointer border border-white hover:border-primary rounded-full text-lg hover:text-primary transition-colors duration-300 ease-in-out"
+    >
+      Contact me
+    </button>
+  </div>
+
+  <div
+    class="z-10 absolute inset-x-0 bottom-10 overflow-x-clip overflow-y-visible pointer-events-none py-4"
+  >
+    <div class="relative left-1/2 -translate-x-1/2 w-[110vw]">
+      <div class="-rotate-[3deg] bg-white/10 backdrop-blur-[5.3px]">
+        <om-marquee
+          [reverse]="false"
+          [animationDuration]="'20s'"
+          [marqueeGap]="'3.5rem'"
+          [pauseOnHover]="false"
+          class="w-[110vw] text-primary py-3"
+        >
+          @for (text of marqueeTexts; track $index) {
+          <span #OmMarqueeContent class="text-[32px]">•</span>
+          <div #OmMarqueeContent class="py-0.5 text-[32px]">{{ text }}</div>
+          }
+        </om-marquee>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute right-20 bottom-0 flex flex-col items-center gap-6">
+    <a
+      href="mailto:mail@martin-unger.at"
+      class="text-white hover:text-primary [writing-mode:vertical-rl] rotate-180 leading-none text-2xl"
+    >
+      mail&#64;martin-unger.at
+    </a>
+
+    <div class="flex flex-col items-center gap-6 text-primary">
+      <a
+        href="https://github.com/MartinUnger98"
+        target="_blank"
+        rel="noopener"
+        class="group relative flex items-center justify-center"
+      >
+        <i class="fa-brands fa-github text-[32px] group-hover:text-white"></i>
+        <span
+          aria-hidden="true"
+          class="pointer-events-none absolute left-full top-1/2 -translate-y-1/2 ml-2 text-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          •
+        </span>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/martin-unger-profile/"
+        target="_blank"
+        rel="noopener"
+        class="group relative flex items-center justify-center"
+      >
+        <i
+          class="fa-brands fa-square-linkedin text-[32px] group-hover:text-white"
+        ></i>
+        <span
+          aria-hidden="true"
+          class="pointer-events-none absolute left-full top-1/2 -translate-y-1/2 ml-2 text-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          •
+        </span>
+      </a>
+    </div>
+
+    <span class="mt-4 relative z-0 bg-white/80 h-[186px] w-px"></span>
+  </div>
+
+  <div class="absolute bottom-0 left-24 flex flex-col items-center gap-6">
+    <div
+      class="flex justify-center items-center border border-primary px-1 py-4.5 rounded-full"
+    >
+      <i class="fa-solid fa-arrow-down fa-bounce"></i>
+    </div>
+
+    <span class="bg-primary h-60 w-px"></span>
+  </div>
+</main>

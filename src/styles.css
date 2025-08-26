@@ -1,5 +1,6 @@
 @import "./tailwind-theme.css";
 @import "tailwindcss";
+@import '@fortawesome/fontawesome-free/css/all.css';
 
 @font-face {
   font-family: 'Karla';
@@ -28,4 +29,8 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
 }
