@@ -1,22 +1,15 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ToggleButtonComponent } from '../../ui/toggle-button/toggle-button.component';
 
 @Component({
   selector: 'app-header',
-  imports: [FormsModule],
+  imports: [FormsModule, ToggleButtonComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent {
-  langs = [
-    { label: 'EN', value: 'en' },
-    { label: 'DE', value: 'de' },
-  ];
-
-  selectedLang: 'en' | 'de' = 'de';
-
-  onLangChange(lang: 'en' | 'de') {
-    console.log('Language switched to', lang);
-  }
+  lang: 'en' | 'de' = 'en';
+  onLangChange(v: 'en' | 'de') { this.lang = v; }
 }
