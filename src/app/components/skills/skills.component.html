@@ -1,0 +1,37 @@
+<main class="text-white w-full flex justify-center">
+  <div class="max-w-[1600px] w-full flex justify-between">
+    <div class="flex flex-col gap-5">
+      <span class="text-primary text-2xl w-[520px]">Technologies</span>
+      <div
+        class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-8 w-[520px] text-lg"
+      >
+        <h2 class="text-primary font-fira font-bold text-6xl">Skill Set</h2>
+        <p>
+          I'm engaged with the circle of lifelong learning. I always keep an eye
+          on the latest technologies. This way, I have been able to constantly
+          expand my tech stack, which can be proved by my projects in the next
+          section.
+        </p>
+        <h2 class="text-primary font-fira font-bold text-2xl">
+          You need another skill?
+        </h2>
+        <p>
+          Feel free to contact me. I look forward to expanding on my previous
+          knowledge.
+        </p>
+        <ui-button
+          text="Let`s talk"
+          type="button"/>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-4 gap-x-14 gap-y-14 justify-items-center">
+      @for (skill of skills; track $index) {
+      <figure class="flex flex-col items-center gap-2">
+        <img class="w-16 h-16" [src]="skill.src" [alt]="skill.name" />
+        <figcaption>{{ skill.name }}</figcaption>
+      </figure>
+      }
+    </div>
+  </div>
+</main>

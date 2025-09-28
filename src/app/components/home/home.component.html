@@ -1,3 +1,6 @@
-<app-header></app-header>
-<app-hero-section></app-hero-section>
-<app-about-me></app-about-me>
+<main class="flex flex-col relative gap-36 [&>*:not(app-hero-section)]:px-20">
+  <app-header class="absolute top-0 left-0 z-20 w-full"></app-header>
+  <app-hero-section></app-hero-section>
+  <app-about-me></app-about-me>
+  <app-skills></app-skills>
+</main>
