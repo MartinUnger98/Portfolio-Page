@@ -4,12 +4,8 @@
   <h2 class="font-fira text-[40px] text pb-3">Fullstack Developer</h2>
   <h1 class="font-bold text-9xl pb-10">Martin Unger</h1>
   <div class="flex gap-12">
-    <ui-button
-      text="Check my work"
-      type="button"/>
-    <ui-button
-      text="Contact me"
-      type="button"/>
+    <ui-button text="Check my work" type="button" />
+    <ui-button text="Contact me" type="button" />
   </div>
 
   <div
@@ -19,21 +15,29 @@
       <div class="-rotate-[3deg] bg-white/10 backdrop-blur-[5.3px]">
         <om-marquee
           [reverse]="false"
-          [animationDuration]="'20s'"
-          [marqueeGap]="'3.5rem'"
+          [animationDuration]="'60s'"
+          [marqueeGap]="'0rem'"
           [pauseOnHover]="false"
-          class="w-[110vw] text-primary py-3"
+          styleClass="w-[110vw] text-primary py-3"
         >
-          @for (text of marqueeTexts; track $index) {
-          <span #OmMarqueeContent class="text-[32px]">•</span>
-          <div #OmMarqueeContent class="py-0.5 text-[32px]">{{ text }}</div>
-          }
+          <ng-template>
+            @for (text of marqueeTexts; track $index; let last = $last) {
+            <ng-template>
+              <div class="flex gap-14">
+                <span class="text-[32px]" aria-hidden="true">•</span>
+                <span class="text-[32px] pr-14">{{ text }}</span>
+              </div>
+            </ng-template>
+            }
+          </ng-template>
         </om-marquee>
       </div>
     </div>
   </div>
 
-  <div class="absolute right-[60.5px] bottom-0 flex flex-col items-center gap-6">
+  <div
+    class="absolute right-[60.5px] bottom-0 flex flex-col items-center gap-6"
+  >
     <a
       href="mailto:mail@martin-unger.at"
       class="text-white hover:text-primary [writing-mode:vertical-rl] rotate-180 leading-none text-2xl"
