@@ -1,37 +1,42 @@
 @import "./tailwind-theme.css";
 @import "tailwindcss";
-@import '@fortawesome/fontawesome-free/css/all.css';
+@import "@fortawesome/fontawesome-free/css/all.css";
 
 @font-face {
-  font-family: 'Karla';
-  src: url('assets/fonts/karla/Karla-Regular.woff2') format('woff2');
+  font-family: "Karla";
+  src: url("assets/fonts/karla/Karla-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Karla';
-  src: url('assets/fonts/karla/Karla-Bold.woff2') format('woff2');
+  font-family: "Karla";
+  src: url("assets/fonts/karla/Karla-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Fira Code';
-  src: url('assets/fonts/firacode/FiraCode-Regular.woff2') format('woff2');
+  font-family: "Fira Code";
+  src: url("assets/fonts/firacode/FiraCode-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Fira Code';
-  src: url('assets/fonts/firacode/FiraCode-Bold.woff2') format('woff2');
+  font-family: "Fira Code";
+  src: url("assets/fonts/firacode/FiraCode-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: 'Karla', sans-serif;
-  background-color: #1C1C1C;
+  font-family: "Karla", sans-serif;
+  background-color: #1c1c1c;
+}
+
+.project-dialog-backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
 }

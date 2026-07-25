@@ -11,5 +11,7 @@ import { ToggleButtonComponent } from '../../ui/toggle-button/toggle-button.comp
 })
 export class HeaderComponent {
   lang: 'en' | 'de' = 'en';
-  onLangChange(v: 'en' | 'de') { this.lang = v; }
+  onLangChange(v: 'en' | 'de') {
+    this.lang = v;
+  }
 }

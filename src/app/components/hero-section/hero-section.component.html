@@ -4,33 +4,27 @@
   <h2 class="font-fira text-[40px] text pb-3">Fullstack Developer</h2>
   <h1 class="font-bold text-9xl pb-10">Martin Unger</h1>
   <div class="flex gap-12">
-    <ui-button text="Check my work" type="button" />
-    <ui-button text="Contact me" type="button" />
+    <ui-button text="Check my work" />
+    <ui-button text="Contact me" />
   </div>
 
   <div
     class="z-10 absolute inset-x-0 bottom-10 overflow-x-clip overflow-y-visible pointer-events-none py-4"
   >
     <div class="relative left-1/2 -translate-x-1/2 w-[110vw]">
-      <div class="-rotate-[3deg] bg-white/10 backdrop-blur-[5.3px]">
-        <om-marquee
-          [reverse]="false"
-          [animationDuration]="'60s'"
-          [marqueeGap]="'0rem'"
-          [pauseOnHover]="false"
-          styleClass="w-[110vw] text-primary py-3"
-        >
-          <ng-template>
-            @for (text of marqueeTexts; track $index; let last = $last) {
-            <ng-template>
-              <div class="flex gap-14">
-                <span class="text-[32px]" aria-hidden="true">•</span>
-                <span class="text-[32px] pr-14">{{ text }}</span>
-              </div>
-            </ng-template>
-            }
-          </ng-template>
-        </om-marquee>
+      <div class="marquee-bar -rotate-[3deg] w-[110vw] overflow-hidden py-3">
+        <div class="marquee-track flex w-max text-primary">
+          @for (group of [1, 2, 3]; track $index) {
+            <div class="flex shrink-0" [attr.aria-hidden]="group !== 1">
+              @for (text of marqueeTexts; track $index) {
+                <div class="flex items-center gap-14 pr-14">
+                  <span class="text-[32px]" aria-hidden="true">•</span>
+                  <span class="text-[32px]">{{ text }}</span>
+                </div>
+              }
+            </div>
+          }
+        </div>
       </div>
     </div>
   </div>

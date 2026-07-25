@@ -3,6 +3,7 @@ import { HeroSectionComponent } from '../hero-section/hero-section.component';
 import { HeaderComponent } from '../header/header.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { SkillsComponent } from '../skills/skills.component';
+import { ProjectsComponent } from '../projects/projects.component';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +11,10 @@ import { SkillsComponent } from '../skills/skills.component';
     HeroSectionComponent,
     HeaderComponent,
     AboutMeComponent,
-    SkillsComponent
+    SkillsComponent,
+    ProjectsComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}

@@ -19,18 +19,16 @@
           Feel free to contact me. I look forward to expanding on my previous
           knowledge.
         </p>
-        <ui-button
-          text="Let`s talk"
-          type="button"/>
+        <ui-button text="Let`s talk" type="button" />
       </div>
     </div>
 
     <div class="grid grid-cols-4 gap-x-14 gap-y-14 justify-items-center">
       @for (skill of skills; track $index) {
-      <figure class="flex flex-col items-center gap-2">
-        <img class="w-16 h-16" [src]="skill.src" [alt]="skill.name" />
-        <figcaption>{{ skill.name }}</figcaption>
-      </figure>
+        <figure class="flex flex-col items-center gap-2">
+          <img class="w-16 h-16" [src]="skill.src" [alt]="skill.name" />
+          <figcaption>{{ skill.name }}</figcaption>
+        </figure>
       }
     </div>
   </div>

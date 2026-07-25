@@ -55,11 +55,21 @@
   line-height: 1;
 }
 
-.lang-toggle:not(.is-de) .label.en { color: var(--white); }
-.lang-toggle:not(.is-de) .label.de { color: var(--green); opacity: 0.9; }
+.lang-toggle:not(.is-de) .label.en {
+  color: var(--white);
+}
+.lang-toggle:not(.is-de) .label.de {
+  color: var(--green);
+  opacity: 0.9;
+}
 
-.lang-toggle.is-de .label.de { color: var(--white); }
-.lang-toggle.is-de .label.en { color: var(--green); opacity: 0.9; }
+.lang-toggle.is-de .label.de {
+  color: var(--white);
+}
+.lang-toggle.is-de .label.en {
+  color: var(--green);
+  opacity: 0.9;
+}
 
 .lang-toggle:focus-visible {
   box-shadow: 0 0 0 4px color-mix(in oklab, var(--green) 40%, transparent);

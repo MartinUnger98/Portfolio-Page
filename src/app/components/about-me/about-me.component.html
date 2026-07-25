@@ -22,28 +22,12 @@
         have solid experience building scalable applications with Angular,
         Django, and .NET.
       </p>
-      <div class="flex gap-4">
-        <img src="/assets/images/location.svg" alt="location-icon" />
-        <p>
-          Currently, I work at Atos Austria as a Fullstack Developer, where I
-          focus on developing enterprise solutions using Angular and .NET.
-        </p>
-      </div>
-      <div class="flex gap-4">
-        <img src="/assets/images/cognition.svg" alt="location-icon" />
-        <p>
-          Beyond that, I also contribute to projects involving cloud-based
-          solutions with Microsoft Azure, which gives me the opportunity to
-          explore modern architectures and cloud-native development practices.
-        </p>
-      </div>
-      <div class="flex gap-4">
-        <img src="/assets/images/check-icon.svg" alt="location-icon" />
-        <p>
-          I`m passionate about creating clean, efficient code and delivering
-          applications that are both user-friendly and technically strong.
-        </p>
-      </div>
+      @for (point of aboutPoints; track $index) {
+        <div class="flex gap-4">
+          <img [src]="point.icon" [alt]="point.alt" class="w-8 h-8" />
+          <p>{{ point.text }}</p>
+        </div>
+      }
     </div>
   </div>
 </main>

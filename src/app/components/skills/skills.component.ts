@@ -10,10 +10,9 @@ interface Skill {
   selector: 'app-skills',
   imports: [ButtonComponent],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-
   readonly skills: Skill[] = [
     { name: 'Angular', src: 'assets/skillicons/Angular.svg' },
     { name: 'C#', src: 'assets/skillicons/csharp.svg' },

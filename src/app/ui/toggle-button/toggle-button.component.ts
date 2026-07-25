@@ -6,7 +6,7 @@ type Lang = 'en' | 'de';
   selector: 'app-toggle-button',
   imports: [],
   templateUrl: './toggle-button.component.html',
-  styleUrl: './toggle-button.component.scss'
+  styleUrl: './toggle-button.component.scss',
 })
 export class ToggleButtonComponent {
   @Input() value: Lang = 'en';

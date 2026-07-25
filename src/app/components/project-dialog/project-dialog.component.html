@@ -1,0 +1,67 @@
+<div
+  class="relative flex flex-col md:flex-row gap-10 p-8 md:p-12 text-white bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl max-h-[90vh] overflow-y-auto"
+>
+  <ui-button
+    (click)="close()"
+    class="absolute top-6 right-6 text-white hover:text-primary transition-colors duration-300 cursor-pointer text-2xl"
+    icon="fa-solid fa-xmark"
+    [outlined]="false"
+  />
+
+  <div class="flex flex-col gap-6 flex-1">
+    <div>
+      <span class="text-primary font-karla font-bold text-9xl">{{
+        project.number
+      }}</span>
+      <h3 class="font-fira font-bold text-6xl mt-2">{{ project.name }}</h3>
+    </div>
+
+    <div>
+      <h4 class="text-primary font-fira font-bold text-2xl mb-2">
+        What is this project about?
+      </h4>
+      <p class="text-lg">{{ project.description }}</p>
+    </div>
+
+    <div class="flex flex-wrap gap-6">
+      @for (tech of project.techs; track $index) {
+        <div class="flex items-center gap-2">
+          <img [src]="tech.icon" [alt]="tech.name" class="w-6 h-6" />
+          <span class="text-lg">{{ tech.name }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="flex gap-4 mt-2">
+      <ui-button
+        text="GitHub"
+        target="_blank"
+        (click)="openLink(project.github)"
+        icon="fa-solid fa-arrow-up-right-from-square"
+      />
+      <ui-button
+        text="Live Test"
+        target="_blank"
+        (click)="openLink(project.live)"
+        icon="fa-solid fa-arrow-up-right-from-square"
+      />
+    </div>
+  </div>
+
+  <div class="flex-1 flex flex-col items-end justify-between pt-6">
+    <img
+      [src]="project.image"
+      [alt]="project.name"
+      class="w-full max-w-[380px] rounded-2xl"
+    />
+
+    @if (hasMultipleProjects) {
+      <ui-button
+        text="Next project"
+        (click)="nextProject()"
+        icon="fa-solid fa-arrow-right"
+        [outlined]="false"
+      />
+    }
+  </div>
+</div>

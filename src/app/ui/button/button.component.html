@@ -1,7 +1,16 @@
 <button
+  type="button"
   [attr.type]="type"
   (click)="handleClick($event)"
-  class="h-12 cursor-pointer border border-white hover:border-primary rounded-full text-lg hover:text-primary transition-colors duration-300 ease-in-out"
+  class="h-12 cursor-pointer text-lg hover:text-primary transition-colors duration-300 ease-in-out"
+  [class]="
+    outlined ? 'border-white border hover:border-primary rounded-full' : ''
+  "
 >
-  <span class="px-6">{{ text }}</span>
+  <span class="px-6 flex items-center gap-2">
+    {{ text }}
+    @if (icon) {
+      <i [class]="icon"></i>
+    }
+  </span>
 </button>
