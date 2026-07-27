@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
-import { ButtonComponent } from '../../ui/button/button.component';
-import { Project } from '../projects/project.model';
+import { ButtonComponent } from '../../../ui/button/button.component';
+import { Project } from '../../projects/project.model';
 
 export interface ProjectDialogData {
   projects: Project[];

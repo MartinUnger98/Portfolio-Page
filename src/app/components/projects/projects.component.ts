@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Dialog } from '@angular/cdk/dialog';
 import { Project } from './project.model';
-import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
+import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 
 @Component({
   selector: 'app-projects',
@@ -26,6 +26,7 @@ export class ProjectsComponent {
         { name: '.NET', icon: 'assets/skillicons/net.svg' },
         { name: 'Python', icon: 'assets/skillicons/Python.svg' },
         { name: 'Django', icon: 'assets/skillicons/Django.svg' },
+        { name: 'Docker', icon: 'assets/skillicons/Docker.svg' },
       ],
       github: 'https://github.com/MartinUnger98/Join',
       live: 'https://join.martin-unger.at/login',
@@ -57,6 +58,7 @@ export class ProjectsComponent {
         { name: 'Python', icon: 'assets/skillicons/Python.svg' },
         { name: 'Django', icon: 'assets/skillicons/Django.svg' },
         { name: 'PostgreSQL', icon: 'assets/skillicons/PostgreSQL.svg' },
+        { name: 'Docker', icon: 'assets/skillicons/Docker.svg' },
       ],
       github: 'https://github.com/MartinUnger98/Videoflix',
       live: 'https://videoflix.martin-unger.at/',

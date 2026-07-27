@@ -1,5 +1,5 @@
 <div
-  class="relative flex flex-col md:flex-row gap-10 p-8 md:p-12 text-white bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl max-h-[90vh] overflow-y-auto"
+  class="relative flex flex-col md:flex-row gap-10 p-8 md:p-12 text-white bg-primary-blur border border-primary rounded-4xl overflow-y-auto"
 >
   <ui-button
     (click)="close()"
@@ -52,7 +52,7 @@
     <img
       [src]="project.image"
       [alt]="project.name"
-      class="w-full max-w-[380px] rounded-2xl"
+      class="w-full max-w-full rounded-2xl"
     />
 
     @if (hasMultipleProjects) {
