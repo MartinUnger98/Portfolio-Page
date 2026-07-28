@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { Dialog } from '@angular/cdk/dialog';
 import { Project } from './project.model';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
@@ -64,6 +64,21 @@ export class ProjectsComponent {
       live: 'https://videoflix.martin-unger.at/',
     },
   ];
+
+  private readonly hoveredIndex = signal<number | null>(null);
+
+  readonly previewProject = computed(() => {
+    const index = this.hoveredIndex();
+    return index === null ? null : this.projects[index];
+  });
+
+  setHovered(index: number) {
+    this.hoveredIndex.set(index);
+  }
+
+  clearHovered() {
+    this.hoveredIndex.set(null);
+  }
 
   openProject(index: number) {
     this.dialog.open(ProjectDialogComponent, {

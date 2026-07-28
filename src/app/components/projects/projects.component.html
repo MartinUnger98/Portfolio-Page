@@ -1,9 +1,7 @@
 <main id="projects" class="text-white w-full flex justify-center">
   <div class="max-w-[1600px] w-full flex flex-col gap-5">
     <span class="text-primary text-2xl">Portfolio</span>
-    <div
-      class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-8 text-lg"
-    >
+    <div class="flex flex-col gap-4 p-8 text-lg">
       <h2 class="text-primary font-fira font-bold text-6xl">
         Featured Projects
       </h2>
@@ -12,29 +10,53 @@
         skills in action.
       </p>
 
-      <div class="flex flex-col mt-2">
-        <div class="border-t border-primary"></div>
-        @for (project of projects; track $index; let i = $index) {
-          <button
-            type="button"
-            (click)="openProject(i)"
-            class="group flex items-center justify-between gap-8 py-6 border-b border-white/20 text-left cursor-pointer"
-          >
-            <span
-              class="font-fira font-bold text-2xl group-hover:text-primary transition-colors duration-300"
+      <div class="flex flex-col lg:flex-row gap-10 mt-2">
+        <div class="flex flex-col flex-1" (mouseleave)="clearHovered()">
+          @for (project of projects; track $index; let i = $index) {
+            <div class="border-t border-primary"></div>
+            <button
+              type="button"
+              (click)="openProject(i)"
+              (mouseenter)="setHovered(i)"
+              class="group flex items-center justify-between cursor-pointer gap-8 py-10 px-8 border-b border-white/20 text-left hover:bg-primary-blur transition-colors duration-300"
             >
-              {{ project.name }}
-            </span>
-            <span class="flex items-center gap-2 text-base text-white/70">
-              @for (tech of project.techs; track $index; let last = $last) {
-                <span>{{ tech.name }}</span>
-                @if (!last) {
-                  <span class="text-primary">|</span>
+              <span
+                class="font-fira font-bold text-2xl group-hover:text-primary transition-colors duration-300"
+              >
+                {{ project.name }}
+                @if (previewProject() === project) {
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square text-primary ml-2"
+                  ></i>
                 }
-              }
-            </span>
-          </button>
-        }
+              </span>
+              <span class="flex items-center gap-2 text-base text-white/70">
+                @for (tech of project.techs; track $index; let last = $last) {
+                  <span>{{ tech.name }}</span>
+                  @if (!last) {
+                    <span class="text-primary">|</span>
+                  }
+                }
+              </span>
+            </button>
+          }
+          <div class="border-t border-primary"></div>
+        </div>
+
+        <div
+          class="hidden lg:block relative w-[320px] shrink-0 self-start mt-4"
+        >
+          @if (previewProject(); as preview) {
+            <div
+              class="diagonal-stripes absolute -bottom-6 -right-6 w-full h-full rounded-2xl"
+            ></div>
+            <img
+              [src]="preview.image"
+              [alt]="preview.name"
+              class="relative w-full rounded-2xl shadow-xl"
+            />
+          }
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,9 @@
+.diagonal-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-primary) 0,
+    var(--color-primary) 2px,
+    transparent 2px,
+    transparent 12px
+  );
+}

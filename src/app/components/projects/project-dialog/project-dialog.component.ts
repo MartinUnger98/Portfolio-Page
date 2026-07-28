@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { Project } from '../../projects/project.model';
@@ -18,24 +18,23 @@ export class ProjectDialogComponent {
   private readonly data = inject<ProjectDialogData>(DIALOG_DATA);
   private readonly dialogRef = inject(DialogRef<void, ProjectDialogComponent>);
 
-  activeIndex = this.data.activeIndex;
+  readonly activeIndex = signal(this.data.activeIndex);
 
-  get project(): Project {
-    return this.data.projects[this.activeIndex];
-  }
+  readonly project = computed<Project>(
+    () => this.data.projects[this.activeIndex()],
+  );
 
-  get hasMultipleProjects(): boolean {
-    return this.data.projects.length > 1;
-  }
+  readonly hasMultipleProjects = computed(() => this.data.projects.length > 1);
 
   nextProject() {
-    this.activeIndex = (this.activeIndex + 1) % this.data.projects.length;
+    this.activeIndex.update((index) => (index + 1) % this.data.projects.length);
   }
 
   previousProject() {
-    this.activeIndex =
-      (this.activeIndex - 1 + this.data.projects.length) %
-      this.data.projects.length;
+    this.activeIndex.update(
+      (index) =>
+        (index - 1 + this.data.projects.length) % this.data.projects.length,
+    );
   }
 
   openLink(url: string) {

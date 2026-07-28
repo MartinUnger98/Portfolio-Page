@@ -30,7 +30,6 @@ export class CareerComponent {
         { name: 'Figma', icon: 'assets/skillicons/figma.svg' },
         { name: 'Claude Code', icon: 'assets/skillicons/claudecode.svg' },
         { name: 'GitHub Copilot', icon: 'assets/skillicons/githubcopilot.svg' },
-
       ],
     },
     {
