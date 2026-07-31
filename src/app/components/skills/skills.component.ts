@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../ui/button/button.component';
+import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 
 interface Skill {
   name: string;
@@ -8,7 +9,7 @@ interface Skill {
 
 @Component({
   selector: 'app-skills',
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, ScrollRevealDirective],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })

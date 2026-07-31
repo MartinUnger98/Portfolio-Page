@@ -2,15 +2,39 @@
   id="hero"
   class="hero-bg relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center h-full w-full text-white text-center px-4"
 >
-  <h2 class="font-fira text-2xl sm:text-3xl md:text-[40px] text pb-3">Fullstack Developer</h2>
-  <h1 class="font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl pb-10">Martin Unger</h1>
-  <div class="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12">
+  <h2 class="font-fira text-2xl sm:text-3xl md:text-[40px] text pb-3">
+    @for (word of subtitleWords; track $index) {
+      <span class="inline-block overflow-hidden pb-1 -mb-1">
+        <span
+          class="hero-reveal inline-block"
+          [style.animation-delay.ms]="$index * 150"
+          >{{ word }}&nbsp;</span
+        >
+      </span>
+    }
+  </h2>
+  <h1 class="font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl pb-10">
+    @for (word of nameWords; track $index) {
+      <span class="inline-block overflow-hidden pb-1 -mb-1">
+        <span
+          class="hero-reveal inline-block"
+          [style.animation-delay.ms]="300 + $index * 180"
+          >{{ word }}&nbsp;</span
+        >
+      </span>
+    }
+  </h1>
+  <div
+    class="hero-fade-up flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12"
+    style="animation-delay: 750ms"
+  >
     <ui-button text="Check my work" (click)="scrollToSection('projects')" />
     <ui-button text="Contact me" (click)="scrollToSection('contact')" />
   </div>
 
   <div
-    class="z-10 absolute inset-x-0 bottom-4 sm:bottom-6 lg:bottom-10 overflow-x-clip overflow-y-visible pointer-events-none py-4"
+    class="hero-fade-up z-10 absolute inset-x-0 bottom-4 sm:bottom-6 lg:bottom-10 overflow-x-clip overflow-y-visible pointer-events-none py-4"
+    style="animation-delay: 1000ms"
   >
     <div class="relative left-1/2 -translate-x-1/2 w-[110vw]">
       <div class="marquee-bar -rotate-[3deg] w-[110vw] overflow-hidden py-2 md:py-3">
@@ -31,7 +55,8 @@
   </div>
 
   <div
-    class="hidden lg:flex absolute right-[24px] xl:right-[60.5px] bottom-0 flex-col items-center gap-6"
+    class="hero-fade-up hidden lg:flex absolute right-[24px] xl:right-[60.5px] bottom-0 flex-col items-center gap-6"
+    style="animation-delay: 1150ms"
   >
     <a
       href="mailto:mail@martin-unger.at"
@@ -77,7 +102,10 @@
     <span class="mt-4 relative z-0 bg-white/80 h-[186px] w-px"></span>
   </div>
 
-  <div class="hidden lg:flex absolute bottom-0 left-[24px] xl:left-[65.5px] flex-col items-center gap-6">
+  <div
+    class="hero-fade-up hidden lg:flex absolute bottom-0 left-[24px] xl:left-[65.5px] flex-col items-center gap-6"
+    style="animation-delay: 1150ms"
+  >
     <div
       class="flex justify-center items-center border border-primary px-1 py-4.5 rounded-full"
     >

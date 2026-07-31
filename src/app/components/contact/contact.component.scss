@@ -1,3 +1,35 @@
+.contact-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.contact-field:focus-within .contact-underline {
+  transform: scaleX(1);
+}
+
+.status-message {
+  animation: status-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes status-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 textarea {
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) transparent;

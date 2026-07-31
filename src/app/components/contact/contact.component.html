@@ -2,7 +2,7 @@
   <div
     class="max-w-[1600px] pt-10 w-full flex flex-col min-[1250px]:flex-row justify-between gap-10 min-[1250px]:gap-16 px-4 sm:px-6 lg:px-8 py-6 sm:py-8"
   >
-    <div class="flex flex-col gap-5 max-w-full min-[1250px]:max-w-[480px]">
+    <div appScrollReveal="left" class="flex flex-col gap-5 max-w-full min-[1250px]:max-w-[480px]">
       <span class="text-primary text-xl sm:text-2xl">Contact me</span>
       <h2 class="font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">Let's work together</h2>
 
@@ -27,12 +27,14 @@
       [formGroup]="form"
       (ngSubmit)="submit()"
       novalidate
+      appScrollReveal="right"
+      [revealDelay]="120"
       class="flex flex-col gap-8 flex-1 max-w-full min-[1250px]:max-w-[620px]"
     >
       <div class="flex flex-col">
         <div class="border-t border-primary"></div>
 
-        <div class="flex flex-col gap-2 py-6">
+        <div class="contact-field relative flex flex-col gap-2 py-6">
           <label for="name" class="text-primary font-fira font-bold text-xl sm:text-2xl">
             What's your name?
           </label>
@@ -51,11 +53,12 @@
               >Oops! it seems your name is missing</span
             >
           }
+          <span class="contact-underline"></span>
         </div>
 
         <div class="border-t border-primary"></div>
 
-        <div class="flex flex-col gap-2 py-6">
+        <div class="contact-field relative flex flex-col gap-2 py-6">
           <label for="email" class="text-primary font-fira font-bold text-xl sm:text-2xl">
             What's your email?
           </label>
@@ -72,11 +75,12 @@
           ) {
             <span class="text-[#F2836B]">Hoppla! your email is required</span>
           }
+          <span class="contact-underline"></span>
         </div>
 
         <div class="border-t border-primary"></div>
 
-        <div class="flex flex-col gap-2 py-6">
+        <div class="contact-field relative flex flex-col gap-2 py-6">
           <label
             for="message"
             class="text-primary font-fira font-bold text-xl sm:text-2xl"
@@ -96,6 +100,7 @@
           ) {
             <span class="text-[#F2836B]">What do you need to develop?</span>
           }
+          <span class="contact-underline"></span>
         </div>
 
         <div class="border-t border-primary"></div>
@@ -129,10 +134,10 @@
         />
 
         @if (status() === "sent") {
-          <p class="text-primary">Thanks! I'll get back to you soon.</p>
+          <p class="status-message text-primary">Thanks! I'll get back to you soon.</p>
         }
         @if (status() === "error") {
-          <p class="text-[#F2836B]">
+          <p class="status-message text-[#F2836B]">
             Something went wrong. Please try again or email me directly.
           </p>
         }

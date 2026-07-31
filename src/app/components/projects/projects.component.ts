@@ -2,10 +2,11 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { Dialog } from '@angular/cdk/dialog';
 import { Project } from './project.model';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
+import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [ScrollRevealDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })

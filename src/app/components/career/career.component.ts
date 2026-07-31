@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CareerEntry } from './career.model';
+import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 
 @Component({
   selector: 'app-career',
-  imports: [],
+  imports: [ScrollRevealDirective],
   templateUrl: './career.component.html',
   styleUrl: './career.component.scss',
 })

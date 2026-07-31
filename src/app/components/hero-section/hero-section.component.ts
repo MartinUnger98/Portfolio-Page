@@ -15,6 +15,9 @@ export class HeroSectionComponent {
     "Let's connect",
   ];
 
+  readonly subtitleWords = 'Fullstack Developer'.split(' ');
+  readonly nameWords = 'Martin Unger'.split(' ');
+
   scrollToSection(id: string) {
     document.getElementById(id)?.scrollIntoView();
   }

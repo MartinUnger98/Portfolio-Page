@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent } from '../../ui/button/button.component';
+import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 
 type SubmitStatus = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -9,7 +10,7 @@ const EMAIL_PATTERN = /^[a-z0-9_.-]+@[a-z0-9.-]+\.[a-z.]{2,6}$/i;
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, ButtonComponent],
+  imports: [ReactiveFormsModule, ButtonComponent, ScrollRevealDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
