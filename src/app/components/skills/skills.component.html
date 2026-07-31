@@ -1,18 +1,18 @@
-<main id="skills" class="text-white w-full flex justify-center">
-  <div class="max-w-[1600px] pt-10 w-full flex justify-between">
-    <div class="flex flex-col gap-5">
-      <span class="text-primary text-2xl w-[520px]">Technologies</span>
+<main id="skills" class="text-white w-full flex justify-center px-4 sm:px-6 lg:px-8">
+  <div class="max-w-[1600px] pt-10 w-full flex flex-col lg:flex-row justify-between gap-10 lg:gap-8">
+    <div class="flex flex-col gap-5 w-full lg:w-[520px] lg:shrink-0">
+      <span class="text-primary text-xl sm:text-2xl">Technologies</span>
       <div
-        class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-8 w-[520px] text-lg"
+        class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-6 sm:p-8 w-full text-base sm:text-lg"
       >
-        <h2 class="text-primary font-fira font-bold text-6xl">Skill Set</h2>
+        <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">Skill Set</h2>
         <p>
           I'm engaged with the circle of lifelong learning. I always keep an eye
           on the latest technologies. This way, I have been able to constantly
           expand my tech stack, which can be proved by my projects in the next
           section.
         </p>
-        <h2 class="text-primary font-fira font-bold text-2xl">
+        <h2 class="text-primary font-fira font-bold text-xl sm:text-2xl">
           You need another skill?
         </h2>
         <p>
@@ -23,11 +23,11 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-4 gap-x-14 gap-y-14 justify-items-center">
+    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-x-6 sm:gap-x-10 lg:gap-x-14 gap-y-8 sm:gap-y-10 lg:gap-y-14 justify-items-center">
       @for (skill of skills; track $index) {
         <figure class="flex flex-col items-center gap-2">
-          <img class="w-16 h-16" [src]="skill.src" [alt]="skill.name" />
-          <figcaption>{{ skill.name }}</figcaption>
+          <img class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16" [src]="skill.src" [alt]="skill.name" />
+          <figcaption class="text-sm sm:text-base text-center">{{ skill.name }}</figcaption>
         </figure>
       }
     </div>

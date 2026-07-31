@@ -33,7 +33,19 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 144px;
+  scroll-padding-top: 80px;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 112px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 144px;
+  }
 }
 
 body {

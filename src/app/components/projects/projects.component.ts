@@ -17,6 +17,7 @@ export class ProjectsComponent {
       number: '01',
       name: 'Join',
       image: 'assets/images/Join.svg',
+      imagePosition: '50% 10%',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       techs: [
@@ -35,6 +36,7 @@ export class ProjectsComponent {
       number: '02',
       name: 'DABubble',
       image: 'assets/images/dabubble_portfolio.svg',
+      imagePosition: '50% 85%',
       description:
         'Inspired by Slack, this chat messenger allows you to create custom channels for smooth communication with colleagues. Exchange direct messages, share images, and tag individuals effortlessly.',
       techs: [
@@ -50,6 +52,7 @@ export class ProjectsComponent {
       number: '03',
       name: 'Videoflix',
       image: 'assets/images/videoflix-portfolio.svg',
+      imagePosition: '50% 55%',
       description:
         'Videoflix is a video platform where users can explore categorized content, resume playback and stream videos in multiple quality levels.',
       techs: [

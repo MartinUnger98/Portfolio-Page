@@ -2,3 +2,40 @@
   display: block;
   width: min(1100px, 95vw);
 }
+
+.dialog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "header"
+    "body"
+    "next";
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header image"
+      "body   image"
+      "body   next";
+    align-items: start;
+    gap: 2.5rem;
+  }
+}
+
+.area-image {
+  grid-area: image;
+}
+
+.area-header {
+  grid-area: header;
+}
+
+.area-body {
+  grid-area: body;
+}
+
+.area-next {
+  grid-area: next;
+}

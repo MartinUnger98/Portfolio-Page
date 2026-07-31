@@ -1,10 +1,10 @@
-<footer id="footer" class="flex justify-center items-center">
+<footer id="footer" class="flex justify-center items-center px-4 sm:px-6 lg:px-8">
   <div
-    class="max-w-[1600px] py-10 w-full flex flex-wrap gap-8 justify-between items-center text-white"
+    class="max-w-[1600px] py-10 w-full flex flex-col min-[650px]:flex-row flex-wrap gap-8 justify-between items-center text-white text-center min-[650px]:text-left"
   >
     <div class="flex flex-col items-center gap-2">
       <img
-        class="h-24 drop-shadow-[4px_3px_7px_#3dcfb6]"
+        class="h-16 sm:h-20 lg:h-24 drop-shadow-[4px_3px_7px_#3dcfb6]"
         src="/assets/images/logo.svg"
         alt="Logo"
       />
@@ -15,7 +15,7 @@
       >
     </div>
 
-    <span class="font-fira text-white text-2xl"
+    <span class="font-fira text-white text-xl sm:text-2xl order-3 min-[650px]:order-none"
       >&copy; Martin Unger {{ year }}</span
     >
 
@@ -23,10 +23,11 @@
       @for (sociallink of socialLinks; track $index) {
         <i
           [class]="sociallink.icon"
-          class="text-4xl text-white cursor-pointer hover:text-primary transition-colors duration-300 drop-shadow-[0px_3px_7px_#3dcfb6]"
+          class="text-3xl sm:text-4xl text-white cursor-pointer hover:text-primary transition-colors duration-300 drop-shadow-[0px_3px_7px_#3dcfb6]"
           (click)="open(sociallink.href, sociallink.external)"
         ></i>
       }
     </div>
   </div>
 </footer>
+

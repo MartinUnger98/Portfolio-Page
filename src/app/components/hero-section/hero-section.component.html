@@ -2,25 +2,25 @@
   id="hero"
   class="hero-bg relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center h-full w-full text-white text-center px-4"
 >
-  <h2 class="font-fira text-[40px] text pb-3">Fullstack Developer</h2>
-  <h1 class="font-bold text-9xl pb-10">Martin Unger</h1>
-  <div class="flex gap-12">
+  <h2 class="font-fira text-2xl sm:text-3xl md:text-[40px] text pb-3">Fullstack Developer</h2>
+  <h1 class="font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl pb-10">Martin Unger</h1>
+  <div class="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12">
     <ui-button text="Check my work" (click)="scrollToSection('projects')" />
     <ui-button text="Contact me" (click)="scrollToSection('contact')" />
   </div>
 
   <div
-    class="z-10 absolute inset-x-0 bottom-10 overflow-x-clip overflow-y-visible pointer-events-none py-4"
+    class="z-10 absolute inset-x-0 bottom-4 sm:bottom-6 lg:bottom-10 overflow-x-clip overflow-y-visible pointer-events-none py-4"
   >
     <div class="relative left-1/2 -translate-x-1/2 w-[110vw]">
-      <div class="marquee-bar -rotate-[3deg] w-[110vw] overflow-hidden py-3">
+      <div class="marquee-bar -rotate-[3deg] w-[110vw] overflow-hidden py-2 md:py-3">
         <div class="marquee-track flex w-max text-primary">
           @for (group of [1, 2, 3]; track $index) {
             <div class="flex shrink-0" [attr.aria-hidden]="group !== 1">
               @for (text of marqueeTexts; track $index) {
-                <div class="flex items-center gap-14 pr-14">
-                  <span class="text-[32px]" aria-hidden="true">•</span>
-                  <span class="text-[32px]">{{ text }}</span>
+                <div class="flex items-center gap-6 sm:gap-10 md:gap-14 pr-6 sm:pr-10 md:pr-14">
+                  <span class="text-base sm:text-xl md:text-[32px]" aria-hidden="true">•</span>
+                  <span class="text-base sm:text-xl md:text-[32px]">{{ text }}</span>
                 </div>
               }
             </div>
@@ -31,7 +31,7 @@
   </div>
 
   <div
-    class="absolute right-[60.5px] bottom-0 flex flex-col items-center gap-6"
+    class="hidden lg:flex absolute right-[24px] xl:right-[60.5px] bottom-0 flex-col items-center gap-6"
   >
     <a
       href="mailto:mail@martin-unger.at"
@@ -77,7 +77,7 @@
     <span class="mt-4 relative z-0 bg-white/80 h-[186px] w-px"></span>
   </div>
 
-  <div class="absolute bottom-0 left-[65.5px] flex flex-col items-center gap-6">
+  <div class="hidden lg:flex absolute bottom-0 left-[24px] xl:left-[65.5px] flex-col items-center gap-6">
     <div
       class="flex justify-center items-center border border-primary px-1 py-4.5 rounded-full"
     >
@@ -85,5 +85,30 @@
     </div>
 
     <span class="bg-primary h-60 w-px"></span>
+  </div>
+
+  <div class="lg:hidden flex items-center justify-center gap-6 text-primary mt-10">
+    <a
+      href="mailto:mail@martin-unger.at"
+      class="text-white hover:text-primary text-sm sm:text-base"
+    >
+      mail&#64;martin-unger.at
+    </a>
+    <a
+      href="https://github.com/MartinUnger98"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center justify-center"
+    >
+      <i class="fa-brands fa-github text-2xl hover:text-white"></i>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/martin-unger-profile/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center justify-center"
+    >
+      <i class="fa-brands fa-square-linkedin text-2xl hover:text-white"></i>
+    </a>
   </div>
 </main>

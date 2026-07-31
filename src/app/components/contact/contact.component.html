@@ -1,19 +1,19 @@
 <main id="contact" class="text-white w-full flex justify-center">
   <div
-    class="max-w-[1600px] pt-10 w-full flex flex-col md:flex-row justify-between gap-16 p-8"
+    class="max-w-[1600px] pt-10 w-full flex flex-col min-[1250px]:flex-row justify-between gap-10 min-[1250px]:gap-16 px-4 sm:px-6 lg:px-8 py-6 sm:py-8"
   >
-    <div class="flex flex-col gap-5 max-w-[480px]">
-      <span class="text-primary text-2xl">Contact me</span>
-      <h2 class="font-fira font-bold text-6xl">Let's work together</h2>
+    <div class="flex flex-col gap-5 max-w-full min-[1250px]:max-w-[480px]">
+      <span class="text-primary text-xl sm:text-2xl">Contact me</span>
+      <h2 class="font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">Let's work together</h2>
 
-      <h3 class="text-primary font-fira font-bold text-2xl mt-4">
+      <h3 class="text-primary font-fira font-bold text-xl sm:text-2xl mt-4">
         Got a problem to solve?
       </h3>
-      <p class="text-lg">
+      <p class="text-base sm:text-lg">
         Contact me through this form, I am interested in hearing you, knowing
         your ideas and contributing to your projects with my work.
       </p>
-      <p class="text-lg">
+      <p class="text-base sm:text-lg">
         Need a Fullstack developer?
         <a
           href="mailto:mail@martin-unger.at"
@@ -27,13 +27,13 @@
       [formGroup]="form"
       (ngSubmit)="submit()"
       novalidate
-      class="flex flex-col gap-8 flex-1 max-w-[620px]"
+      class="flex flex-col gap-8 flex-1 max-w-full min-[1250px]:max-w-[620px]"
     >
       <div class="flex flex-col">
         <div class="border-t border-primary"></div>
 
         <div class="flex flex-col gap-2 py-6">
-          <label for="name" class="text-primary font-fira font-bold text-2xl">
+          <label for="name" class="text-primary font-fira font-bold text-xl sm:text-2xl">
             What's your name?
           </label>
           <input
@@ -56,7 +56,7 @@
         <div class="border-t border-primary"></div>
 
         <div class="flex flex-col gap-2 py-6">
-          <label for="email" class="text-primary font-fira font-bold text-2xl">
+          <label for="email" class="text-primary font-fira font-bold text-xl sm:text-2xl">
             What's your email?
           </label>
           <input
@@ -79,7 +79,7 @@
         <div class="flex flex-col gap-2 py-6">
           <label
             for="message"
-            class="text-primary font-fira font-bold text-2xl"
+            class="text-primary font-fira font-bold text-xl sm:text-2xl"
           >
             How can I help you?
           </label>
@@ -102,15 +102,17 @@
       </div>
 
       <div class="flex flex-col gap-2">
-        <label class="flex items-center gap-3 text-base cursor-pointer">
+        <label class="flex items-start gap-3 text-base cursor-pointer">
           <input
             type="checkbox"
             formControlName="privacyAccepted"
-            class="w-5 h-5 shrink-0 rounded-sm border-2 border-primary bg-transparent accent-primary cursor-pointer"
+            class="w-5 h-5 shrink-0 mt-0.5 rounded-sm border-2 border-primary bg-transparent accent-primary cursor-pointer"
           />
-          I've read the<a href="#" class="text-primary hover:underline"
-            >privacy policy</a
-          >and agree to the processing of my data as outlined.
+          <span>
+            I've read the
+            <a href="#" class="text-primary hover:underline">privacy policy</a>
+            and agree to the processing of my data as outlined.
+          </span>
         </label>
         @if (
           form.controls.privacyAccepted.invalid &&

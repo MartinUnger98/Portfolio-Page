@@ -1,23 +1,23 @@
-<main id="about-me" class="flex justify-center text-white">
-  <div class="flex pt-10 justify-between w-full max-w-[1600px]">
-    <div class="relative w-[568px]">
+<main id="about-me" class="flex justify-center text-white px-4 sm:px-6 lg:px-8">
+  <div class="flex flex-col min-[1250px]:flex-row pt-10 justify-between items-center min-[1250px]:items-start gap-10 min-[1250px]:gap-8 w-full max-w-[1600px]">
+    <div class="relative w-full max-w-[568px] aspect-[3507/2842] shrink-0">
       <img
         src="/assets/images/bg_profile.svg"
-        class="w-[568px] absolute top-0 left-0"
+        class="w-full h-full object-contain absolute top-0 left-0"
         alt="profile-pic-shadow"
       />
       <img
         src="/assets/images/profile-img.webp"
-        class="profile-photo w-[568px] absolute top-0 left-0"
+        class="profile-photo w-full h-full object-contain absolute top-0 left-0"
         alt="profile-pic"
       />
     </div>
-    <div class="flex flex-col gap-5 pt-14">
-      <span class="text-primary text-2xl w-[568px]">Who I am</span>
+    <div class="flex flex-col gap-5 min-[1250px]:pt-14 w-full min-[1250px]:w-auto">
+      <span class="text-primary text-xl sm:text-2xl">Who I am</span>
       <div
-        class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-8 w-[568px] text-lg"
+        class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-8 sm:p-10 w-full min-[1250px]:w-[568px] text-base sm:text-lg"
       >
-        <h2 class="text-primary font-fira font-bold text-6xl">About me</h2>
+        <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">About me</h2>
         <p>
           Hi, my name is Martin Unger, a Fullstack Developer based in Vienna. I
           have solid experience building scalable applications with Angular,
@@ -25,7 +25,7 @@
         </p>
         @for (point of aboutPoints; track $index) {
           <div class="flex gap-4">
-            <img [src]="point.icon" [alt]="point.alt" class="w-8 h-8" />
+            <img [src]="point.icon" [alt]="point.alt" class="w-8 h-8 shrink-0" />
             <p>{{ point.text }}</p>
           </div>
         }

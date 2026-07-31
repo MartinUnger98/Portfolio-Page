@@ -1,10 +1,10 @@
-<main id="career" class="text-white w-full flex justify-center">
+<main id="career" class="text-white w-full flex justify-center px-4 sm:px-6 lg:px-8">
   <div class="max-w-[1600px] pt-10 w-full flex flex-col gap-5">
-    <span class="text-primary text-2xl">Experience</span>
+    <span class="text-primary text-xl sm:text-2xl">Experience</span>
     <div
-      class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-8 text-lg"
+      class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-6 sm:p-8 text-base sm:text-lg"
     >
-      <h2 class="text-primary font-fira font-bold text-6xl">Career Journey</h2>
+      <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">Career Journey</h2>
       <p>
         From my first steps as a career changer to building enterprise-grade
         software today. Here's how my path in software development has evolved
@@ -13,10 +13,10 @@
 
       <div class="flex flex-col mt-4">
         @for (entry of entries; track $index; let last = $last) {
-          <div class="flex gap-6">
+          <div class="flex gap-3 sm:gap-6">
             <div class="flex flex-col items-center">
               <span
-                class="flex items-center justify-center w-10 h-10 shrink-0 rounded-full border border-primary bg-[#1c1c1c] z-10"
+                class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 shrink-0 rounded-full border border-primary bg-[#1c1c1c] z-10"
               >
                 <i
                   class="text-primary text-sm"
@@ -30,11 +30,11 @@
               }
             </div>
 
-            <div class="flex-1 pb-10">
+            <div class="flex-1 pb-10 min-w-0">
               <div
                 class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"
               >
-                <h3 class="font-fira font-bold text-2xl">{{ entry.role }}</h3>
+                <h3 class="font-fira font-bold text-xl sm:text-2xl">{{ entry.role }}</h3>
                 <span class="font-fira text-primary text-base">{{
                   entry.period
                 }}</span>

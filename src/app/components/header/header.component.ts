@@ -19,6 +19,7 @@ import { ToggleButtonComponent } from '../../ui/toggle-button/toggle-button.comp
 export class HeaderComponent implements OnInit {
   lang: 'en' | 'de' = 'en';
   isScrolledPastHero = false;
+  isMobileMenuOpen = false;
 
   navLinks = [
     { label: 'About me', href: '#about-me' },
@@ -45,5 +46,13 @@ export class HeaderComponent implements OnInit {
 
   onLangChange(v: 'en' | 'de') {
     this.lang = v;
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
   }
 }
