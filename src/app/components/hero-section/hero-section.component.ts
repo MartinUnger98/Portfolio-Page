@@ -14,4 +14,8 @@ export class HeroSectionComponent {
     'Based in Vienna',
     "Let's connect",
   ];
+
+  scrollToSection(id: string) {
+    document.getElementById(id)?.scrollIntoView();
+  }
 }

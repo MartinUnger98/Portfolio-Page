@@ -1,11 +1,12 @@
 <main
+  id="hero"
   class="hero-bg relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center h-full w-full text-white text-center px-4"
 >
   <h2 class="font-fira text-[40px] text pb-3">Fullstack Developer</h2>
   <h1 class="font-bold text-9xl pb-10">Martin Unger</h1>
   <div class="flex gap-12">
-    <ui-button text="Check my work" />
-    <ui-button text="Contact me" />
+    <ui-button text="Check my work" (click)="scrollToSection('projects')" />
+    <ui-button text="Contact me" (click)="scrollToSection('contact')" />
   </div>
 
   <div

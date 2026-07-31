@@ -1,0 +1,12 @@
+.profile-photo {
+  -webkit-mask-image: radial-gradient(
+    ellipse closest-side at 50% 46%,
+    black 55%,
+    transparent 119%
+  );
+  mask-image: radial-gradient(
+    ellipse closest-side at 50% 46%,
+    black 83%,
+    transparent 119%
+  );
+}

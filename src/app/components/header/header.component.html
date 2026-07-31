@@ -1,54 +1,23 @@
-<main class="flex justify-between items-center w-full text-white px-24 py-8">
+<main
+  class="flex justify-between items-center w-full text-white px-24 py-8 transition-colors duration-300"
+  [ngClass]="{ 'bg-[#1c1c1c]/80 backdrop-blur-sm': isScrolledPastHero }"
+>
   <div class="flex gap-6 font-fira text-xl">
     <app-toggle-button [(value)]="lang"></app-toggle-button>
-    <a
-      href="#"
-      class="group relative flex flex-col items-center justify-center"
-    >
-      <span>About me</span>
-      <span
-        aria-hidden="true"
-        class="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 text-[32px] text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    @for (link of navLinks; track link.href) {
+      <a
+        [href]="link.href"
+        class="group relative flex flex-col items-center justify-center"
       >
-        •
-      </span>
-    </a>
-    <a
-      href="#"
-      class="group relative flex flex-col items-center justify-center"
-    >
-      <span>Skills</span>
-      <span
-        aria-hidden="true"
-        class="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 text-[32px] text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      >
-        •
-      </span>
-    </a>
-    <a
-      href="#"
-      class="group relative flex flex-col items-center justify-center"
-    >
-      <span>Career</span>
-      <span
-        aria-hidden="true"
-        class="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 text-[32px] text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      >
-        •
-      </span>
-    </a>
-    <a
-      href="#"
-      class="group relative flex flex-col items-center justify-center"
-    >
-      <span>Projects</span>
-      <span
-        aria-hidden="true"
-        class="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 text-[32px] text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      >
-        •
-      </span>
-    </a>
+        <span>{{ link.label }}</span>
+        <span
+          aria-hidden="true"
+          class="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 text-[32px] text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          •
+        </span>
+      </a>
+    }
   </div>
 
   <img class="h-20" src="/assets/images/logo.svg" alt="" />

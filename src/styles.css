@@ -31,6 +31,11 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 144px;
+}
+
 body {
   font-family: "Karla", sans-serif;
   background-color: #1c1c1c;

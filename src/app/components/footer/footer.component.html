@@ -1,31 +1,32 @@
-<footer
-  id="footer"
-  class="w-full flex flex-wrap gap-8 justify-between items-center text-white"
->
-  <div class="flex flex-col items-center gap-2">
-    <img
-      class="h-24 drop-shadow-[4px_3px_7px_#3dcfb6]"
-      src="/assets/images/logo.svg"
-      alt="Logo"
-    />
-    <a
-      href="#"
-      class="font-fira hover:text-primary transition-colors duration-300"
-      >Imprint</a
-    >
-  </div>
-
-  <span class="font-fira text-white text-2xl"
-    >&copy; Martin Unger {{ year }}</span
+<footer id="footer" class="flex justify-center items-center">
+  <div
+    class="max-w-[1600px] py-10 w-full flex flex-wrap gap-8 justify-between items-center text-white"
   >
+    <div class="flex flex-col items-center gap-2">
+      <img
+        class="h-24 drop-shadow-[4px_3px_7px_#3dcfb6]"
+        src="/assets/images/logo.svg"
+        alt="Logo"
+      />
+      <a
+        href="#"
+        class="font-fira hover:text-primary transition-colors duration-300"
+        >Imprint</a
+      >
+    </div>
 
-  <div class="flex items-center gap-4">
-    @for (sociallink of socialLinks; track $index) {
-      <i
-        [class]="sociallink.icon"
-        class="text-4xl text-white cursor-pointer hover:text-primary transition-colors duration-300 drop-shadow-[0px_3px_7px_#3dcfb6]"
-        (click)="open(sociallink.href, sociallink.external)"
-      ></i>
-    }
+    <span class="font-fira text-white text-2xl"
+      >&copy; Martin Unger {{ year }}</span
+    >
+
+    <div class="flex items-center gap-4">
+      @for (sociallink of socialLinks; track $index) {
+        <i
+          [class]="sociallink.icon"
+          class="text-4xl text-white cursor-pointer hover:text-primary transition-colors duration-300 drop-shadow-[0px_3px_7px_#3dcfb6]"
+          (click)="open(sociallink.href, sociallink.external)"
+        ></i>
+      }
+    </div>
   </div>
 </footer>
