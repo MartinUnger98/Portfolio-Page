@@ -1,25 +1,21 @@
 <main id="skills" class="text-white w-full flex justify-center px-4 sm:px-6 lg:px-8">
   <div class="max-w-[1600px] pt-10 w-full flex flex-col lg:flex-row justify-between gap-10 lg:gap-8">
     <div appScrollReveal="left" class="flex flex-col gap-5 w-full lg:w-[520px] lg:shrink-0">
-      <span class="text-primary text-xl sm:text-2xl">Technologies</span>
+      <span class="text-primary text-xl sm:text-2xl">{{ i18n.translate('Technologies') }}</span>
       <div
         class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-6 sm:p-8 w-full text-base sm:text-lg"
       >
-        <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">Skill Set</h2>
+        <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">{{ i18n.translate('Skill Set') }}</h2>
         <p>
-          I'm engaged with the circle of lifelong learning. I always keep an eye
-          on the latest technologies. This way, I have been able to constantly
-          expand my tech stack, which can be proved by my projects in the next
-          section.
+          {{ i18n.translate("I'm engaged with the circle of lifelong learning. I always keep an eye on the latest technologies. This way, I have been able to constantly expand my tech stack, which can be proved by my projects in the next section.") }}
         </p>
         <h2 class="text-primary font-fira font-bold text-xl sm:text-2xl">
-          You need another skill?
+          {{ i18n.translate('You need another skill?') }}
         </h2>
         <p>
-          Feel free to contact me. I look forward to expanding on my previous
-          knowledge.
+          {{ i18n.translate('Feel free to contact me. I look forward to expanding on my previous knowledge.') }}
         </p>
-        <ui-button text="Let`s talk" type="button" />
+        <ui-button [text]="i18n.translate('Let\'s talk')" type="button" />
       </div>
     </div>
 

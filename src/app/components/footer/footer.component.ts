@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
+import { TranslationService } from '../../i18n/translation.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,7 @@ import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
+  protected readonly i18n = inject(TranslationService);
   readonly year = new Date().getFullYear();
 
   socialLinks = [

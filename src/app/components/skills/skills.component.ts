@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
+import { TranslationService } from '../../i18n/translation.service';
 
 interface Skill {
   name: string;
@@ -14,6 +15,8 @@ interface Skill {
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
+  protected readonly i18n = inject(TranslationService);
+
   readonly skills: Skill[] = [
     { name: 'Angular', src: 'assets/skillicons/Angular.svg' },
     { name: 'C#', src: 'assets/skillicons/csharp.svg' },

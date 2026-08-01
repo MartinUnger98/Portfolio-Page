@@ -25,9 +25,9 @@
   <div class="area-body flex flex-col gap-4 md:gap-6 min-w-0">
     <div>
       <h4 class="text-primary font-fira font-bold text-xl sm:text-2xl mb-2">
-        What is this project about?
+        {{ i18n.translate('What is this project about?') }}
       </h4>
-      <p class="text-base sm:text-lg">{{ project().description }}</p>
+      <p class="text-base sm:text-lg">{{ i18n.translate(project().description) }}</p>
     </div>
 
     <div class="flex flex-wrap gap-4 sm:gap-6">
@@ -47,7 +47,7 @@
         icon="fa-solid fa-arrow-up-right-from-square"
       />
       <ui-button
-        text="Live Test"
+        [text]="i18n.translate('Live Test')"
         target="_blank"
         (click)="openLink(project().live)"
         icon="fa-solid fa-arrow-up-right-from-square"
@@ -57,7 +57,7 @@
 
   @if (hasMultipleProjects()) {
     <ui-button
-      text="Next project"
+      [text]="i18n.translate('Next project')"
       (click)="nextProject()"
       icon="fa-solid fa-arrow-right"
       [outlined]="false"

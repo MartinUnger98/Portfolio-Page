@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CareerEntry } from './career.model';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
+import { TranslationService } from '../../i18n/translation.service';
 
 @Component({
   selector: 'app-career',
@@ -9,12 +10,14 @@ import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
   styleUrl: './career.component.scss',
 })
 export class CareerComponent {
+  protected readonly i18n = inject(TranslationService);
+
   readonly entries: CareerEntry[] = [
     {
       type: 'work',
       role: 'Fullstack Developer',
       place: 'Atos Group Austria',
-      period: 'Jan 2026 - Today',
+      period: 'Jan 2026 - Present',
       location: 'Vienna · Hybrid',
       description:
         'Full-stack development on a large enterprise application for a major Austrian company. I build features end-to-end across an Angular/PrimeNG/Nx frontend and a .NET backend, focusing on complex data tables and workflow tools, automated GDPR-compliant data deletion processes, and real-time updates with SignalR.',
@@ -37,7 +40,7 @@ export class CareerComponent {
       type: 'work',
       role: 'Frontend Developer',
       place: 'Atos Group Austria',
-      period: 'Aug 2024 - Dez 2025',
+      period: 'Aug 2024 - Dec 2025',
       location: 'Vienna · Hybrid',
       description:
         'Frontend-focused role on the same enterprise platform, turning complex business processes into clean, maintainable Angular interfaces built with PrimeNG and Nx, working closely with backend and design in an agile Scrum team.',
@@ -54,8 +57,8 @@ export class CareerComponent {
       type: 'education',
       role: 'Back-End Development',
       place: 'Developer Akademie',
-      period: 'Mai 2024 - Aug 2025',
-      location: 'TÜV-zertifizierter Bildungsträger',
+      period: 'May 2024 - Aug 2025',
+      location: 'TÜV-certified training provider',
       description:
         'Intensive training program for career changers in software development, with over 34 project-driven modules and daily mentor code reviews. My focus was on Python and Django REST Framework, building full-stack projects such as Join and Videoflix.',
       skills: [
@@ -71,8 +74,8 @@ export class CareerComponent {
       type: 'education',
       role: 'Front-End Development',
       place: 'Developer Akademie',
-      period: 'Feb 2023 - Dez 2023',
-      location: 'TÜV-zertifizierter Bildungsträger',
+      period: 'Feb 2023 - Dec 2023',
+      location: 'TÜV-certified training provider',
       description:
         'Same program, with the module focused entirely on frontend development — from HTML, CSS and JavaScript fundamentals up to Angular and Firebase. Built projects such as DABubble in agile teams with continuous mentor feedback.',
       skills: [

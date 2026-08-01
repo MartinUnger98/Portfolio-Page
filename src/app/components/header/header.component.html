@@ -3,7 +3,10 @@
   [ngClass]="{ 'bg-[#1c1c1c]/80 backdrop-blur-sm': isScrolledPastHero }"
 >
   <div class="flex items-center gap-4 md:gap-6">
-    <app-toggle-button [(value)]="lang"></app-toggle-button>
+    <app-toggle-button
+      [value]="i18n.lang()"
+      (valueChange)="onLangChange($event)"
+    ></app-toggle-button>
 
     <nav class="hidden lg:flex gap-6 font-fira text-xl">
       @for (link of navLinks; track link.href) {
@@ -11,7 +14,7 @@
           [href]="link.href"
           class="group relative flex flex-col items-center justify-center"
         >
-          <span>{{ link.label }}</span>
+          <span>{{ i18n.translate(link.label) }}</span>
           <span
             aria-hidden="true"
             class="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 text-[32px] text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -30,7 +33,7 @@
     class="lg:hidden text-white text-2xl cursor-pointer"
     (click)="toggleMobileMenu()"
     [attr.aria-expanded]="isMobileMenuOpen"
-    aria-label="Toggle navigation menu"
+    [attr.aria-label]="i18n.translate('Toggle navigation menu')"
   >
     <i class="fa-solid" [class.fa-bars]="!isMobileMenuOpen" [class.fa-xmark]="isMobileMenuOpen"></i>
   </button>
@@ -42,7 +45,7 @@
   >
     @for (link of navLinks; track link.href) {
       <a [href]="link.href" (click)="closeMobileMenu()" class="hover:text-primary transition-colors duration-300">
-        {{ link.label }}
+        {{ i18n.translate(link.label) }}
       </a>
     }
   </nav>

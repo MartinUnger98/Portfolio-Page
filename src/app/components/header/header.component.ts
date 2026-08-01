@@ -2,12 +2,14 @@ import {
   Component,
   ElementRef,
   HostListener,
+  inject,
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToggleButtonComponent } from '../../ui/toggle-button/toggle-button.component';
+import { Lang, TranslationService } from '../../i18n/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +19,8 @@ import { ToggleButtonComponent } from '../../ui/toggle-button/toggle-button.comp
   encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
-  lang: 'en' | 'de' = 'en';
+  protected readonly i18n = inject(TranslationService);
+
   isScrolledPastHero = false;
   isMobileMenuOpen = false;
 
@@ -44,8 +47,8 @@ export class HeaderComponent implements OnInit {
       : window.scrollY > 0;
   }
 
-  onLangChange(v: 'en' | 'de') {
-    this.lang = v;
+  onLangChange(v: Lang) {
+    this.i18n.setLang(v);
   }
 
   toggleMobileMenu() {

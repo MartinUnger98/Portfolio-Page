@@ -2,6 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { Project } from '../../projects/project.model';
+import { TranslationService } from '../../../i18n/translation.service';
 
 export interface ProjectDialogData {
   projects: Project[];
@@ -15,6 +16,7 @@ export interface ProjectDialogData {
   styleUrl: './project-dialog.component.scss',
 })
 export class ProjectDialogComponent {
+  protected readonly i18n = inject(TranslationService);
   private readonly data = inject<ProjectDialogData>(DIALOG_DATA);
   private readonly dialogRef = inject(DialogRef<void, ProjectDialogComponent>);
 

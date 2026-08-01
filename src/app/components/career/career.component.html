@@ -1,15 +1,13 @@
 <main id="career" class="text-white w-full flex justify-center px-4 sm:px-6 lg:px-8">
   <div class="max-w-[1600px] pt-10 w-full flex flex-col gap-5">
-    <span class="text-primary text-xl sm:text-2xl">Experience</span>
+    <span class="text-primary text-xl sm:text-2xl">{{ i18n.translate('Experience') }}</span>
     <div
       appScrollReveal="up"
       class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-6 sm:p-8 text-base sm:text-lg"
     >
-      <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">Career Journey</h2>
+      <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">{{ i18n.translate('Career Journey') }}</h2>
       <p>
-        From my first steps as a career changer to building enterprise-grade
-        software today. Here's how my path in software development has evolved
-        so far.
+        {{ i18n.translate("From my first steps as a career changer to building enterprise-grade software today. Here's how my path in software development has evolved so far.") }}
       </p>
 
       <div class="flex flex-col mt-4">
@@ -37,15 +35,15 @@
               <div
                 class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"
               >
-                <h3 class="font-fira font-bold text-xl sm:text-2xl">{{ entry.role }}</h3>
+                <h3 class="font-fira font-bold text-xl sm:text-2xl">{{ i18n.translate(entry.role) }}</h3>
                 <span class="font-fira text-primary text-base">{{
-                  entry.period
+                  i18n.translate(entry.period)
                 }}</span>
               </div>
               <div class="text-white/60 text-base mb-3">
-                {{ entry.place }} · {{ entry.location }}
+                {{ entry.place }} · {{ i18n.translate(entry.location) }}
               </div>
-              <p class="mb-4">{{ entry.description }}</p>
+              <p class="mb-4">{{ i18n.translate(entry.description) }}</p>
               <div class="flex flex-wrap gap-2">
                 @for (skill of entry.skills; track $index) {
                   <span

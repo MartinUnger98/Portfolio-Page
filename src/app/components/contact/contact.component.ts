@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
+import { TranslationService } from '../../i18n/translation.service';
 
 type SubmitStatus = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -15,6 +16,7 @@ const EMAIL_PATTERN = /^[a-z0-9_.-]+@[a-z0-9.-]+\.[a-z.]{2,6}$/i;
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  protected readonly i18n = inject(TranslationService);
   private readonly http = inject(HttpClient);
   private readonly fb = inject(FormBuilder);
 

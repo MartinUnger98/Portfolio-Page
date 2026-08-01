@@ -3,6 +3,7 @@ import { Dialog } from '@angular/cdk/dialog';
 import { Project } from './project.model';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
+import { TranslationService } from '../../i18n/translation.service';
 
 @Component({
   selector: 'app-projects',
@@ -12,6 +13,7 @@ import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 })
 export class ProjectsComponent {
   private readonly dialog = inject(Dialog);
+  protected readonly i18n = inject(TranslationService);
 
   readonly projects: Project[] = [
     {
