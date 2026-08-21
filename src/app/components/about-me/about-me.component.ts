@@ -15,17 +15,17 @@ export class AboutMeComponent {
     {
       icon: '/assets/images/location.svg',
       alt: 'location icon',
-      text: 'Currently, I work at Atos Austria as a Fullstack Developer, where I focus on developing enterprise solutions using Angular and .NET.',
+      text: "Currently, I work at Atos Austria as a Fullstack Developer, where I focus on developing enterprise solutions using Angular and .NET.",
     },
     {
       icon: '/assets/images/cognition.svg',
       alt: 'cognition icon',
-      text: 'Beyond that, I also contribute to projects involving cloud-based solutions with Microsoft Azure, which gives me the opportunity to explore modern architectures and cloud-native development practices.',
+      text: "Over time I got more interested in the architecture around the code, how the pieces fit together and what breaks under load.",
     },
     {
       icon: '/assets/images/check-icon.svg',
       alt: 'check icon',
-      text: "I'm passionate about creating clean, efficient code and delivering applications that are both user-friendly and technically strong.",
+      text: "I build things meant to last longer than the sprint they were written in.",
     },
   ];
 

@@ -41,7 +41,7 @@ export class ProjectsComponent {
       image: 'assets/images/dabubble_portfolio.svg',
       imagePosition: '50% 85%',
       description:
-        'Inspired by Slack, this chat messenger allows you to create custom channels for smooth communication with colleagues. Exchange direct messages, share images, and tag individuals effortlessly.',
+        'A Slack-style chat app with custom channels, direct messages, image uploads and mentions. Everything updates live through Firebase, so keeping the state consistent across open sessions was most of the work.',
       techs: [
         { name: 'Angular', icon: 'assets/skillicons/Angular.svg' },
         { name: 'TypeScript', icon: 'assets/skillicons/TypeScript.svg' },
@@ -57,7 +57,7 @@ export class ProjectsComponent {
       image: 'assets/images/videoflix-portfolio.svg',
       imagePosition: '50% 55%',
       description:
-        'Videoflix is a video platform where users can explore categorized content, resume playback and stream videos in multiple quality levels.',
+        'A streaming platform with categorized content, resume playback and multiple quality levels. Videos get converted into different resolutions in the background after upload, which taught me more about backend queues than about video.',
       techs: [
         { name: 'Angular', icon: 'assets/skillicons/Angular.svg' },
         { name: 'TypeScript', icon: 'assets/skillicons/TypeScript.svg' },

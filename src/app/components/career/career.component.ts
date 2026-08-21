@@ -20,7 +20,7 @@ export class CareerComponent {
       period: 'Jan 2026 - Present',
       location: 'Vienna · Hybrid',
       description:
-        'Full-stack development on a large enterprise application for a major Austrian company. I build features end-to-end across an Angular/PrimeNG/Nx frontend and a .NET backend, focusing on complex data tables and workflow tools, automated GDPR-compliant data deletion processes, and real-time updates with SignalR.',
+        'I develop enterprise applications from the interface down to the database, mostly with Angular, PrimeNG, Nx and .NET. My focus is on complex data tables, workflow tools and real-time updates over SignalR.',
       skills: [
         { name: 'Angular', icon: 'assets/skillicons/Angular.svg' },
         { name: '.NET', icon: 'assets/skillicons/net.svg' },
@@ -43,7 +43,7 @@ export class CareerComponent {
       period: 'Aug 2024 - Dec 2025',
       location: 'Vienna · Hybrid',
       description:
-        'Frontend-focused role on the same enterprise platform, turning complex business processes into clean, maintainable Angular interfaces built with PrimeNG and Nx, working closely with backend and design in an agile Scrum team.',
+        'Frontend work on enterprise applications, mostly Angular with PrimeNG and Nx. Turning complicated internal workflows into interfaces people can actually use, and keeping them maintainable once the requirements change again. All of it in an agile Scrum team, with Backend and Design right next to me.',
       skills: [
         { name: 'Angular', icon: 'assets/skillicons/Angular.svg' },
         { name: 'Nx', icon: 'assets/skillicons/nx.svg' },
@@ -60,7 +60,7 @@ export class CareerComponent {
       period: 'May 2024 - Aug 2025',
       location: 'TÜV-certified training provider',
       description:
-        'Intensive training program for career changers in software development, with over 34 project-driven modules and daily mentor code reviews. My focus was on Python and Django REST Framework, building full-stack projects such as Join and Videoflix.',
+        'An intensive career-change program: 34+ modules, all project-driven, with code reviews from a mentor every day. My focus was Python and Django REST Framework, building full-stack projects like Join and Videoflix.',
       skills: [
         { name: 'Python', icon: 'assets/skillicons/Python.svg' },
         { name: 'Django', icon: 'assets/skillicons/Django.svg' },
@@ -77,7 +77,7 @@ export class CareerComponent {
       period: 'Feb 2023 - Dec 2023',
       location: 'TÜV-certified training provider',
       description:
-        'Same program, with the module focused entirely on frontend development — from HTML, CSS and JavaScript fundamentals up to Angular and Firebase. Built projects such as DABubble in agile teams with continuous mentor feedback.',
+        'Same program, Frontend part. Started at HTML, CSS and JavaScript fundamentals and ended at Angular and Firebase. Projects like DABubble, built in agile teams with continuous mentor feedback.',
       skills: [
         { name: 'GitHub', icon: 'assets/skillicons/github.svg' },
         { name: 'HTML5', icon: 'assets/skillicons/HTML.svg' },
