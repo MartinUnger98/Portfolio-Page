@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 import { TranslationService } from '../../i18n/translation.service';
 
 @Component({
   selector: 'app-footer',
-  imports: [ScrollRevealDirective],
+  imports: [ScrollRevealDirective, RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })

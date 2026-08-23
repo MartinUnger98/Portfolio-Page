@@ -86,10 +86,12 @@
           </label>
           <textarea
             id="message"
-            rows="4 "
+            #messageInput
+            rows="4"
             formControlName="message"
             [placeholder]="i18n.translate('Hello Lukas, I am interested in…')"
-            class="bg-transparent outline-none resize-none text-lg w-full placeholder:text-white/50"
+            (input)="autoResizeMessage($event)"
+            class="bg-transparent outline-none resize-none text-lg w-full placeholder:text-white/50 overflow-y-auto"
           ></textarea>
           @if (
             form.controls.message.invalid &&
@@ -112,7 +114,7 @@
           />
           <span>
             {{ i18n.translate("I've read the") }}
-            <a href="#" class="text-primary hover:underline">{{ i18n.translate('privacy policy') }}</a>
+            <a routerLink="/privacy-policy" class="text-primary hover:underline">{{ i18n.translate('privacy policy') }}</a>
             {{ i18n.translate('and agree to the processing of my data as outlined.') }}
           </span>
         </label>

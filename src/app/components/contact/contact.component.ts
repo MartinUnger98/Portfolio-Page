@@ -1,6 +1,7 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, ElementRef, inject, signal, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 import { TranslationService } from '../../i18n/translation.service';
@@ -8,10 +9,11 @@ import { TranslationService } from '../../i18n/translation.service';
 type SubmitStatus = 'idle' | 'sending' | 'sent' | 'error';
 
 const EMAIL_PATTERN = /^[a-z0-9_.-]+@[a-z0-9.-]+\.[a-z.]{2,6}$/i;
+const MESSAGE_MAX_HEIGHT_PX = 240;
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, ButtonComponent, ScrollRevealDirective],
+  imports: [ReactiveFormsModule, ButtonComponent, ScrollRevealDirective, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -19,6 +21,8 @@ export class ContactComponent {
   protected readonly i18n = inject(TranslationService);
   private readonly http = inject(HttpClient);
   private readonly fb = inject(FormBuilder);
+
+  @ViewChild('messageInput') private readonly messageInput?: ElementRef<HTMLTextAreaElement>;
 
   private readonly formspreeEndpoint = 'https://formspree.io/f/mjvqzpqy';
 
@@ -30,6 +34,12 @@ export class ContactComponent {
     message: ['', Validators.required],
     privacyAccepted: [false, Validators.requiredTrue],
   });
+
+  autoResizeMessage(event: Event) {
+    const textarea = event.target as HTMLTextAreaElement;
+    textarea.style.height = 'auto';
+    textarea.style.height = `${Math.min(textarea.scrollHeight, MESSAGE_MAX_HEIGHT_PX)}px`;
+  }
 
   submit() {
     if (this.form.invalid) {
@@ -48,6 +58,9 @@ export class ContactComponent {
         next: () => {
           this.status.set('sent');
           this.form.reset({ privacyAccepted: false });
+          if (this.messageInput) {
+            this.messageInput.nativeElement.style.height = 'auto';
+          }
         },
         error: () => this.status.set('error'),
       });
