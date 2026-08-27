@@ -58,4 +58,14 @@ export class HeaderComponent implements OnInit {
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  scrollToSection(event: MouseEvent, href: string) {
+    event.preventDefault();
+    document.getElementById(href.slice(1))?.scrollIntoView();
+    this.closeMobileMenu();
+  }
 }

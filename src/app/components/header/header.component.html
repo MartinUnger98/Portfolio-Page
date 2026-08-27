@@ -12,6 +12,7 @@
       @for (link of navLinks; track link.href) {
         <a
           [href]="link.href"
+          (click)="scrollToSection($event, link.href)"
           class="group relative flex flex-col items-center justify-center"
         >
           <span>{{ i18n.translate(link.label) }}</span>
@@ -26,7 +27,12 @@
     </nav>
   </div>
 
-  <img class="h-12 md:h-16 lg:h-20" src="/assets/images/logo.svg" alt="" />
+  <img
+    class="h-12 md:h-16 lg:h-20 cursor-pointer"
+    src="/assets/images/logo.svg"
+    alt=""
+    (click)="scrollToTop()"
+  />
 
   <button
     type="button"
@@ -44,7 +50,7 @@
     class="lg:hidden absolute top-full left-0 w-full bg-[#1c1c1c]/95 backdrop-blur-sm border-t border-white/10 flex flex-col items-center gap-6 py-8 font-fira text-xl text-white"
   >
     @for (link of navLinks; track link.href) {
-      <a [href]="link.href" (click)="closeMobileMenu()" class="hover:text-primary transition-colors duration-300">
+      <a [href]="link.href" (click)="scrollToSection($event, link.href)" class="hover:text-primary transition-colors duration-300">
         {{ i18n.translate(link.label) }}
       </a>
     }

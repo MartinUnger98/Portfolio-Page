@@ -29,6 +29,10 @@ export class FooterComponent {
     },
   ];
 
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   open(href: string, external: boolean = true) {
     if (external) {
       window.open(href, '_blank', 'noopener');
