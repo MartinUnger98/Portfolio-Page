@@ -1,5 +1,5 @@
 <div
-  class="dialog-grid relative p-6 sm:p-8 md:p-12 text-white bg-primary-blur border border-primary rounded-4xl overflow-y-auto max-h-[90vh]"
+  class="dialog-grid relative p-5 sm:p-8 md:p-12 text-white bg-primary-blur border border-primary rounded-4xl overflow-y-auto"
 >
   <ui-button
     (click)="close()"
@@ -13,10 +13,10 @@
     [src]="project().image"
     [alt]="i18n.translate('Screenshot of') + ' ' + project().name"
     [style.object-position]="project().imagePosition || '50% 50%'"
-    class="area-image w-full aspect-video object-cover rounded-2xl mt-12 md:mt-9 md:aspect-auto md:max-w-full"
+    class="area-image w-full aspect-video max-h-[26svh] object-cover rounded-2xl md:mt-9 md:aspect-auto md:max-h-none md:max-w-full"
   />
 
-  <div class="area-header flex items-baseline gap-3 md:block">
+  <div class="area-header flex items-baseline gap-3 pr-12 md:block md:pr-0">
     <span
       aria-hidden="true"
       class="text-primary font-karla font-bold text-3xl sm:text-4xl md:text-7xl lg:text-9xl"
@@ -42,7 +42,7 @@
       </p>
     </div>
 
-    <ul class="flex flex-wrap gap-4 sm:gap-6 list-none">
+    <ul class="flex flex-wrap gap-x-4 gap-y-2 sm:gap-6 list-none">
       @for (tech of project().techs; track $index) {
         <li class="flex items-center gap-2">
           <img [src]="tech.icon" alt="" class="w-6 h-6" />

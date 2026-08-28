@@ -4,7 +4,7 @@
   class="text-white w-full flex justify-center"
 >
   <div
-    class="max-w-[1600px] pt-10 w-full flex flex-col min-[1250px]:flex-row justify-between gap-10 min-[1250px]:gap-16 px-4 sm:px-6 lg:px-8 py-6 sm:py-8"
+    class="max-w-[1600px] pt-10 w-full flex flex-col min-[1250px]:flex-row justify-between gap-10 min-[1250px]:gap-16 px-4 sm:px-6 lg:px-8 py-6 sm:py-8 pb-2 sm:pb-8"
   >
     <div
       appScrollReveal="left"
@@ -185,20 +185,26 @@
           "
         />
 
-        <p role="status" aria-live="polite" class="status-message text-primary">
-          @if (status() === "sent") {
-            {{ i18n.translate("Thanks! I'll get back to you soon.") }}
-          }
-        </p>
-        <p role="alert" class="status-message text-[#F2836B]">
-          @if (status() === "error") {
-            {{
-              i18n.translate(
-                "Something went wrong. Please try again or email me directly."
-              )
-            }}
-          }
-        </p>
+        <div class="flex flex-col text-center">
+          <p
+            role="status"
+            aria-live="polite"
+            class="status-message text-primary"
+          >
+            @if (status() === "sent") {
+              {{ i18n.translate("Thanks! I'll get back to you soon.") }}
+            }
+          </p>
+          <p role="alert" class="status-message text-[#F2836B]">
+            @if (status() === "error") {
+              {{
+                i18n.translate(
+                  "Something went wrong. Please try again or email me directly."
+                )
+              }}
+            }
+          </p>
+        </div>
       </div>
     </form>
   </div>

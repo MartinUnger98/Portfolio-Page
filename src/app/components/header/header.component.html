@@ -43,7 +43,7 @@
     #menuToggle
     type="button"
     class="lg:hidden text-white text-2xl cursor-pointer"
-    (click)="toggleMobileMenu()"
+    (click)="toggleMobileMenu($event)"
     [attr.aria-expanded]="isMobileMenuOpen"
     aria-controls="mobile-nav"
     [attr.aria-label]="i18n.translate('Toggle navigation menu')"

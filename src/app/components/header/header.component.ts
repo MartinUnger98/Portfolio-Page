@@ -74,12 +74,15 @@ export class HeaderComponent implements OnInit {
     this.i18n.setLang(v);
   }
 
-  toggleMobileMenu() {
+  toggleMobileMenu(event?: MouseEvent) {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
     if (!this.isMobileMenuOpen) return;
 
     this.cdr.detectChanges();
-    this.mobileNav?.nativeElement.querySelector('a')?.focus();
+    const openedByKeyboard = !event || event.detail === 0;
+    if (openedByKeyboard) {
+      this.mobileNav?.nativeElement.querySelector('a')?.focus();
+    }
   }
 
   closeMobileMenu() {

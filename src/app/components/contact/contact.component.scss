@@ -1,3 +1,24 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff;
+  caret-color: #ffffff;
+  -webkit-box-shadow: 0 0 0 1000px #1c1c1c inset;
+  box-shadow: 0 0 0 1000px #1c1c1c inset;
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+input:autofill,
+textarea:autofill {
+  -webkit-text-fill-color: #ffffff;
+  caret-color: #ffffff;
+  filter: none;
+}
+
 .contact-underline {
   position: absolute;
   left: 0;
