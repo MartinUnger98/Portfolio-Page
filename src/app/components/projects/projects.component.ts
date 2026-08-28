@@ -86,11 +86,23 @@ export class ProjectsComponent {
     this.hoveredIndex.set(null);
   }
 
+  onFocusOut(event: FocusEvent) {
+    const list = event.currentTarget as HTMLElement;
+    const next = event.relatedTarget as Node | null;
+    if (!next || !list.contains(next)) {
+      this.clearHovered();
+    }
+  }
+
   openProject(index: number) {
     this.dialog.open(ProjectDialogComponent, {
       data: { projects: this.projects, activeIndex: index },
       panelClass: 'project-dialog-panel',
       backdropClass: 'project-dialog-backdrop',
+      ariaLabelledBy: 'project-dialog-title',
+      ariaModal: true,
+      autoFocus: 'first-heading',
+      restoreFocus: true,
     });
   }
 }

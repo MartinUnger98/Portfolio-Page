@@ -1,4 +1,12 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  ViewChild,
+  computed,
+  inject,
+  signal,
+} from '@angular/core';
 import { DIALOG_DATA, DialogRef } from '@angular/cdk/dialog';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { Project } from '../../projects/project.model';
@@ -19,6 +27,7 @@ export class ProjectDialogComponent {
   protected readonly i18n = inject(TranslationService);
   private readonly data = inject<ProjectDialogData>(DIALOG_DATA);
   private readonly dialogRef = inject(DialogRef<void, ProjectDialogComponent>);
+  private readonly cdr = inject(ChangeDetectorRef);
 
   readonly activeIndex = signal(this.data.activeIndex);
 
@@ -28,8 +37,13 @@ export class ProjectDialogComponent {
 
   readonly hasMultipleProjects = computed(() => this.data.projects.length > 1);
 
+  @ViewChild('dialogTitle')
+  private readonly dialogTitle?: ElementRef<HTMLElement>;
+
   nextProject() {
     this.activeIndex.update((index) => (index + 1) % this.data.projects.length);
+    this.cdr.detectChanges();
+    this.dialogTitle?.nativeElement.focus();
   }
 
   previousProject() {
@@ -37,10 +51,6 @@ export class ProjectDialogComponent {
       (index) =>
         (index - 1 + this.data.projects.length) % this.data.projects.length,
     );
-  }
-
-  openLink(url: string) {
-    window.open(url, '_blank');
   }
 
   close() {

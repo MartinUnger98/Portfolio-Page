@@ -1,6 +1,7 @@
 :host {
   --green: #3dcfb6;
   --white: #ffffff;
+  --on-green: #12312b;
   --h: 28px;
   --w: 84px;
   --border: 1px;
@@ -56,19 +57,17 @@
 }
 
 .lang-toggle:not(.is-de) .label.en {
-  color: var(--white);
+  color: var(--on-green);
 }
 .lang-toggle:not(.is-de) .label.de {
   color: var(--green);
-  opacity: 0.9;
 }
 
 .lang-toggle.is-de .label.de {
-  color: var(--white);
+  color: var(--on-green);
 }
 .lang-toggle.is-de .label.en {
   color: var(--green);
-  opacity: 0.9;
 }
 
 .lang-toggle:focus-visible {

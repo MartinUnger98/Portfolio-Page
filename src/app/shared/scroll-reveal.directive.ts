@@ -1,4 +1,12 @@
-import { Directive, ElementRef, Input, OnDestroy, OnInit, Renderer2, inject } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+  inject,
+} from '@angular/core';
 
 export type ScrollRevealVariant = 'up' | 'left' | 'right' | 'scale' | 'fade';
 

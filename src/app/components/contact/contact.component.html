@@ -1,22 +1,40 @@
-<main id="contact" class="text-white w-full flex justify-center">
+<section
+  id="contact"
+  aria-labelledby="contact-title"
+  class="text-white w-full flex justify-center"
+>
   <div
     class="max-w-[1600px] pt-10 w-full flex flex-col min-[1250px]:flex-row justify-between gap-10 min-[1250px]:gap-16 px-4 sm:px-6 lg:px-8 py-6 sm:py-8"
   >
-    <div appScrollReveal="left" class="flex flex-col gap-5 max-w-full min-[1250px]:max-w-[480px]">
-      <span class="text-primary text-xl sm:text-2xl">{{ i18n.translate('Contact me') }}</span>
-      <h2 class="font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">{{ i18n.translate("Let's work together") }}</h2>
+    <div
+      appScrollReveal="left"
+      class="flex flex-col gap-5 max-w-full min-[1250px]:max-w-[480px]"
+    >
+      <span class="text-primary text-xl sm:text-2xl">{{
+        i18n.translate("Contact me")
+      }}</span>
+      <h2
+        id="contact-title"
+        class="font-fira font-bold text-4xl sm:text-5xl lg:text-6xl"
+      >
+        {{ i18n.translate("Let's work together") }}
+      </h2>
 
       <h3 class="text-primary font-fira font-bold text-xl sm:text-2xl mt-4">
-        {{ i18n.translate('Got a problem to solve?') }}
+        {{ i18n.translate("Got a problem to solve?") }}
       </h3>
       <p class="text-base sm:text-lg">
-        {{ i18n.translate('Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.') }}
+        {{
+          i18n.translate(
+            "Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work."
+          )
+        }}
       </p>
       <p class="text-base sm:text-lg">
-        {{ i18n.translate('Need a Fullstack developer?') }}
+        {{ i18n.translate("Need a Fullstack developer?") }}
         <a
           href="mailto:mail@martin-unger.at"
-          class="text-primary hover:underline"
+          class="text-primary underline underline-offset-2 decoration-primary/60 hover:decoration-primary"
           >{{ i18n.translate("Let's talk!") }}</a
         >
       </p>
@@ -28,51 +46,64 @@
       novalidate
       appScrollReveal="right"
       [revealDelay]="120"
+      [attr.aria-label]="i18n.translate('Contact form')"
       class="flex flex-col gap-8 flex-1 max-w-full min-[1250px]:max-w-[620px]"
     >
       <div class="flex flex-col">
         <div class="border-t border-primary"></div>
 
         <div class="contact-field relative flex flex-col gap-2 py-6">
-          <label for="name" class="text-primary font-fira font-bold text-xl sm:text-2xl">
+          <label
+            for="name"
+            class="text-primary font-fira font-bold text-xl sm:text-2xl"
+          >
             {{ i18n.translate("What's your name?") }}
           </label>
           <input
             id="name"
             type="text"
             formControlName="name"
+            required
+            autocomplete="name"
+            [attr.aria-invalid]="showError('name')"
+            [attr.aria-describedby]="showError('name') ? 'name-error' : null"
             [placeholder]="i18n.translate('Your name goes here')"
             class="bg-transparent outline-none text-lg w-full placeholder:text-white/50"
           />
-          @if (
-            form.controls.name.invalid &&
-            (form.controls.name.touched || form.controls.name.dirty)
-          ) {
-            <span class="text-[#F2836B]">{{ i18n.translate('Oops! It seems your name is missing.') }}</span>
+          @if (showError("name")) {
+            <span id="name-error" class="text-[#F2836B]">{{
+              i18n.translate("Oops! It seems your name is missing.")
+            }}</span>
           }
-          <span class="contact-underline"></span>
+          <span aria-hidden="true" class="contact-underline"></span>
         </div>
 
         <div class="border-t border-primary"></div>
 
         <div class="contact-field relative flex flex-col gap-2 py-6">
-          <label for="email" class="text-primary font-fira font-bold text-xl sm:text-2xl">
+          <label
+            for="email"
+            class="text-primary font-fira font-bold text-xl sm:text-2xl"
+          >
             {{ i18n.translate("What's your email?") }}
           </label>
           <input
             id="email"
             type="email"
             formControlName="email"
+            required
+            autocomplete="email"
+            [attr.aria-invalid]="showError('email')"
+            [attr.aria-describedby]="showError('email') ? 'email-error' : null"
             placeholder="youremail@email.com"
             class="bg-transparent outline-none text-lg w-full placeholder:text-white/50"
           />
-          @if (
-            form.controls.email.invalid &&
-            (form.controls.email.touched || form.controls.email.dirty)
-          ) {
-            <span class="text-[#F2836B]">{{ i18n.translate('Oops! Your email is required.') }}</span>
+          @if (showError("email")) {
+            <span id="email-error" class="text-[#F2836B]">{{
+              i18n.translate("Oops! Your email is required.")
+            }}</span>
           }
-          <span class="contact-underline"></span>
+          <span aria-hidden="true" class="contact-underline"></span>
         </div>
 
         <div class="border-t border-primary"></div>
@@ -82,24 +113,28 @@
             for="message"
             class="text-primary font-fira font-bold text-xl sm:text-2xl"
           >
-            {{ i18n.translate('How can I help you?') }}
+            {{ i18n.translate("How can I help you?") }}
           </label>
           <textarea
             id="message"
             #messageInput
             rows="4"
             formControlName="message"
-            [placeholder]="i18n.translate('Hello Lukas, I am interested in…')"
+            required
+            [attr.aria-invalid]="showError('message')"
+            [attr.aria-describedby]="
+              showError('message') ? 'message-error' : null
+            "
+            [placeholder]="i18n.translate('Hello Martin, I am interested in…')"
             (input)="autoResizeMessage($event)"
             class="bg-transparent outline-none resize-none text-lg w-full placeholder:text-white/50 overflow-y-auto"
           ></textarea>
-          @if (
-            form.controls.message.invalid &&
-            (form.controls.message.touched || form.controls.message.dirty)
-          ) {
-            <span class="text-[#F2836B]">{{ i18n.translate('What do you need to develop?') }}</span>
+          @if (showError("message")) {
+            <span id="message-error" class="text-[#F2836B]">{{
+              i18n.translate("What do you need to develop?")
+            }}</span>
           }
-          <span class="contact-underline"></span>
+          <span aria-hidden="true" class="contact-underline"></span>
         </div>
 
         <div class="border-t border-primary"></div>
@@ -108,39 +143,63 @@
       <div class="flex flex-col gap-2">
         <label class="flex items-start gap-3 text-base cursor-pointer">
           <input
+            id="privacyAccepted"
             type="checkbox"
             formControlName="privacyAccepted"
-            class="w-5 h-5 shrink-0 mt-0.5 rounded-sm border-2 border-primary bg-transparent accent-primary cursor-pointer"
+            required
+            [attr.aria-invalid]="showError('privacyAccepted')"
+            [attr.aria-describedby]="
+              showError('privacyAccepted') ? 'privacy-error' : null
+            "
+            class="w-6 h-6 shrink-0 mt-0.5 rounded-sm border-2 border-primary bg-transparent accent-primary cursor-pointer"
           />
           <span>
             {{ i18n.translate("I've read the") }}
-            <a routerLink="/privacy-policy" class="text-primary hover:underline">{{ i18n.translate('privacy policy') }}</a>
-            {{ i18n.translate('and agree to the processing of my data as outlined.') }}
+            <a
+              routerLink="/privacy-policy"
+              class="text-primary underline underline-offset-2 decoration-primary/60 hover:decoration-primary"
+              >{{ i18n.translate("privacy policy") }}</a
+            >
+            {{
+              i18n.translate(
+                "and agree to the processing of my data as outlined."
+              )
+            }}
           </span>
         </label>
-        @if (
-          form.controls.privacyAccepted.invalid &&
-          form.controls.privacyAccepted.touched
-        ) {
-          <span class="text-[#F2836B]">{{ i18n.translate('Please accept the privacy policy.') }}</span>
+        @if (showError("privacyAccepted")) {
+          <span id="privacy-error" class="text-[#F2836B]">{{
+            i18n.translate("Please accept the privacy policy.")
+          }}</span>
         }
       </div>
 
       <div class="flex flex-col items-center gap-4">
         <ui-button
           type="submit"
-          [text]="status() === 'sending' ? i18n.translate('Sending...') : i18n.translate('Say Hello ;)')"
+          [disabled]="status() === 'sending'"
+          [text]="
+            status() === 'sending'
+              ? i18n.translate('Sending...')
+              : i18n.translate('Say Hello ;)')
+          "
         />
 
-        @if (status() === "sent") {
-          <p class="status-message text-primary">{{ i18n.translate("Thanks! I'll get back to you soon.") }}</p>
-        }
-        @if (status() === "error") {
-          <p class="status-message text-[#F2836B]">
-            {{ i18n.translate('Something went wrong. Please try again or email me directly.') }}
-          </p>
-        }
+        <p role="status" aria-live="polite" class="status-message text-primary">
+          @if (status() === "sent") {
+            {{ i18n.translate("Thanks! I'll get back to you soon.") }}
+          }
+        </p>
+        <p role="alert" class="status-message text-[#F2836B]">
+          @if (status() === "error") {
+            {{
+              i18n.translate(
+                "Something went wrong. Please try again or email me directly."
+              )
+            }}
+          }
+        </p>
       </div>
     </form>
   </div>
-</main>
+</section>

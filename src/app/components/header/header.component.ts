@@ -1,7 +1,9 @@
 import {
+  ChangeDetectorRef,
   Component,
   ElementRef,
   HostListener,
+  ViewChild,
   inject,
   OnInit,
   ViewEncapsulation,
@@ -10,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToggleButtonComponent } from '../../ui/toggle-button/toggle-button.component';
 import { Lang, TranslationService } from '../../i18n/translation.service';
+import { focusSection } from '../../shared/focus-section';
 
 @Component({
   selector: 'app-header',
@@ -24,12 +27,18 @@ export class HeaderComponent implements OnInit {
   isScrolledPastHero = false;
   isMobileMenuOpen = false;
 
+  @ViewChild('menuToggle')
+  private readonly menuToggle?: ElementRef<HTMLButtonElement>;
+  @ViewChild('mobileNav') private readonly mobileNav?: ElementRef<HTMLElement>;
+
   navLinks = [
     { label: 'About me', href: '#about-me' },
     { label: 'Skills', href: '#skills' },
     { label: 'Career', href: '#career' },
     { label: 'Projects', href: '#projects' },
   ];
+
+  private readonly cdr = inject(ChangeDetectorRef);
 
   constructor(private elementRef: ElementRef<HTMLElement>) {}
 
@@ -47,12 +56,30 @@ export class HeaderComponent implements OnInit {
       : window.scrollY > 0;
   }
 
+  @HostListener('document:keydown.escape')
+  onEscape() {
+    if (!this.isMobileMenuOpen) return;
+    this.closeMobileMenu();
+    this.menuToggle?.nativeElement.focus();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (!this.isMobileMenuOpen) return;
+    if (this.elementRef.nativeElement.contains(event.target as Node)) return;
+    this.closeMobileMenu();
+  }
+
   onLangChange(v: Lang) {
     this.i18n.setLang(v);
   }
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    if (!this.isMobileMenuOpen) return;
+
+    this.cdr.detectChanges();
+    this.mobileNav?.nativeElement.querySelector('a')?.focus();
   }
 
   closeMobileMenu() {
@@ -61,11 +88,12 @@ export class HeaderComponent implements OnInit {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    focusSection('hero');
   }
 
   scrollToSection(event: MouseEvent, href: string) {
     event.preventDefault();
-    document.getElementById(href.slice(1))?.scrollIntoView();
     this.closeMobileMenu();
+    focusSection(href.slice(1));
   }
 }

@@ -1,166 +1,251 @@
-<main class="flex flex-col min-h-screen">
-  <div
+<a class="skip-link" href="#main-content">{{
+  i18n.translate("Skip to main content")
+}}</a>
+
+<div class="flex flex-col min-h-screen">
+  <header
     class="flex justify-between items-center w-full text-white px-4 sm:px-6 md:px-12 lg:px-24 py-4 md:py-6 lg:py-8"
   >
     <a
       routerLink="/"
       class="flex items-center gap-2 font-fira hover:text-primary transition-colors duration-300"
     >
-      <i class="fa-solid fa-arrow-left"></i>
-      <span>{{ i18n.translate('Back to home') }}</span>
+      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      <span>{{ i18n.translate("Back to home") }}</span>
     </a>
     <app-toggle-button
       [value]="i18n.lang()"
       (valueChange)="onLangChange($event)"
     ></app-toggle-button>
-  </div>
+  </header>
 
-  <section class="flex justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+  <main
+    id="main-content"
+    tabindex="-1"
+    class="flex-1 flex justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-14"
+  >
     <div class="flex flex-col gap-3 w-full max-w-3xl text-white">
-      <h1 class="font-fira text-primary font-bold text-4xl sm:text-5xl mb-2">
-        {{ i18n.translate('Privacy Policy') }}
+      <h1
+        #pageTitle
+        tabindex="-1"
+        class="font-fira text-primary font-bold text-4xl sm:text-5xl mb-2"
+      >
+        {{ i18n.translate("Privacy Policy") }}
       </h1>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'Responsible party in terms of data protection laws, particularly the EU General Data Protection Regulation (GDPR), is:'
+            "Responsible party in terms of data protection laws, particularly the EU General Data Protection Regulation (GDPR), is:"
           )
         }}
       </p>
       <p>Martin Unger</p>
 
       <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
-        {{ i18n.translate('Your Rights as a Data Subject') }}
+        {{ i18n.translate("Your Rights as a Data Subject") }}
       </h2>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'You can exercise the following rights at any time using the contact details of our data protection officer:'
+            "You can exercise the following rights at any time using the contact details of our data protection officer:"
           )
         }}
       </p>
       <ul class="list-disc pl-6 flex flex-col gap-1">
         <li>
-          {{ i18n.translate('Access to your data stored with us and its processing (Art. 15 GDPR),') }}
-        </li>
-        <li>{{ i18n.translate('Correction of inaccurate personal data (Art. 16 GDPR),') }}</li>
-        <li>{{ i18n.translate('Deletion of your data stored with us (Art. 17 GDPR),') }}</li>
-        <li>
           {{
             i18n.translate(
-              'Restriction of data processing if we are not yet allowed to delete your data due to legal obligations (Art. 18 GDPR),'
+              "Access to your data stored with us and its processing (Art. 15 GDPR),"
             )
           }}
         </li>
-        <li>{{ i18n.translate('Objection to the processing of your data by us (Art. 21 GDPR) and') }}</li>
         <li>
           {{
             i18n.translate(
-              'Data portability if you have consented to data processing or have concluded a contract with us (Art. 20 GDPR).'
+              "Correction of inaccurate personal data (Art. 16 GDPR),"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            i18n.translate(
+              "Deletion of your data stored with us (Art. 17 GDPR),"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            i18n.translate(
+              "Restriction of data processing if we are not yet allowed to delete your data due to legal obligations (Art. 18 GDPR),"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            i18n.translate(
+              "Objection to the processing of your data by us (Art. 21 GDPR) and"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            i18n.translate(
+              "Data portability if you have consented to data processing or have concluded a contract with us (Art. 20 GDPR)."
             )
           }}
         </li>
       </ul>
       <p class="leading-relaxed">
-        {{ i18n.translate('If you have given us consent, you can revoke it at any time with effect for the future.') }}
-      </p>
-      <p class="leading-relaxed">
         {{
           i18n.translate(
-            'You can lodge a complaint with a supervisory authority at any time, e.g., the supervisory authority of the federal state of your residence or the authority that oversees us as the responsible body.'
+            "If you have given us consent, you can revoke it at any time with effect for the future."
           )
         }}
       </p>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'A list of supervisory authorities (for the non-public sector) with addresses can be found at:'
+            "You can lodge a complaint with a supervisory authority at any time, e.g., the supervisory authority of the federal state of your residence or the authority that oversees us as the responsible body."
+          )
+        }}
+      </p>
+      <p class="leading-relaxed">
+        {{
+          i18n.translate(
+            "A list of supervisory authorities (for the non-public sector) with addresses can be found at:"
           )
         }}
         <a
           href="https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html"
           target="_blank"
           rel="noopener nofollow"
-          class="text-primary hover:underline"
-          >{{ i18n.translate('Data Protection Supervisory Authorities') }}</a
+          class="text-primary underline underline-offset-2 decoration-primary/60 hover:decoration-primary"
+          >{{ i18n.translate("Data Protection Supervisory Authorities")
+          }}<span class="sr-only">
+            ({{ i18n.translate("opens in a new tab") }})</span
+          ></a
         >.
       </p>
 
       <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
-        {{ i18n.translate('Collection of General Information When Visiting Our Website') }}
+        {{
+          i18n.translate(
+            "Collection of General Information When Visiting Our Website"
+          )
+        }}
       </h2>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Type and Purpose of Processing:') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Type and Purpose of Processing:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'When you access our website, i.e., if you do not register or otherwise submit information, information of a general nature is automatically collected. This information (server log files) includes the type of web browser, the operating system used, the domain name of your Internet service provider, your IP address, and similar.'
+            "When you access our website, i.e., if you do not register or otherwise submit information, information of a general nature is automatically collected. This information (server log files) includes the type of web browser, the operating system used, the domain name of your Internet service provider, your IP address, and similar."
           )
         }}
       </p>
-      <p class="leading-relaxed">{{ i18n.translate('They are processed in particular for the following purposes:') }}</p>
+      <p class="leading-relaxed">
+        {{
+          i18n.translate(
+            "They are processed in particular for the following purposes:"
+          )
+        }}
+      </p>
       <ul class="list-disc pl-6 flex flex-col gap-1">
-        <li>{{ i18n.translate('Ensuring a trouble-free connection of the website,') }}</li>
-        <li>{{ i18n.translate('Ensuring smooth use of our website,') }}</li>
-        <li>{{ i18n.translate('Evaluation of system security and stability as well as') }}</li>
-        <li>{{ i18n.translate('to optimize our website.') }}</li>
+        <li>
+          {{
+            i18n.translate("Ensuring a trouble-free connection of the website,")
+          }}
+        </li>
+        <li>{{ i18n.translate("Ensuring smooth use of our website,") }}</li>
+        <li>
+          {{
+            i18n.translate(
+              "Evaluation of system security and stability as well as"
+            )
+          }}
+        </li>
+        <li>{{ i18n.translate("to optimize our website.") }}</li>
       </ul>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'We do not use your data to draw conclusions about you. Information of this type may be statistically evaluated by us anonymously, if necessary, to optimize our website and the underlying technology.'
+            "We do not use your data to draw conclusions about you. Information of this type may be statistically evaluated by us anonymously, if necessary, to optimize our website and the underlying technology."
           )
         }}
       </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Legal Basis and Legitimate Interest:') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Legal Basis and Legitimate Interest:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'Processing is carried out in accordance with Art. 6 (1) lit. f GDPR on the basis of our legitimate interest in improving the stability and functionality of our website.'
+            "Processing is carried out in accordance with Art. 6 (1) lit. f GDPR on the basis of our legitimate interest in improving the stability and functionality of our website."
           )
         }}
       </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Recipient:') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Recipient:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'Recipients of the data may be technical service providers who act as processors for the operation and maintenance of our website.'
+            "Recipients of the data may be technical service providers who act as processors for the operation and maintenance of our website."
           )
         }}
       </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Storage Duration:') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Storage Duration:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'The data will be deleted as soon as they are no longer necessary for the purpose of their collection. This is generally the case for the data that serve to provide the website when the respective session has ended.'
+            "The data will be deleted as soon as they are no longer necessary for the purpose of their collection. This is generally the case for the data that serve to provide the website when the respective session has ended."
           )
         }}
       </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Provision required or necessary:') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Provision required or necessary:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'The provision of the aforementioned personal data is neither legally nor contractually required. However, without the IP address, the service and functionality of our website is not guaranteed. Moreover, individual services and services may not be available or limited. For this reason, an objection is excluded.'
+            "The provision of the aforementioned personal data is neither legally nor contractually required. However, without the IP address, the service and functionality of our website is not guaranteed. Moreover, individual services and services may not be available or limited. For this reason, an objection is excluded."
           )
         }}
       </p>
 
-      <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">{{ i18n.translate('Registration on our website') }}</h2>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Type and Purpose of Processing:') }}</h3>
+      <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
+        {{ i18n.translate("Registration on our website") }}
+      </h2>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Type and Purpose of Processing:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'For registration on our website, we need some personal data, which are transmitted to us via an input mask.'
+            "For registration on our website, we need some personal data, which are transmitted to us via an input mask."
           )
         }}
       </p>
       <p class="leading-relaxed">
-        {{ i18n.translate('At the time of registration, the following additional data are collected:') }}
+        {{
+          i18n.translate(
+            "At the time of registration, the following additional data are collected:"
+          )
+        }}
       </p>
-      <p>{{ i18n.translate('none') }}</p>
+      <p>{{ i18n.translate("none") }}</p>
       <p class="leading-relaxed">
-        {{ i18n.translate('Your registration is necessary for providing certain contents and services on our website.') }}
+        {{
+          i18n.translate(
+            "Your registration is necessary for providing certain contents and services on our website."
+          )
+        }}
       </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Legal Basis:') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Legal Basis:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
@@ -168,77 +253,113 @@
           )
         }}
       </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Recipient:') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Recipient:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'The recipients of the data may be technical service providers who act as data processors for the operation and maintenance of our website.'
+            "The recipients of the data may be technical service providers who act as data processors for the operation and maintenance of our website."
           )
         }}
       </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Transfer to third countries:') }}</h3>
-      <p class="leading-relaxed">
-        {{ i18n.translate('The collected data may be transferred to the following third countries:') }}
-      </p>
-      <p>{{ i18n.translate('no') }}</p>
-      <p class="leading-relaxed">{{ i18n.translate('The following data protection guarantees are in place:') }}</p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Storage Duration:') }}</h3>
-      <p class="leading-relaxed">
-        {{ i18n.translate('Data in this context will only be processed as long as the corresponding consent is given.') }}
-      </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Provision required or necessary:') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Transfer to third countries:") }}
+      </h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'The provision of your personal data is voluntary, based solely on your consent. Without providing your personal data, we cannot grant you access to our offered content.'
+            "The collected data may be transferred to the following third countries:"
           )
         }}
       </p>
-
-      <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">{{ i18n.translate('SSL Encryption') }}</h2>
+      <p>{{ i18n.translate("no") }}</p>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'To protect the security of your data during transmission, we use state-of-the-art encryption methods (e.g., SSL) via HTTPS.'
+            "The following data protection guarantees are in place:"
+          )
+        }}
+      </p>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Storage Duration:") }}
+      </h3>
+      <p class="leading-relaxed">
+        {{
+          i18n.translate(
+            "Data in this context will only be processed as long as the corresponding consent is given."
+          )
+        }}
+      </p>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Provision required or necessary:") }}
+      </h3>
+      <p class="leading-relaxed">
+        {{
+          i18n.translate(
+            "The provision of your personal data is voluntary, based solely on your consent. Without providing your personal data, we cannot grant you access to our offered content."
           )
         }}
       </p>
 
       <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
-        {{ i18n.translate('Information about your right to object according to Art. 21 GDPR') }}
+        {{ i18n.translate("SSL Encryption") }}
       </h2>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Case-specific right to object') }}</h3>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'You have the right, for reasons arising from your particular situation, to object at any time to the processing of personal data concerning you, which is based on Art. 6 (1) lit. f GDPR (data processing based on a balance of interests); this also applies to profiling based on this provision within the meaning of Art. 4 No. 4 GDPR.'
+            "To protect the security of your data during transmission, we use state-of-the-art encryption methods (e.g., SSL) via HTTPS."
+          )
+        }}
+      </p>
+
+      <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
+        {{
+          i18n.translate(
+            "Information about your right to object according to Art. 21 GDPR"
+          )
+        }}
+      </h2>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Case-specific right to object") }}
+      </h3>
+      <p class="leading-relaxed">
+        {{
+          i18n.translate(
+            "You have the right, for reasons arising from your particular situation, to object at any time to the processing of personal data concerning you, which is based on Art. 6 (1) lit. f GDPR (data processing based on a balance of interests); this also applies to profiling based on this provision within the meaning of Art. 4 No. 4 GDPR."
           )
         }}
       </p>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights, and freedoms, or for the establishment, exercise or defense of legal claims.'
+            "If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights, and freedoms, or for the establishment, exercise or defense of legal claims."
           )
         }}
       </p>
-      <h3 class="font-fira text-xl sm:text-2xl mt-2">{{ i18n.translate('Recipient of an objection') }}</h3>
+      <h3 class="font-fira text-xl sm:text-2xl mt-2">
+        {{ i18n.translate("Recipient of an objection") }}
+      </h3>
       <p>Martin Unger<br />mail&#64;martin-unger.at</p>
 
-      <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">{{ i18n.translate('Change of our Privacy Policy') }}</h2>
+      <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
+        {{ i18n.translate("Change of our Privacy Policy") }}
+      </h2>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'We reserve the right to adapt this privacy statement to ensure it always complies with current legal requirements or to implement changes to our services in the privacy policy, e.g., when introducing new services. The new privacy policy will then apply to your next visit.'
+            "We reserve the right to adapt this privacy statement to ensure it always complies with current legal requirements or to implement changes to our services in the privacy policy, e.g., when introducing new services. The new privacy policy will then apply to your next visit."
           )
         }}
       </p>
 
-      <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">{{ i18n.translate('Questions to the Data Protection Officer') }}</h2>
+      <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
+        {{ i18n.translate("Questions to the Data Protection Officer") }}
+      </h2>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'If you have any questions about data protection, please email us or contact the person responsible for data protection in our organization directly:'
+            "If you have any questions about data protection, please email us or contact the person responsible for data protection in our organization directly:"
           )
         }}
       </p>
@@ -247,21 +368,24 @@
         <em>
           {{
             i18n.translate(
-              'The privacy statement was created with the help of activeMind AG, the experts for'
+              "The privacy statement was created with the help of activeMind AG, the experts for"
             )
           }}
           <a
             href="https://www.activemind.de/datenschutz/datenschutzbeauftragter/"
             target="_blank"
-            rel="noopener"
-            class="text-primary hover:underline"
-            >{{ i18n.translate('External Data Protection Officers') }}</a
+            rel="noopener noreferrer"
+            class="text-primary underline underline-offset-2 decoration-primary/60 hover:decoration-primary"
+            >{{ i18n.translate("External Data Protection Officers")
+            }}<span class="sr-only">
+              ({{ i18n.translate("opens in a new tab") }})</span
+            ></a
           >
           (Version #2020-09-30).
         </em>
       </p>
     </div>
-  </section>
+  </main>
 
   <app-footer></app-footer>
-</main>
+</div>

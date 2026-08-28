@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 import { TranslationService } from '../../i18n/translation.service';
+import { focusSection } from '../../shared/focus-section';
 
 interface Skill {
   name: string;
@@ -35,4 +36,8 @@ export class SkillsComponent {
     { name: 'Tailwind', src: 'assets/skillicons/tailwind.svg' },
     { name: 'PrimeNG', src: 'assets/skillicons/primeng.svg' },
   ];
+
+  scrollToContact() {
+    focusSection('contact');
+  }
 }

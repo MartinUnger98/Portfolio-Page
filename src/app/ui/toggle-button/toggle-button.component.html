@@ -2,17 +2,14 @@
   type="button"
   class="lang-toggle"
   [class.is-de]="value === 'de'"
-  role="switch"
-  [attr.aria-checked]="value === 'de'"
-  [attr.aria-label]="
-    value === 'en' ? 'Switch to German' : 'Auf Englisch umschalten'
-  "
+  [attr.aria-label]="labels[value]"
+  [attr.lang]="value"
   (click)="toggle()"
 >
-  <div class="thumb" aria-hidden="true"></div>
+  <span class="thumb" aria-hidden="true"></span>
 
-  <div class="labels" aria-hidden="true">
+  <span class="labels" aria-hidden="true">
     <span class="label en">EN</span>
     <span class="label de">DE</span>
-  </div>
+  </span>
 </button>

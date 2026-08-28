@@ -1,5 +1,11 @@
-<main id="about-me" class="flex justify-center text-white px-4 sm:px-6 lg:px-8">
-  <div class="flex flex-col min-[1250px]:flex-row pt-10 justify-between items-center min-[1250px]:items-start gap-10 min-[1250px]:gap-8 w-full max-w-[1600px]">
+<section
+  id="about-me"
+  aria-labelledby="about-me-title"
+  class="flex justify-center text-white px-4 sm:px-6 lg:px-8"
+>
+  <div
+    class="flex flex-col min-[1250px]:flex-row pt-10 justify-between items-center min-[1250px]:items-start gap-10 min-[1250px]:gap-8 w-full max-w-[1600px]"
+  >
     <div
       appScrollReveal="left"
       class="relative w-full max-w-[568px] aspect-[3507/2842] shrink-0"
@@ -7,12 +13,12 @@
       <img
         src="/assets/images/bg_profile.svg"
         class="w-full h-full object-contain absolute top-0 left-0"
-        alt="profile-pic-shadow"
+        alt=""
       />
       <img
         src="/assets/images/profile-img.webp"
         class="profile-photo w-full h-full object-contain absolute top-0 left-0"
-        alt="profile-pic"
+        alt="Martin Unger"
       />
     </div>
     <div
@@ -20,21 +26,32 @@
       [revealDelay]="120"
       class="flex flex-col gap-5 min-[1250px]:pt-14 w-full min-[1250px]:w-auto"
     >
-      <span class="text-primary text-xl sm:text-2xl">{{ i18n.translate('Who I am') }}</span>
+      <span class="text-primary text-xl sm:text-2xl">{{
+        i18n.translate("Who I am")
+      }}</span>
       <div
         class="flex flex-col gap-4 bg-[#3DCFB61A] border border-[#3DCFB6] rounded-4xl p-8 sm:p-10 w-full min-[1250px]:w-[568px] text-base sm:text-lg"
       >
-        <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">{{ i18n.translate('About me') }}</h2>
+        <h2
+          id="about-me-title"
+          class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl"
+        >
+          {{ i18n.translate("About me") }}
+        </h2>
         <p>
-          {{ i18n.translate('Hi, my name is Martin Unger, a Fullstack Developer from Vienna with experience building scalable applications with Angular, Django, and .NET.') }}
+          {{
+            i18n.translate(
+              "Hi, my name is Martin Unger, a Fullstack Developer from Vienna with experience building scalable applications with Angular, Django, and .NET."
+            )
+          }}
         </p>
         @for (point of aboutPoints; track $index) {
           <div class="flex gap-4">
-            <img [src]="point.icon" [alt]="point.alt" class="w-8 h-8 shrink-0" />
+            <img [src]="point.icon" alt="" class="w-8 h-8 shrink-0" />
             <p>{{ point.text }}</p>
           </div>
         }
       </div>
     </div>
   </div>
-</main>
+</section>

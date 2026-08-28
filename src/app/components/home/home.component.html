@@ -1,10 +1,22 @@
-<main class="flex flex-col relative gap-12 sm:gap-16 lg:gap-24">
-  <app-header class="fixed top-0 left-0 z-20 w-full"></app-header>
-  <app-hero-section></app-hero-section>
-  <app-about-me></app-about-me>
-  <app-skills></app-skills>
-  <app-career></app-career>
-  <app-projects></app-projects>
-  <app-contact></app-contact>
+<a class="skip-link" href="#main-content">{{
+  i18n.translate("Skip to main content")
+}}</a>
+
+<app-header class="fixed top-0 left-0 z-20 w-full"></app-header>
+
+<div class="flex flex-col relative gap-12 sm:gap-16 lg:gap-24">
+  <main
+    id="main-content"
+    tabindex="-1"
+    class="flex flex-col gap-12 sm:gap-16 lg:gap-24"
+  >
+    <app-hero-section></app-hero-section>
+    <app-about-me></app-about-me>
+    <app-skills></app-skills>
+    <app-career></app-career>
+    <app-projects></app-projects>
+    <app-contact></app-contact>
+  </main>
+
   <app-footer></app-footer>
-</main>
+</div>

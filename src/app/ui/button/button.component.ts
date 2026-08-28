@@ -13,10 +13,18 @@ export class ButtonComponent {
   @Input() target: '_blank' | '_self' = '_self';
   @Input() icon?: string;
   @Input() outlined: boolean = true;
+  @Input() disabled: boolean = false;
+  @Input() ariaLabel?: string;
+  @Input() newTabHint = 'opens in a new tab';
 
   @Output() clicked = new EventEmitter<Event>();
 
   handleClick(event: Event) {
+    if (this.disabled) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
     this.clicked.emit(event);
   }
 }

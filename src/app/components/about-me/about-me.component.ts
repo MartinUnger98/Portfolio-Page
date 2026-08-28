@@ -15,21 +15,24 @@ export class AboutMeComponent {
     {
       icon: '/assets/images/location.svg',
       alt: 'location icon',
-      text: "Currently, I work at Atos Austria as a Fullstack Developer, where I focus on developing enterprise solutions using Angular and .NET.",
+      text: 'Currently, I work at Atos Austria as a Fullstack Developer, where I focus on developing enterprise solutions using Angular and .NET.',
     },
     {
       icon: '/assets/images/cognition.svg',
       alt: 'cognition icon',
-      text: "Over time I got more interested in the architecture around the code, how the pieces fit together and what breaks under load.",
+      text: 'Over time I got more interested in the architecture around the code, how the pieces fit together and what breaks under load.',
     },
     {
       icon: '/assets/images/check-icon.svg',
       alt: 'check icon',
-      text: "I build things meant to last longer than the sprint they were written in.",
+      text: 'I build things meant to last longer than the sprint they were written in.',
     },
   ];
 
   get aboutPoints() {
-    return this.icons.map((entry) => ({ ...entry, text: this.i18n.translate(entry.text) }));
+    return this.icons.map((entry) => ({
+      ...entry,
+      text: this.i18n.translate(entry.text),
+    }));
   }
 }

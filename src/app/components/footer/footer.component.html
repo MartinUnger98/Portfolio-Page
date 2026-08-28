@@ -1,35 +1,57 @@
-<footer id="footer" class="flex justify-center items-center px-4 sm:px-6 lg:px-8">
+<footer
+  id="footer"
+  class="flex justify-center items-center px-4 sm:px-6 lg:px-8"
+>
   <div
     appScrollReveal="up"
     class="max-w-[1600px] py-10 w-full flex flex-col min-[650px]:flex-row flex-wrap gap-8 justify-between items-center text-white text-center min-[650px]:text-left"
   >
     <div class="flex flex-col items-center gap-2">
-      <img
-        class="h-16 sm:h-20 lg:h-24 drop-shadow-[4px_3px_7px_#3dcfb6] cursor-pointer"
-        src="/assets/images/logo.svg"
-        alt="Logo"
+      <button
+        type="button"
+        class="cursor-pointer"
+        [attr.aria-label]="i18n.translate('Back to top')"
         (click)="scrollToTop()"
-      />
-        <a
-          routerLink="/imprint"
-          class="font-fira hover:text-primary transition-colors duration-300"
-          >{{ i18n.translate('Imprint') }}</a
-        >
+      >
+        <img
+          class="h-16 sm:h-20 lg:h-24 drop-shadow-[4px_3px_7px_#3dcfb6]"
+          src="/assets/images/logo.svg"
+          alt=""
+        />
+      </button>
+      <a
+        routerLink="/imprint"
+        class="font-fira hover:text-primary transition-colors duration-300"
+        >{{ i18n.translate("Imprint") }}</a
+      >
     </div>
 
-    <span class="font-fira text-white text-xl sm:text-2xl order-3 min-[650px]:order-none"
+    <span
+      class="font-fira text-white text-xl sm:text-2xl order-3 min-[650px]:order-none"
       >&copy; Martin Unger {{ year }}</span
     >
 
-    <div class="flex items-center gap-4">
-      @for (sociallink of socialLinks; track $index) {
-        <i
-          [class]="sociallink.icon"
-          class="text-3xl sm:text-4xl text-white cursor-pointer hover:text-primary transition-colors duration-300 drop-shadow-[0px_3px_7px_#3dcfb6]"
-          (click)="open(sociallink.href, sociallink.external)"
-        ></i>
-      }
-    </div>
+    <nav [attr.aria-label]="i18n.translate('Social links')">
+      <ul class="flex items-center gap-4 list-none">
+        @for (sociallink of socialLinks; track sociallink.href) {
+          <li class="flex">
+            <a
+              [href]="sociallink.href"
+              [attr.target]="sociallink.external ? '_blank' : null"
+              [attr.rel]="sociallink.external ? 'noopener noreferrer' : null"
+              class="flex items-center justify-center text-3xl sm:text-4xl text-white hover:text-primary transition-colors duration-300 drop-shadow-[0px_3px_7px_#3dcfb6]"
+            >
+              <i [class]="sociallink.icon" aria-hidden="true"></i>
+              <span class="sr-only">
+                {{ i18n.translate(sociallink.label) }}
+                @if (sociallink.external) {
+                  {{ " (" + i18n.translate("opens in a new tab") + ")" }}
+                }
+              </span>
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
   </div>
 </footer>
-

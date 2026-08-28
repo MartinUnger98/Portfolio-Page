@@ -1,8 +1,9 @@
-<main
+<section
   id="hero"
+  [attr.aria-label]="i18n.translate('Introduction')"
   class="hero-bg relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center h-full w-full text-white text-center px-4"
 >
-  <h2 class="font-fira text-2xl sm:text-3xl md:text-[40px] text pb-3">
+  <p class="font-fira text-2xl sm:text-3xl md:text-[40px] text pb-3">
     @for (word of subtitleWords; track $index) {
       <span class="inline-block overflow-hidden pb-1 -mb-1">
         <span
@@ -12,7 +13,7 @@
         >
       </span>
     }
-  </h2>
+  </p>
   <h1 class="font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl pb-10">
     @for (word of nameWords; track $index) {
       <span class="inline-block overflow-hidden pb-1 -mb-1">
@@ -28,8 +29,14 @@
     class="hero-fade-up flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12"
     style="animation-delay: 750ms"
   >
-    <ui-button [text]="i18n.translate('Check out my work')" (click)="scrollToSection('projects')" />
-    <ui-button [text]="i18n.translate('Contact me')" (click)="scrollToSection('contact')" />
+    <ui-button
+      [text]="i18n.translate('Check out my work')"
+      (click)="scrollToSection('projects')"
+    />
+    <ui-button
+      [text]="i18n.translate('Contact me')"
+      (click)="scrollToSection('contact')"
+    />
   </div>
 
   <div
@@ -37,14 +44,24 @@
     style="animation-delay: 1000ms"
   >
     <div class="relative left-1/2 -translate-x-1/2 w-[110vw]">
-      <div class="marquee-bar -rotate-[3deg] w-[110vw] overflow-hidden py-2 md:py-3">
+      <div
+        class="marquee-bar -rotate-[3deg] w-[110vw] overflow-hidden py-2 md:py-3"
+      >
         <div class="marquee-track flex w-max text-primary">
           @for (group of [1, 2, 3]; track $index) {
             <div class="flex shrink-0" [attr.aria-hidden]="group !== 1">
               @for (text of marqueeTexts; track $index) {
-                <div class="flex items-center gap-6 sm:gap-10 md:gap-14 pr-6 sm:pr-10 md:pr-14">
-                  <span class="text-base sm:text-xl md:text-[32px]" aria-hidden="true">•</span>
-                  <span class="text-base sm:text-xl md:text-[32px]">{{ text }}</span>
+                <div
+                  class="flex items-center gap-6 sm:gap-10 md:gap-14 pr-6 sm:pr-10 md:pr-14"
+                >
+                  <span
+                    class="text-base sm:text-xl md:text-[32px]"
+                    aria-hidden="true"
+                    >•</span
+                  >
+                  <span class="text-base sm:text-xl md:text-[32px]">{{
+                    text
+                  }}</span>
                 </div>
               }
             </div>
@@ -65,44 +82,44 @@
       mail&#64;martin-unger.at
     </a>
 
-    <div class="flex flex-col items-center gap-6 text-primary">
-      <a
-        href="https://github.com/MartinUnger98"
-        target="_blank"
-        rel="noopener"
-        class="group relative flex items-center justify-center"
-      >
-        <i class="fa-brands fa-github text-[32px] group-hover:text-white"></i>
-        <span
-          aria-hidden="true"
-          class="pointer-events-none absolute left-full top-1/2 -translate-y-1/2 ml-2 text-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          •
-        </span>
-      </a>
+    <ul class="flex flex-col items-center gap-6 text-primary list-none">
+      @for (social of socialLinks; track social.href) {
+        <li>
+          <a
+            [href]="social.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative flex items-center justify-center"
+          >
+            <i
+              [class]="social.icon"
+              class="text-[32px] group-hover:text-white"
+              aria-hidden="true"
+            ></i>
+            <span class="sr-only"
+              >{{ i18n.translate(social.label) }} ({{
+                i18n.translate("opens in a new tab")
+              }})</span
+            >
+            <span
+              aria-hidden="true"
+              class="pointer-events-none absolute left-full top-1/2 -translate-y-1/2 ml-2 text-[32px] opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300"
+            >
+              •
+            </span>
+          </a>
+        </li>
+      }
+    </ul>
 
-      <a
-        href="https://www.linkedin.com/in/martin-unger-profile/"
-        target="_blank"
-        rel="noopener"
-        class="group relative flex items-center justify-center"
-      >
-        <i
-          class="fa-brands fa-square-linkedin text-[32px] group-hover:text-white"
-        ></i>
-        <span
-          aria-hidden="true"
-          class="pointer-events-none absolute left-full top-1/2 -translate-y-1/2 ml-2 text-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          •
-        </span>
-      </a>
-    </div>
-
-    <span class="mt-4 relative z-0 bg-white/80 h-[186px] w-px"></span>
+    <span
+      aria-hidden="true"
+      class="mt-4 relative z-0 bg-white/80 h-[186px] w-px"
+    ></span>
   </div>
 
   <div
+    aria-hidden="true"
     class="hero-fade-up hidden lg:flex absolute bottom-0 left-[24px] xl:left-[65.5px] flex-col items-center gap-6"
     style="animation-delay: 1150ms"
   >
@@ -115,28 +132,37 @@
     <span class="bg-primary h-60 w-px"></span>
   </div>
 
-  <div class="lg:hidden flex items-center justify-center gap-6 text-primary mt-10">
-    <a
-      href="mailto:mail@martin-unger.at"
-      class="text-white hover:text-primary text-sm sm:text-base"
-    >
-      mail&#64;martin-unger.at
-    </a>
-    <a
-      href="https://github.com/MartinUnger98"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center justify-center"
-    >
-      <i class="fa-brands fa-github text-2xl hover:text-white"></i>
-    </a>
-    <a
-      href="https://www.linkedin.com/in/martin-unger-profile/"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center justify-center"
-    >
-      <i class="fa-brands fa-square-linkedin text-2xl hover:text-white"></i>
-    </a>
-  </div>
-</main>
+  <ul
+    class="lg:hidden flex items-center justify-center gap-6 text-primary mt-10 list-none"
+  >
+    <li>
+      <a
+        href="mailto:mail@martin-unger.at"
+        class="text-white hover:text-primary text-sm sm:text-base"
+      >
+        mail&#64;martin-unger.at
+      </a>
+    </li>
+    @for (social of socialLinks; track social.href) {
+      <li class="flex">
+        <a
+          [href]="social.href"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center"
+        >
+          <i
+            [class]="social.icon"
+            class="text-2xl hover:text-white"
+            aria-hidden="true"
+          ></i>
+          <span class="sr-only"
+            >{{ i18n.translate(social.label) }} ({{
+              i18n.translate("opens in a new tab")
+            }})</span
+          >
+        </a>
+      </li>
+    }
+  </ul>
+</section>

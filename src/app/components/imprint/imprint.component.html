@@ -1,77 +1,92 @@
-<main class="flex flex-col min-h-screen">
-  <div
+<a class="skip-link" href="#main-content">{{
+  i18n.translate("Skip to main content")
+}}</a>
+
+<div class="flex flex-col min-h-screen">
+  <header
     class="flex justify-between items-center w-full text-white px-4 sm:px-6 md:px-12 lg:px-24 py-4 md:py-6 lg:py-8"
   >
     <a
       routerLink="/"
       class="flex items-center gap-2 font-fira hover:text-primary transition-colors duration-300"
     >
-      <i class="fa-solid fa-arrow-left"></i>
-      <span>{{ i18n.translate('Back to home') }}</span>
+      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      <span>{{ i18n.translate("Back to home") }}</span>
     </a>
     <app-toggle-button
       [value]="i18n.lang()"
       (valueChange)="onLangChange($event)"
     ></app-toggle-button>
-  </div>
+  </header>
 
-  <section class="flex justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+  <main
+    id="main-content"
+    tabindex="-1"
+    class="flex-1 flex justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-14"
+  >
     <div class="flex flex-col gap-3 w-full max-w-3xl text-white">
-      <h1 class="font-fira text-primary font-bold text-4xl sm:text-5xl mb-2">
-        {{ i18n.translate('Imprint') }}
+      <h1
+        #pageTitle
+        tabindex="-1"
+        class="font-fira text-primary font-bold text-4xl sm:text-5xl mb-2"
+      >
+        {{ i18n.translate("Imprint") }}
       </h1>
 
       <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
-        {{ i18n.translate('Details according to § 5 TMG:') }}
+        {{ i18n.translate("Details according to § 5 TMG:") }}
       </h2>
       <p>Martin Unger</p>
 
       <h3 class="font-fira text-xl sm:text-2xl mt-2">
-        {{ i18n.translate('Postal Address:') }}
+        {{ i18n.translate("Postal Address:") }}
       </h3>
       <p>Nestroygasse 3<br />1020 Wien</p>
 
       <h3 class="font-fira text-xl sm:text-2xl mt-2">
-        {{ i18n.translate('Contact:') }}
+        {{ i18n.translate("Contact:") }}
       </h3>
       <p>Telefon: +43 664 401 89 22<br />E-Mail: mail&#64;martin-unger.at</p>
 
       <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
-        {{ i18n.translate('Website Information') }}
+        {{ i18n.translate("Website Information") }}
       </h2>
 
       <h2 class="font-fira text-primary text-2xl sm:text-3xl mt-4">
-        {{ i18n.translate('Information according to § 36 VSBG') }}
+        {{ i18n.translate("Information according to § 36 VSBG") }}
       </h2>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'According to § 36 VSBG (Consumer Dispute Resolution Act - Act on Alternative Dispute Resolution in Consumer Matters), the operator of this website declares:'
+            "According to § 36 VSBG (Consumer Dispute Resolution Act - Act on Alternative Dispute Resolution in Consumer Matters), the operator of this website declares:"
           )
         }}
       </p>
       <p class="leading-relaxed">
         {{
           i18n.translate(
-            'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.'
+            "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board."
           )
         }}
       </p>
 
       <p class="mt-4">
         <em>
-          {{ i18n.translate('The imprint was created with the') }}
+          {{ i18n.translate("The imprint was created with the") }}
           <a
             href="https://www.activemind.de/datenschutz/impressums-generator/"
             target="_blank"
             rel="noopener nofollow"
-            class="text-primary hover:underline"
-            >{{ i18n.translate('Imprint generator of the activeMind AG') }}</a
+            class="text-primary underline underline-offset-2 decoration-primary/60 hover:decoration-primary"
+            >{{ i18n.translate("Imprint generator of the activeMind AG")
+            }}<span class="sr-only">
+              ({{ i18n.translate("opens in a new tab") }})</span
+            ></a
           >.
         </em>
       </p>
     </div>
-  </section>
+  </main>
 
-  <app-footer class="fixed bottom-0 left-0 w-full"></app-footer>
-</main>
+  <app-footer></app-footer>
+</div>

@@ -1,4 +1,10 @@
-import { Component, inject } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ToggleButtonComponent } from '../../ui/toggle-button/toggle-button.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -10,8 +16,14 @@ import { Lang, TranslationService } from '../../i18n/translation.service';
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss',
 })
-export class ImprintComponent {
+export class ImprintComponent implements AfterViewInit {
   protected readonly i18n = inject(TranslationService);
+
+  @ViewChild('pageTitle') private readonly pageTitle?: ElementRef<HTMLElement>;
+
+  ngAfterViewInit() {
+    this.pageTitle?.nativeElement.focus({ preventScroll: true });
+  }
 
   onLangChange(v: Lang) {
     this.i18n.setLang(v);

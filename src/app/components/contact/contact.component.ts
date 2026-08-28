@@ -1,4 +1,10 @@
-import { Component, ElementRef, inject, signal, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  signal,
+  ViewChild,
+} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -7,13 +13,19 @@ import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 import { TranslationService } from '../../i18n/translation.service';
 
 type SubmitStatus = 'idle' | 'sending' | 'sent' | 'error';
+type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
 
 const EMAIL_PATTERN = /^[a-z0-9_.-]+@[a-z0-9.-]+\.[a-z.]{2,6}$/i;
 const MESSAGE_MAX_HEIGHT_PX = 240;
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, ButtonComponent, ScrollRevealDirective, RouterLink],
+  imports: [
+    ReactiveFormsModule,
+    ButtonComponent,
+    ScrollRevealDirective,
+    RouterLink,
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -22,7 +34,10 @@ export class ContactComponent {
   private readonly http = inject(HttpClient);
   private readonly fb = inject(FormBuilder);
 
-  @ViewChild('messageInput') private readonly messageInput?: ElementRef<HTMLTextAreaElement>;
+  @ViewChild('messageInput')
+  private readonly messageInput?: ElementRef<HTMLTextAreaElement>;
+
+  private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
 
   private readonly formspreeEndpoint = 'https://formspree.io/f/mjvqzpqy';
 
@@ -35,6 +50,11 @@ export class ContactComponent {
     privacyAccepted: [false, Validators.requiredTrue],
   });
 
+  showError(control: ContactField): boolean {
+    const field = this.form.controls[control];
+    return field.invalid && (field.touched || field.dirty);
+  }
+
   autoResizeMessage(event: Event) {
     const textarea = event.target as HTMLTextAreaElement;
     textarea.style.height = 'auto';
@@ -44,6 +64,7 @@ export class ContactComponent {
   submit() {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
+      this.focusFirstInvalidControl();
       return;
     }
 
@@ -64,5 +85,17 @@ export class ContactComponent {
         },
         error: () => this.status.set('error'),
       });
+  }
+
+  private focusFirstInvalidControl() {
+    const firstInvalid = Object.keys(this.form.controls).find(
+      (name) => this.form.get(name)?.invalid,
+    );
+    if (!firstInvalid) return;
+
+    const element = this.host.nativeElement.querySelector<HTMLElement>(
+      `#${firstInvalid}`,
+    );
+    element?.focus();
   }
 }

@@ -5,51 +5,65 @@
     (click)="close()"
     class="absolute z-10 top-4 right-4 sm:top-6 sm:right-6 text-white hover:text-primary transition-colors duration-300 cursor-pointer text-2xl"
     icon="fa-solid fa-xmark"
+    [ariaLabel]="i18n.translate('Close project details')"
     [outlined]="false"
   />
 
   <img
     [src]="project().image"
-    [alt]="project().name"
+    [alt]="i18n.translate('Screenshot of') + ' ' + project().name"
     [style.object-position]="project().imagePosition || '50% 50%'"
     class="area-image w-full aspect-video object-cover rounded-2xl mt-12 md:mt-9 md:aspect-auto md:max-w-full"
   />
 
   <div class="area-header flex items-baseline gap-3 md:block">
-    <span class="text-primary font-karla font-bold text-3xl sm:text-4xl md:text-7xl lg:text-9xl">{{
-      project().number
-    }}</span>
-    <h3 class="font-fira font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl md:mt-2">{{ project().name }}</h3>
+    <span
+      aria-hidden="true"
+      class="text-primary font-karla font-bold text-3xl sm:text-4xl md:text-7xl lg:text-9xl"
+      >{{ project().number }}</span
+    >
+    <h2
+      #dialogTitle
+      id="project-dialog-title"
+      tabindex="-1"
+      class="font-fira font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl md:mt-2"
+    >
+      {{ project().name }}
+    </h2>
   </div>
 
   <div class="area-body flex flex-col gap-4 md:gap-6 min-w-0">
     <div>
-      <h4 class="text-primary font-fira font-bold text-xl sm:text-2xl mb-2">
-        {{ i18n.translate('What is this project about?') }}
-      </h4>
-      <p class="text-base sm:text-lg">{{ i18n.translate(project().description) }}</p>
+      <h3 class="text-primary font-fira font-bold text-xl sm:text-2xl mb-2">
+        {{ i18n.translate("What is this project about?") }}
+      </h3>
+      <p class="text-base sm:text-lg">
+        {{ i18n.translate(project().description) }}
+      </p>
     </div>
 
-    <div class="flex flex-wrap gap-4 sm:gap-6">
+    <ul class="flex flex-wrap gap-4 sm:gap-6 list-none">
       @for (tech of project().techs; track $index) {
-        <div class="flex items-center gap-2">
-          <img [src]="tech.icon" [alt]="tech.name" class="w-6 h-6" />
+        <li class="flex items-center gap-2">
+          <img [src]="tech.icon" alt="" class="w-6 h-6" />
           <span class="text-base sm:text-lg">{{ tech.name }}</span>
-        </div>
+        </li>
       }
-    </div>
+    </ul>
 
     <div class="flex flex-wrap gap-4 mt-2">
       <ui-button
-        text="GitHub"
+        [text]="'GitHub'"
+        [href]="project().github"
         target="_blank"
-        (click)="openLink(project().github)"
+        [newTabHint]="i18n.translate('opens in a new tab')"
         icon="fa-solid fa-arrow-up-right-from-square"
       />
       <ui-button
         [text]="i18n.translate('Live Test')"
+        [href]="project().live"
         target="_blank"
-        (click)="openLink(project().live)"
+        [newTabHint]="i18n.translate('opens in a new tab')"
         icon="fa-solid fa-arrow-up-right-from-square"
       />
     </div>

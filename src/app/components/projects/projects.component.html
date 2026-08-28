@@ -1,16 +1,36 @@
-<main id="projects" class="text-white w-full flex justify-center px-4 sm:px-6 lg:px-8">
+<section
+  id="projects"
+  aria-labelledby="projects-title"
+  class="text-white w-full flex justify-center px-4 sm:px-6 lg:px-8"
+>
   <div class="max-w-[1600px] pt-10 w-full flex flex-col gap-5">
-    <span class="text-primary text-xl sm:text-2xl">{{ i18n.translate('Portfolio') }}</span>
-    <div appScrollReveal="up" class="flex flex-col gap-4 p-0 sm:p-8 text-base sm:text-lg">
-      <h2 class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl">
-        {{ i18n.translate('Featured Projects') }}
+    <span class="text-primary text-xl sm:text-2xl">{{
+      i18n.translate("Portfolio")
+    }}</span>
+    <div
+      appScrollReveal="up"
+      class="flex flex-col gap-4 p-0 sm:p-8 text-base sm:text-lg"
+    >
+      <h2
+        id="projects-title"
+        class="text-primary font-fira font-bold text-4xl sm:text-5xl lg:text-6xl"
+      >
+        {{ i18n.translate("Featured Projects") }}
       </h2>
       <p>
-        {{ i18n.translate('Explore a selection of my work here - Interact with projects to see my skills in action.') }}
+        {{
+          i18n.translate(
+            "Explore a selection of my work here - Interact with projects to see my skills in action."
+          )
+        }}
       </p>
 
       <div class="flex flex-col lg:flex-row gap-10 mt-2">
-        <div class="flex flex-col flex-1 min-w-0" (mouseleave)="clearHovered()">
+        <div
+          class="flex flex-col flex-1 min-w-0"
+          (mouseleave)="clearHovered()"
+          (focusout)="onFocusOut($event)"
+        >
           @for (project of projects; track $index; let i = $index) {
             <div class="border-t border-primary"></div>
             <button
@@ -19,6 +39,8 @@
               [revealDelay]="i * 60"
               (click)="openProject(i)"
               (mouseenter)="setHovered(i)"
+              (focus)="setHovered(i)"
+              aria-haspopup="dialog"
               class="group flex flex-col sm:flex-row sm:items-center items-start justify-between cursor-pointer gap-2 sm:gap-8 py-6 sm:py-10 px-2 sm:px-8 border-b border-white/20 text-left hover:bg-primary-blur transition-colors duration-300"
             >
               <span
@@ -27,15 +49,18 @@
                 {{ project.name }}
                 @if (previewProject() === project) {
                   <i
+                    aria-hidden="true"
                     class="fa-solid fa-arrow-up-right-from-square text-primary"
                   ></i>
                 }
               </span>
-              <span class="flex flex-wrap items-center gap-2 text-sm sm:text-base text-white/70">
+              <span
+                class="flex flex-wrap items-center gap-2 text-sm sm:text-base text-white/70"
+              >
                 @for (tech of project.techs; track $index; let last = $last) {
                   <span>{{ tech.name }}</span>
                   @if (!last) {
-                    <span class="text-primary">|</span>
+                    <span aria-hidden="true" class="text-primary">|</span>
                   }
                 }
               </span>
@@ -45,6 +70,7 @@
         </div>
 
         <div
+          aria-hidden="true"
           class="hidden lg:block relative w-[320px] shrink-0 self-start mt-4"
         >
           @if (previewProject(); as preview) {
@@ -53,7 +79,7 @@
             ></div>
             <img
               [src]="preview.image"
-              [alt]="preview.name"
+              alt=""
               class="project-preview-in relative w-full rounded-2xl shadow-xl"
             />
           }
@@ -61,4 +87,4 @@
       </div>
     </div>
   </div>
-</main>
+</section>
